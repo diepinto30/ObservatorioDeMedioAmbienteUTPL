@@ -1,0 +1,59 @@
+{% extends 'master.html' %}
+{% block tittle %} Registros {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+{% endblock %}
+
+{% block content1 %}
+<br><br><br>
+    <h3 class="text-center h1 mt-5">Crear cuenta</h3>
+    <hr class="bg-warning mb-5">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post" class="text-left">
+                        {% csrf_token %}
+                        <div id="registerUser">
+                            <div class="form-group" style="text-align: center">
+                                <label><h5>Nombres</h5></label><br>
+                                {{ form.first_name }}
+                            </div>
+                            <div class="form-group" style="text-align: center">
+                                <label><h5>Apellidos</h5></label><br>
+                                {{ form.last_name }}
+                            </div>
+                            <br>
+                            <div class="form-group" style="text-align: center">
+                                <label><h5>Username</h5></label><br>
+                                {{ form.username }}
+                            </div>
+                            <br>
+                            <div class="form-group" style="text-align: center">
+                                <label><h5>E-mail</h5></label><br>
+                                {{ form.email }}
+                            </div>
+                            <br><br>
+                            <div class="form-group" style="text-align: center">
+                                <p><i>La contraseña debería tener al menos 8 caracter(es) que contenga mayúscula(s),
+                                    minúscula(s), número(s) entre otros</i></p>
+                                <label>Contraseña:</label><br>
+                                {{ form.errors }}
+                                {{ form.password1 }}
+                            </div>
+                            <div class="form-group" style="text-align: center">
+                                <label>Contraseña (confirmación):</label><br>
+                                {{ form.password2 }}
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-warning btn-block">Registrarse</button>
+                        <br>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div><br><br>  <br><br>
+{% endblock %}
