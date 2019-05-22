@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4890a1e7-9102-4117-85a0-18a363070208" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
+            <state relative-caret-position="855">
               <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="28" />
             </state>
           </provider>
@@ -40,21 +34,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="137" column="14" lean-forward="true" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
+            <state relative-caret-position="487">
+              <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="e#277#303#0" expanded="true" />
+                <element signature="e#414#444#0" expanded="true" />
+                <element signature="e#472#498#0" expanded="true" />
+                <element signature="e#739#769#0" expanded="true" />
+                <element signature="e#797#836#0" expanded="true" />
+                <element signature="e#1094#1124#0" expanded="true" />
+                <element signature="e#1152#1195#0" expanded="true" />
+                <element signature="e#1442#1472#0" expanded="true" />
+                <element signature="e#1500#1526#0" expanded="true" />
+                <element signature="e#2056#2074#0" expanded="true" />
+                <element signature="e#2254#2272#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="117" column="9" selection-start-line="117" selection-start-column="9" selection-end-line="117" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -62,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="60">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
               </folding>
@@ -71,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+            <state relative-caret-position="495">
+              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
               </folding>
@@ -86,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="345">
               <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
               <folding>
                 <element signature="e#656#688#0" expanded="true" />
@@ -98,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
+            <state relative-caret-position="390">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
@@ -110,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Downloads/startbootstrap-grayscale-gh-pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="132" column="1" lean-forward="true" selection-start-line="132" selection-start-column="1" selection-end-line="213" selection-end-column="11" />
+            <state relative-caret-position="1665">
+              <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="213" selection-end-column="11" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -122,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="1740">
               <caret line="116" column="66" selection-start-line="116" selection-start-column="66" selection-end-line="116" selection-end-column="66" />
               <folding>
                 <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -175,7 +178,6 @@
         <option value="$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/urls.py" />
         <option value="$PROJECT_DIR$/webObMedUTPL/portal/views.py" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/data.html" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/urls.py" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html" />
@@ -184,6 +186,7 @@
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -307,18 +310,19 @@
       <workItem from="1558283172433" duration="309000" />
       <workItem from="1558317413317" duration="513000" />
       <workItem from="1558483052797" duration="8773000" />
-      <workItem from="1558495316557" duration="10207000" />
+      <workItem from="1558495316557" duration="10505000" />
+      <workItem from="1558535594088" duration="153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35021000" />
+    <option name="totallyTimeSpent" value="35472000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16962843" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1720517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -431,9 +435,7 @@
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/portal/img/demo-image-02.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/portal/img/ipad.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/portal/img/ipad.png" />
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/portal/img/bg-masthead.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -450,9 +452,7 @@
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/Slideshow.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/header.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/header.css" />
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -460,11 +460,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/nucleo-icons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/nucleo-icons.html" />
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -520,134 +516,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/settings.py" />
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/__init__.py">
+    <entry file="file://$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/webObMedUTPL/portal/forms.py" />
+    <entry file="file://$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/urls.py" />
+    <entry file="file://$PROJECT_DIR$/webObMedUTPL/portal/views.py" />
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/data.html" />
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/portal/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/portal/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
-          <folding>
-            <element signature="e#1#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-          <folding>
-            <element signature="e#7984#7990#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/startbootstrap-grayscale-gh-pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="132" column="1" lean-forward="true" selection-start-line="132" selection-start-column="1" selection-end-line="213" selection-end-column="11" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="137" column="14" lean-forward="true" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/signup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
+        <state relative-caret-position="855">
           <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="60">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="345">
           <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
           <folding>
             <element signature="e#656#688#0" expanded="true" />
@@ -655,9 +570,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/startbootstrap-grayscale-gh-pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="213" selection-end-column="11" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="1740">
           <caret line="116" column="66" selection-start-line="116" selection-start-column="66" selection-end-line="116" selection-end-column="66" />
           <folding>
             <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -666,20 +601,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/login.html">
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        <state relative-caret-position="487">
+          <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+          <folding>
+            <element signature="e#277#303#0" expanded="true" />
+            <element signature="e#414#444#0" expanded="true" />
+            <element signature="e#472#498#0" expanded="true" />
+            <element signature="e#739#769#0" expanded="true" />
+            <element signature="e#797#836#0" expanded="true" />
+            <element signature="e#1094#1124#0" expanded="true" />
+            <element signature="e#1152#1195#0" expanded="true" />
+            <element signature="e#1442#1472#0" expanded="true" />
+            <element signature="e#1500#1526#0" expanded="true" />
+            <element signature="e#2056#2074#0" expanded="true" />
+            <element signature="e#2254#2272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="598">
+          <caret line="117" column="9" selection-start-line="117" selection-start-column="9" selection-end-line="117" selection-end-column="9" />
         </state>
       </provider>
     </entry>
