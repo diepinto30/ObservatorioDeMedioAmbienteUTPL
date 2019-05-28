@@ -1,0 +1,490 @@
+{% extends 'master.html' %}
+{% block tittle %}Editor de Caso {% endblock %}
+{% block head %}
+{% load staticfiles %}
+{% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
+
+<style>
+    .container {
+        height: 67vh;
+    }
+</style>
+{% endblock %}
+{% block content1 %}
+<div style="position: static">
+    <center>
+
+        <h1>Datos de Feminicidios 2016 - 2018</h1>
+        <div class="alert alert-secondary" role="alert">
+            <i>Se parte del grupo y ayudamos a registrar más datos de feminicidios de su país</i>
+        </div>
+        <hr>
+        <br>
+    </center>
+    <center>
+        <div class="row pt-4">
+            <div class="col-md-8 mx-auto">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="py-1 text-center">Editar Caso de feminicidio</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="DatosCasoVictima-Agresor">
+                                <h4>Datos del caso</h4><br>
+
+                                <div class="DatosCaso">
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Fecha del
+                                            Caso: </label>
+                                        <div class="col-sm-6">
+                                            {{ form.fechaCaso }}
+                                            <script>
+                                                $('#datepicker').datepicker({
+                                                    uiLibrary: 'bootstrap4'
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Año del
+                                            caso: </label>
+                                        <div class="col-sm-6">
+                                            {{ form.año }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-4 col-form-label">País del
+                                            caso: </label>
+                                        <div class="col-sm-6">
+                                            {{ form.pais }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Hora de
+                                            Muerte</label>
+                                        <div class="col-sm-6 time">
+                                            {{ form.horaDeMuerte }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Provincia</label>
+                                        <div class="col-sm-6">
+                                            {{ form.provinciaUbi }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Ciudad</label>
+                                        <div class="col-sm-6">
+                                            {{ form.ciudadUbi }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Dirección
+                                            Caso</label>
+                                        <div class="col-sm-6">
+                                            {{ form.direccionCaso }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="DatosVictima">
+                                    <div style="width: 90%;">
+                                        <hr>
+                                    </div>
+                                    <h4>Datos de la Victima</h4><br>
+                                    <p><a class="btn btn-primary" href="#" id="show4">Ver el contenido para llenar</a>
+                                    </p>
+                                    <div id="content" class="col-lg-12">
+                                        <div id="DatosVictima" class="col-lg-12"
+                                             style="display: none; border: 1px solid #d3d3d3; border-radius: 4px">
+                                            <div id="close">
+                                                <a class="btn btn-small close" aria-label="Close" href="#" id="data4"
+                                                   title="Cerrar" style="margin-top: 2%">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </a>
+                                                <div class="contenidoDatosdeLaVictima">
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Nombres
+                                                            Victima</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.nombresV }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Apellidos
+                                                            Victima</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.apellidosV }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Edad
+                                                            Victima</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.edadV }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Nacionalidad
+                                                            de la
+                                                            Victima</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.nacionalidadV }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Profesión
+                                                            o cupación
+                                                            Victima</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.profesionVocupacionV }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="DatosAgresor">
+                                    <div style="width: 90%;">
+                                        <hr>
+                                    </div>
+                                    <h4>Datos del Agresor</h4><br>
+                                    <p><a class="btn btn-primary" href="#" id="show3">Ver el contenido para llenar</a>
+                                    </p>
+                                    <div id="content" class="col-lg-12">
+                                        <div id="DatosAgresor" class="col-lg-12"
+                                             style="display: none; border: 1px solid #d3d3d3; border-radius: 4px">
+                                            <div id="close">
+                                                <a class="btn btn-small close" aria-label="Close" href="#" id="data3"
+                                                   title="Cerrar" style="margin-top: 2%">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </a>
+                                                <div class="contenidoDatosdelAgresor">
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Nombres
+                                                            Agresor</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.nombreA }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Apellidos
+                                                            Agresor</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.apellidosA }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Edad
+                                                            Agresor</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.edadA }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Nacionalidad
+                                                            del
+                                                            Agresor</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.nacionalidadA }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label"><i>Profesión
+                                                            o cupación
+                                                            Agresor</i></label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.profesionAocupacionA }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="contenidoParteLegalTestigo">
+                                                        <div class="form-group row">
+                                                            <label for="inputPassword3" class="col-sm-4 col-form-label">Relación
+                                                                del
+                                                                agresor con
+                                                                la victima</label>
+                                                            <div class="col-sm-5">
+                                                                {{ form.relacionVA }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputPassword3" class="col-sm-4 col-form-label">Situación
+                                                                del Agresor</label>
+                                                            <div class="col-sm-5">
+                                                                {{ form.situacionAgresor }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="DatosLegalesyTestigo">
+                                        <div style="width: 90%;">
+                                            <hr>
+                                        </div>
+                                        <h4>Parte legal y testigo</h4><br>
+                                        <p><a class="btn btn-primary" href="#" id="show1">Ver el contenido para
+                                            llenar</a>
+                                        </p>
+                                        <div id="content" class="col-lg-12">
+                                            <div id="DatosLegalesyTestigo" class="col-lg-12"
+                                                 style="display: none; border: 1px solid #d3d3d3; border-radius: 4px">
+                                                <div id="close">
+
+                                                    <a class="btn btn-small close" aria-label="Close" href="#"
+                                                       id="data1"
+                                                       title="Cerrar" style="margin-top: 2%">
+
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </a>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Como
+                                                            sucito el acto de masacre </label>
+                                                        <div class="col-sm-5">
+                                                            {{ form.hechos }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3"
+                                                               class="col-sm-5 col-form-label">Objeto que fue usando
+                                                            para el
+                                                            asesinato: </label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.armas }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3"
+                                                               class="col-sm-5 col-form-label">Existe algún
+                                                            testigo: </label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.testigo }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="alert alert-warning text-black" role="alert">
+                                                        <p><i><strong>Campos ovilgatorios si su opción en la pregunta
+                                                            anterior
+                                                            fue Si: *</strong></i></p>
+                                                        <div class="form-group row">
+                                                            <label for="inputPassword3"
+                                                                   class="col-sm-4 col-form-label">Nombre del
+                                                                testigo: </label>
+                                                            <div class="col-sm-5">
+                                                                {{ form.nombreT }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputPassword3"
+                                                                   class="col-sm-4 col-form-label">Apellido del
+                                                                testigo: </label>
+                                                            <div class="col-sm-5">
+                                                                {{ form.apellidoT }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputPassword3" class="col-sm-4 col-form-label">Relación
+                                                                del testigo la victima: </label>
+                                                            <div class="col-sm-5">
+                                                                {{ form.relacionTestigo }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="inputPassword3" class="col-sm-5 col-form-label">Descripción
+                                                                lo que el testigo vio : </label>
+                                                            <div class="col-sm-4">
+                                                                {{ form.declaracion }}
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-5 col-form-label">causa
+                                                            o
+                                                            motivo de la muerte</label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.causa }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3"
+                                                               class="col-sm-5 col-form-label">Estado caso: </label>
+                                                        <div class="col-sm-4">
+                                                            {{ form.estadoCaso }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="DatosLinkandURL">
+                                    <div style="width: 90%;">
+                                        <hr>
+                                    </div>
+                                    <h4>Sitios web de la información del caso</h4><br>
+                                    <p><a class="btn btn-primary" href="#" id="show2">Ver el contenido para llenar</a>
+                                    </p>
+                                    <div id="content" class="col-lg-12">
+                                        <div id="DatosSitioWeb" class="col-lg-12"
+                                             style="display: none; border: 1px solid #d3d3d3; border-radius: 4px">
+                                            <div id="close">
+
+                                                <a class="btn btn-small close" aria-label="Close" href="#" id="data2"
+                                                   title="Cerrar" style="margin-top: 2%">
+
+                                                    <span aria-hidden="true">&times;</span>
+                                                </a>
+                                                <div class="contenidoDatosSitioWeb">
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Link
+                                                            Uno: </label>
+                                                        <div class="col-sm-6">
+                                                            {{ form.link1 }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Texto
+                                                            del link Uno:</label>
+                                                        <div class="col-sm-6 time">
+                                                            {{ form.texto1 }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Link
+                                                            Dos:</label>
+                                                        <div class="col-sm-6">
+                                                            {{ form.link2 }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3"
+                                                               class="col-sm-4 col-form-label">Texto del link
+                                                            Dos: </label>
+                                                        <div class="col-sm-6">
+                                                            {{ form.texto2 }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Link
+                                                            Tres:</label>
+                                                        <div class="col-sm-6">
+                                                            {{ form.link3 }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Texto
+                                                            del link Tres:</label>
+                                                        <div class="col-sm-6">
+                                                            {{ form.texto3 }}
+                                                        </div>
+                                                    </div>
+                                                    {% if user.is_authenticated %}
+                                                    <div class="form-group row" id="valorrr">
+                                                        <label for="inputPassword3" class="col-sm-4 col-form-label">Nombre
+                                                            del usuario</label>
+                                                        {% if user.is_authenticated %}
+                                                        <div class="col-sm-6 " >
+                                                            {{ form.extraidosPor }}
+                                                        </div>
+                                                        <script>
+                                                            document.getElementById('valor').value = '{{ user.username }}';
+                                                            document.getElementById('valorrr').style.display = "none";
+                                                        </script>
+                                                        {% endif %}
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-outline-success">Guardar Edición
+                                </button>
+                                <a class="btn btn-outline-warning" href="/perfil">Cancelar</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#data1").on('click', function () {
+            $("#DatosLegalesyTestigo").hide();
+            $("#show1").show();
+            return false;
+        });
+
+        $("#show1").on('click', function () {
+            $("#DatosLegalesyTestigo").show();
+            $("#show1").hide();
+            return false;
+        });
+
+        $("#data2").on('click', function () {
+            $("#DatosSitioWeb").hide();
+            $("#show2").show();
+            return false;
+        });
+
+        $("#show2").on('click', function () {
+            $("#DatosSitioWeb").show();
+            $("#show2").hide();
+            return false;
+        });
+
+        $("#data3").on('click', function () {
+            $("#DatosAgresor").hide();
+            $("#show3").show();
+            return false;
+        });
+
+        $("#show3").on('click', function () {
+            $("#DatosAgresor").show();
+            $("#show3").hide();
+            return false;
+        });
+
+        $("#data4").on('click', function () {
+            $("#DatosVictima").hide();
+            $("#show4").show();
+            return false;
+        });
+
+        $("#show4").on('click', function () {
+            $("#DatosVictima").show();
+            $("#show4").hide();
+            return false;
+        });
+    });
+</script>
+
+{% endblock %}
+

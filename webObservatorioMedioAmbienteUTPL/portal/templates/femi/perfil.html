@@ -1,0 +1,393 @@
+{% extends 'master.html' %}
+{% if user.is_authenticated %}
+{% block tittle %} Perfil de {{ user.username }} {% endblock %}
+{% endif %}
+{% block head %}
+{% load staticfiles %}
+{% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="{% static 'bootstrap-datepicker/js/bootstrap-datepicker.min.js'%}"></script>
+<link rel="stylesheet" href="{% static 'bootstrap-datepicker/css/bootstrap-datepicker3.css'%}">
+
+
+<style>
+    .container {
+        height: 67vh;
+    }
+</style>
+{% endblock %}
+{% block content1 %}
+<div style="position: static">
+    <center>
+
+        <h1>Datos de Feminicidios 2016 - 2018</h1>
+        <div class="alert alert-secondary" role="alert">
+            <i>Se parte del grupo y ayudamos a registrar más datos de feminicidios de su país</i>
+        </div>
+        <hr>
+    </center>
+    <center>
+
+        <div class="w3-content w3-margin-top" style="max-width:1400px;">
+            <div class="w3-row-padding">
+                <div class="w3-third">
+                    <div class="w3-white w3-text-grey w3-card-4">
+                        <div class="w3-display-container">
+                            <img src="{% static 'images/user-2.jpg'%}" style="width:100%" alt="User_{{ user.username }}">
+                            <div class="w3-display-bottomleft w3-container w3-text-black">
+                                {% if user.is_authenticated %}
+                                <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <br>
+                        <div class="w3-container">
+                            <p><i class="fa fa-user fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ user.username }}
+                            </p>
+                            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ user.email }}</p>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="w3-twothird">
+                    <div class="w3-container w3-card w3-white">
+                        <h2 class="w3-text-grey w3-padding-16"><i
+                                class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Datos
+                            agregados
+                        </h2>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity"><b>Parametros</b></h5>
+                            <button class="btn btn-success "><a href="/register" style='text-decoration:none;color:white;'>Resgistrar
+                                nuevo Caso</a>
+                            </button>
+                            <button class="btn btn-primary" id="show1">Ver más +</button>
+                            <button class="btn btn-warning" id="show2">Editar</button>
+                            <button class="btn btn-danger" id="show3">Elimiar</button>
+
+                            <hr>
+
+                            <div class="w3-container">
+                                <h5 class="w3-opacity"><b>Su datos que agregado</b></h5><br>
+                                <center>
+                                    <div style="width: 80%;">
+                                        <table class="table" id="mydatable">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Año</th>
+                                                <th scope="col">Fecha del Caso</th>
+                                                <th scope="col">País</th>
+                                                <th scope="col">Nombre Victima</th>
+                                                <th scope="col">
+                                                    <div id="data1">Más información</div>
+                                                    <div id="data2" style="display: none;">Editar Caso</div>
+                                                    <div id="data3" style="display: none;">Eliminar Caso</div>
+                                                </th>
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for img in list_data %}
+                                            {% if user.is_authenticated %}
+
+                                            {% if user.username == img.extraidosPor %}
+                                            <tr>
+                                                <th> {{ img.idFeminicidios }}</th>
+                                                <td>{{ img.año }}</td>
+                                                <td>{{ img.fechaCaso }}</td>
+                                                <td>{{ img.pais }}</td>
+                                                <td>{{ img.nombresV }} {{ img.apellidosV }}</td>
+                                                <td>
+                                                    <!-- Button trigger modal -->
+                                                    <button id="data1-{{ img.idFeminicidios }}" type="button" class="btn btn-primary" data-toggle="modal"
+                                                            data-target="#bd-example-modal-lg{{ img.idFeminicidios }}">
+                                                        Ver más <strong><i class="icon ion-md-add"></i></strong>
+                                                    </button>
+                                                    <button id="data2-{{ img.idFeminicidios}}" style="display: none;" class="btn btn-warning" ><a href="/editarCaso/{{ img.idFeminicidios }} ">Editar</a></button>
+                                                    <button id="data3-{{ img.idFeminicidios}}" style="display: none;" class="btn btn-danger" ><a href="/EliminarCaso/{{ img.idFeminicidios }} ">Eliminar</a></button>
+
+
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade"
+                                                         id="bd-example-modal-lg{{ img.idFeminicidios }}"
+                                                         tabindex="-1" role="dialog"
+                                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h6 class="modal-title" id="exampleModalLongTitle">#
+                                                                        de
+                                                                        dataset
+                                                                        {{img.idFeminicidios}}</h6>
+                                                                    <button type="button" class="close"
+                                                                            data-dismiss="modal"
+                                                                            aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <h1>Caso de femicidio de {{ img.pais }}</h1>
+                                                                    <hr>
+                                                                    <div style="display:flex;" id="1-datos"
+                                                                         class="alert alert-info" role="alert">
+                                                                        <div>
+                                                                            <strong>Año: </strong> {{ img.año }} &nbsp;&nbsp;&nbsp;
+                                                                        </div>
+                                                                        <div>
+                                                                            <strong>Fecha estimada: </strong>{{ img.fechaCaso }} &nbsp;&nbsp;&nbsp;
+                                                                        </div>
+                                                                        <div>
+                                                                            <strong>Hora de muerte: </strong>
+                                                                            {% if ciudad == img.horaDeMuerte %}
+                                                                            - &nbsp;&nbsp;
+                                                                            {% else %}
+                                                                            {{ img.horaDeMuerte }} &nbsp;&nbsp;
+                                                                            {% endif %}
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="alert alert-secondary" id="2-datos"
+                                                                         role="alert" style="display:flex;">
+                                                                        <div>
+                                                                            <strong>País del hecho: </strong>{{ img.pais  }}&nbsp;&nbsp;
+                                                                        </div>
+                                                                        <div>
+                                                                            <strong>Ciudad: </strong>
+                                                                            {% if ciudad == img.ciudadUbi %}
+                                                                            - &nbsp;&nbsp;
+                                                                            {% else %}
+                                                                            {{ img.ciudadUbi }} &nbsp;&nbsp;
+                                                                            {% endif %}
+                                                                        </div>
+                                                                        <div>
+                                                                            <strong>Provincia: </strong>
+                                                                            {% if provincia == img.provinciaUbi %}
+                                                                            - &nbsp;&nbsp;
+                                                                            {% else %}
+                                                                            {{ img.provinciaUbi }} &nbsp;&nbsp;
+                                                                            {% endif %}
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr>
+                                                                    <div style="display:flex;" id="3-datos"
+                                                                         class="alert alert-light" role="alert">
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        <div style="border: 2px solid #4e555b; border-radius: 4px; padding: 10px;">
+                                                                            <h4><i>Datos de la Victima</i></h4>
+                                                                            <strong>Nombres y Apellidos de la
+                                                                                Victima:</strong><br>
+                                                                            {% if nombre == img.nombresV or apellido == img.apellidosV %}
+                                                                            -- - -- &nbsp;&nbsp;
+                                                                            {% else %}
+                                                                            {{ img.nombresV }} - {{ img.apellidosV }}
+                                                                            &nbsp;&nbsp;
+                                                                            {% endif %}
+                                                                            <br>
+
+                                                                            <strong>Edad aproximada: </strong>
+                                                                            {% if edad == img.edadV %}
+                                                                            -- &nbsp;&nbsp;
+                                                                            {% else %}
+                                                                            {{ img.edadV }} años &nbsp;&nbsp;
+                                                                            {% endif %} <br>
+                                                                            <strong>Nacionalidad: </strong>
+                                                                            {% if nacionalidad == img.nacionalidadV %}
+                                                                            -- &nbsp;&nbsp;
+                                                                            {% else %}
+                                                                            {{ img.nacionalidadV }} &nbsp;&nbsp;
+                                                                            {% endif %} <br>
+                                                                            <strong>Profesión o ocupación: </strong>{{ img.profesionVocupacionV }}
+                                                                        </div> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                                                        &nbsp;&nbsp;
+
+                                                                        <div style="border: 2px solid #4e555b; border-radius: 4px; padding: 10px;">
+                                                                            <h4><i>Datos del Agresor</i></h4>
+                                                                            <strong>Nombres y Apellidos de la
+                                                                                Victima:</strong><br>
+                                                                            {% if nombre == img.nombreA %}
+                                                                            -- - -- &nbsp;&nbsp;
+                                                                            {% else %}
+                                                                            {{ img.nombreA }} - -- &nbsp;&nbsp;
+                                                                            {% endif %}
+                                                                            <br>
+                                                                            <strong>Edad aproximada: </strong>
+                                                                            {% if edad == img.edadA %}
+                                                                            -- &nbsp;&nbsp;
+                                                                            {% else %}
+                                                                            {{ img.edadA }} años &nbsp;&nbsp; <br>
+                                                                            {% endif %}
+
+                                                                            <strong>Nacionalidad: </strong>
+                                                                            {% if nacionalidad == img.nacionalidadA %}
+                                                                            -- &nbsp;&nbsp;
+                                                                            {% else %}
+                                                                            {{ img.nacionalidadA }} &nbsp;&nbsp;
+                                                                            {% endif %} <br>
+                                                                            <strong>Profesión o ocupación: </strong>{{ img.profesionAocupacionA }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr>
+                                                                    <div id="4-datos-urls-texto">
+                                                                        <div class="alert alert-warning" role="alert">
+                                                                            Información de los medios de comunicación en
+                                                                            relación al caso.
+                                                                        </div>
+                                                                        <div style="margin-left: 12%">
+                                                                            <p>
+                                                                                <button class="btn btn-primary"
+                                                                                        type="button"
+                                                                                        data-toggle="collapse"
+                                                                                        data-target="#Referencias-1"
+                                                                                        aria-expanded="false"
+                                                                                        aria-controls="Referencias-1">
+                                                                                    Referencias #1
+                                                                                </button>
+                                                                                <button class="btn btn-primary"
+                                                                                        type="button"
+                                                                                        data-toggle="collapse"
+                                                                                        data-target="#Referencias-2"
+                                                                                        aria-expanded="false"
+                                                                                        aria-controls="Referencias-2">
+                                                                                    Referencias #2
+                                                                                </button>
+                                                                                <button class="btn btn-primary"
+                                                                                        type="button"
+                                                                                        data-toggle="collapse"
+                                                                                        data-target="#Referencias-3"
+                                                                                        aria-expanded="false"
+                                                                                        aria-controls="Referencias-3">
+                                                                                    Referencias #3
+                                                                                </button>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div ID="LINK-1">
+                                                                            <div class="collapse" id="Referencias-1">
+                                                                                <div class="card card-body">
+                                                                                    <strong>Link del sitio web de la
+                                                                                        referencias 1:</strong>
+                                                                                    {{ img.link1 }} <br>
+                                                                                    <strong>Texto :</strong>
+                                                                                    <div style="text-align: justify-all">
+                                                                                        <i>{{ img.texto1 }}</i></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div ID="LINK-2">
+                                                                            <div class="collapse" id="Referencias-2">
+                                                                                <div class="card card-body">
+                                                                                    <strong>Link del sitio web de la
+                                                                                        referencias 2:</strong>
+                                                                                    {{ img.link2 }} <br>
+                                                                                    <strong>Texto :</strong>
+                                                                                    <div style="text-align: justify-all">
+                                                                                        <i>{{  img.texto2 }}</i></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div ID="LINK-3">
+                                                                            <div class="collapse" id="Referencias-3">
+                                                                                <div class="card card-body">
+                                                                                    <strong>Link del sitio web de la
+                                                                                        referencias 3:</strong>
+                                                                                    {{ img.link3 }} <br>
+                                                                                    <strong>Texto :</strong>
+                                                                                    <div style="text-align: justify-all">
+                                                                                        <i>{{ img.texto3 }}</i></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr>
+                                                                    <div class="collapse" id="collapseExample">
+                                                                        <div class="card card-body">
+                                                                            <textarea name="comentarios" rows="10"
+                                                                                      cols="40"
+                                                                                      placeholder="Escribe aquí tus comentarios"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button class="btn btn-success" type="button"
+                                                                            data-toggle="collapse"
+                                                                            data-target="#collapseExample"
+                                                                            aria-expanded="false"
+                                                                            aria-controls="collapseExample">
+                                                                        Comentar
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <button id="data2ww" class="EliminarCaso{{ img.idFeminicidios }}" style="display: none;">Eliminar</button>
+
+                                                </td>
+                                            </tr>
+                                            <script type="text/javascript">
+                                                $(document).ready(function () {
+
+                                                    $("#show1").click('click', function () {
+                                                        document.getElementById("data1-{{ img.idFeminicidios}}").style.display = "block";
+                                                        document.getElementById("data2-{{ img.idFeminicidios}}").style.display = "none";
+                                                        document.getElementById("data3-{{ img.idFeminicidios}}").style.display = "none";
+                                                        document.getElementById("data1").style.display = "block";
+                                                        document.getElementById("data2").style.display = "none";
+                                                        document.getElementById("data3").style.display = "none";
+                                                    });
+
+                                                    $("#show2").click('click', function () {
+                                                        document.getElementById("data1-{{ img.idFeminicidios}}").style.display = "none";
+                                                        document.getElementById("data2-{{ img.idFeminicidios}}").style.display = "block";
+                                                        document.getElementById("data3-{{ img.idFeminicidios}}").style.display = "none";
+                                                        document.getElementById("data1").style.display = "none";
+                                                        document.getElementById("data2").style.display = "block";
+                                                        document.getElementById("data3").style.display = "none";
+                                                    });
+
+                                                    $("#show3").click('click', function () {
+                                                        document.getElementById("data1-{{ img.idFeminicidios}}").style.display = "none";
+                                                        document.getElementById("data2-{{ img.idFeminicidios}}").style.display = "none";
+                                                        document.getElementById("data3-{{ img.idFeminicidios}}").style.display = "block";
+                                                        document.getElementById("data1").style.display = "none";
+                                                        document.getElementById("data2").style.display = "none";
+                                                        document.getElementById("data3").style.display = "block";
+                                                    });
+                                                });
+                                            </script>
+                                            {% endif %}
+                                            {% endif %}
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </center>
+                                <hr>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </center>
+</div>
+
+
+
+{% endblock %}

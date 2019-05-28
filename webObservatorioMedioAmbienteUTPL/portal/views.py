@@ -1,14 +1,18 @@
 from django.shortcuts import render, redirect, render_to_response
-from .forms import LoginFrom, SignUp
+from .forms import LoginFrom, SignUp, ContenidoFrom
 from jsonschema.exceptions import ValidationError
 from django.contrib.auth import login, authenticate, logout
+from .models import GestorContenidos
 
 def home(request):
     return render(request, "home.html")
 
 
 def conocenos(request):
-    return render(request, "observatorio/conocenos.html")
+    contenido = GestorContenidos.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/conocenos.html", dic)
 
 
 def login_user(request):
@@ -20,7 +24,7 @@ def login_user(request):
             if user is not None:
                 login(request, user)
                 # Redirect to a success page.
-                return redirect('/home')
+                return redirect('/')
             else:
                 form = LoginFrom()
                 args = {'form': form}
@@ -50,4 +54,14 @@ def signup(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('/home')
+    return redirect('/')
+
+def GestorContenido(request):
+    if request.method == 'POST':
+        form = ContenidoFrom(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect("/")
+    else:
+        form = ContenidoFrom()
+    return render(request, 'observatorio/GestorContenido.html', {'form': form})
