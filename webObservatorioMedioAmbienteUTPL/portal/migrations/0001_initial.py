@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
                 ('SubiTituloContenido', models.CharField(blank=True, max_length=8000)),
                 ('TipoContenido', models.CharField(blank=True, max_length=1000)),
                 ('texto', models.TextField(blank=True)),
-                ('img', models.ImageField(blank=True, upload_to='photos')),
+                ('img', models.ImageField(blank=True, upload_to='portal/imgs')),
             ],
             options={
                 'db_table': 'GestorContenidos',

@@ -14,16 +14,24 @@
         <div class="text-justify " style="width: 80%">
 
             {% for cont in list_contenido %}
+            {% if cont.TipoContenido == 'conocenos' %}
             <hr>
             <br>
-                <h2>{{ cont.TituloContenido }}</h2><br>
-                {% if cont.SubiTituloContenido == subtitulo %}
+            <h2>{{ cont.TituloContenido }}</h2><br>
+            {% if cont.SubiTituloContenido == subtitulo %}
 
-                {% else %}
-                <h5>{{ cont.SubiTituloContenido }}</h5>
-                {% endif %}
-                <p>{{ cont.texto }}</p>
+            {% else %}
+            <h5>{{ cont.SubiTituloContenido }}</h5>
+            {% endif %}
+            <p>{{ cont.texto }}</p>
+            {% if user.is_superuser %}
+            <div class="col-sm-12">
+               <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"  href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"  style="text-decoration: none;">Editar contenidor</a>
+                <a class="btn btn-outline-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar contenido</a>
+            </div>
+            {% endif %}
             <br>
+            {% endif %}
             {% endfor %}
 
 

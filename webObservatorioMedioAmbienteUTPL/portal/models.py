@@ -16,8 +16,9 @@ class GestorContenidos(models.Model):
     TituloContenido = models.CharField(max_length=4000, blank=True)
     SubiTituloContenido = models.CharField(max_length=4000, blank=True)
     TipoContenido = models.CharField(max_length=4000, blank=True, choices=Type_CHOICES)
+    urlHTML = models.TextField(blank=False)
     texto = models.TextField(blank=True)
-    img = models.ImageField(blank=False)
+    img = models.ImageField(upload_to='portal/imgs')
     Posiciones = models.DecimalField(max_digits=3000, blank=False, decimal_places=1)
     class Meta:
         db_table = 'GestorContenidos'

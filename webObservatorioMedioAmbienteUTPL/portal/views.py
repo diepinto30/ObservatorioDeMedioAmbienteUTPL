@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect, render_to_response
 from .forms import LoginFrom, SignUp, ContenidoFrom
-from jsonschema.exceptions import ValidationError
 from django.contrib.auth import login, authenticate, logout
 from .models import GestorContenidos
 
+
 def home(request):
-    return render(request, "home.html")
+    contenido = GestorContenidos.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    return render(request, "home.html", dic)
 
 
 def conocenos(request):
@@ -56,6 +59,7 @@ def logout_view(request):
     logout(request)
     return redirect('/')
 
+
 def GestorContenido(request):
     if request.method == 'POST':
         form = ContenidoFrom(request.POST)
@@ -65,3 +69,23 @@ def GestorContenido(request):
     else:
         form = ContenidoFrom()
     return render(request, 'observatorio/GestorContenido.html', {'form': form})
+
+
+def Contenido_edit(request, id):
+    Contenido = GestorContenidos.objects.get(idGestorContenidos=id)
+    if request.method == 'GET':
+        form = ContenidoFrom(instance=Contenido)
+    else:
+        form = ContenidoFrom(request.POST, instance=Contenido)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+    return render(request, 'observatorio/EditorDeContenido.html', {'form': form})
+
+
+def EliminarContenido(request, id):
+    Contenido = GestorContenidos.objects.get(idGestorContenidos=id)
+    if request.method == 'POST':
+        Contenido.delete()
+        return redirect('/')
+    return render(request, 'observatorio/EliminarContenido.html', {'Contenido': Contenido})

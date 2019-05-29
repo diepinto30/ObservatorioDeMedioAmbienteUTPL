@@ -1,5 +1,5 @@
 {% extends 'master.html' %}
-{% block tittle %} Gestor de Contenido {% endblock %}
+{% block tittle %} Editor de Contenido {% endblock %}
 {% block head %}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -8,7 +8,7 @@
 {% block content1 %}
 <br><br><br>
 <center>
-    <h3 class="text-center h1 mt-5">Gestor de Contenido del Sitio</h3>
+    <h3 class="text-center h1 mt-5">Editar contenido del sitio</h3>
     <hr class="bg-warning mb-6">
     {% if user.is_superuser %}
     <div class="row">
@@ -47,7 +47,11 @@
                             {{ form.img }}
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-warning btn-block">Guardar contendio nuevo</button>
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-outline-success">Guardar Edición
+                            </button>
+                            <a class="btn btn-outline-warning" href="{% url 'home' %}">Cancelar</a>
+                        </div>
                         <br>
                     </form>
 
