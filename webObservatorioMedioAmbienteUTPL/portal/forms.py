@@ -49,9 +49,24 @@ class ContenidoFrom(forms.ModelForm):
         ('site2', 'site2'),
         ('site3', 'site3'),
     )
+
+    TypeSeccion_CHOICES = (
+        ('Seleccione ...', 'Seleccione ...'),
+        ('Seccion_1', 'Seccion 1'),
+        ('Seccion_2', 'Seccion 2'),
+        ('Seccion_3', 'Seccion 3'),
+        ('Seccion_4', 'Seccion 4'),
+    )
+
+
+    TituloContenido = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
+    SubiTituloContenido = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=False)
     TipoContenido = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=Type_CHOICES)
+    TipoSeccion = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=TypeSeccion_CHOICES)
+    urlHTML = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
     texto = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control'}), required=True)
+    img = forms.ImageField(required=False)
 
     class Meta:
         model = GestorContenidos
-        fields = ('TituloContenido', 'SubiTituloContenido', 'TipoContenido', 'urlHTML', 'texto', 'img')
+        fields = ('TituloContenido', 'SubiTituloContenido', 'TipoContenido', 'TipoSeccion', 'urlHTML', 'texto', 'img')

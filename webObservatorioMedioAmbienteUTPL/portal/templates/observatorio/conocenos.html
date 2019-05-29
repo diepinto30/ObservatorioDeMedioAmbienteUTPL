@@ -15,6 +15,7 @@
 
             {% for cont in list_contenido %}
             {% if cont.TipoContenido == 'conocenos' %}
+            {% if cont.TipoSeccion == 'Seccion_1' %}
             <hr>
             <br>
             <h2>{{ cont.TituloContenido }}</h2><br>
@@ -32,11 +33,11 @@
             {% endif %}
             <br>
             {% endif %}
+            {% endif %}
             {% endfor %}
-
-
         </div>
     </div>
+
 </center>
 <br><br>
 {% endblock %}

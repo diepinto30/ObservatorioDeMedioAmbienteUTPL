@@ -10,12 +10,20 @@ Type_CHOICES = (
     ('site3', 'site3'),
 )
 
+TypeSeccion_CHOICES = (
+    ('Seccion_1', 'Seccion 1'),
+    ('Seccion_2', 'Seccion 2'),
+    ('Seccion_3', 'Seccion 3'),
+    ('Seccion_4', 'Seccion 4'),
+)
+
 
 class GestorContenidos(models.Model):
     idGestorContenidos = models.AutoField(primary_key=True)
     TituloContenido = models.CharField(max_length=4000, blank=True)
     SubiTituloContenido = models.CharField(max_length=4000, blank=True)
     TipoContenido = models.CharField(max_length=4000, blank=True, choices=Type_CHOICES)
+    TipoSeccion = models.CharField(max_length=4000, blank=True, choices=TypeSeccion_CHOICES)
     urlHTML = models.TextField(blank=False)
     texto = models.TextField(blank=True)
     img = models.ImageField(upload_to='portal/imgs')
