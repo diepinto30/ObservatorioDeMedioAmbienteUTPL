@@ -47,9 +47,16 @@ class ContenidoFrom(forms.ModelForm):
         ('Seleccione ...', 'Seleccione ...'),
         ('home', 'Home'),
         ('conocenos', 'Conocenos'),
-        ('site1', 'site1'),
-        ('site2', 'site2'),
-        ('site3', 'site3'),
+        ('site_Agua', 'Página - Agua'),
+        ('site_MedioAmbiente', 'Página - Medio Ambiente'),
+        ('site_CalidadDeVida', 'Página - Calidad de Vida'),
+        ('site_Equidad', 'Página - Equidad'),
+        ('site_Mercados', 'Página - Mercados'),
+        ('site_ParticipacionDemocracia', 'Página - Participación y democracia'),
+        ('site_Etnozoologia', 'Página - Etnozoología'),
+        ('site_12', 'Página -'),
+        ('site_', 'Página -'),
+        ('site_', 'Página -'),
     )
 
     TypeSeccion_CHOICES = (
@@ -62,7 +69,7 @@ class ContenidoFrom(forms.ModelForm):
 
 
     TituloContenido = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    SubiTituloContenido = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=False)
+    SubiTituloContenido = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
     TipoContenido = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=Type_CHOICES)
     TipoSeccion = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=TypeSeccion_CHOICES)
     urlHTML = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
