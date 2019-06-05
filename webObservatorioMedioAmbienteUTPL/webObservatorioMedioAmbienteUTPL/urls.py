@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^$', views.home, name="home"),
     url('admin/', admin.site.urls),
     path('portal/', include('portal.urls')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 if settings.DEBUG:
     urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

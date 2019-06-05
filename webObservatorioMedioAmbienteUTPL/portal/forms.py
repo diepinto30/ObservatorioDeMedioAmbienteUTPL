@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 from .models import GestorContenidos
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.safestring import mark_safe
+from django.db import models
+from ckeditor.fields import RichTextField
 
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=False)
@@ -64,7 +66,8 @@ class ContenidoFrom(forms.ModelForm):
     TipoContenido = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=Type_CHOICES)
     TipoSeccion = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=TypeSeccion_CHOICES)
     urlHTML = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    texto = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control'}), required=True)
+    # texto = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control'}), required=True)
+    texto = RichTextField(blank=True)
     img = forms.ImageField(required=False)
 
     class Meta:

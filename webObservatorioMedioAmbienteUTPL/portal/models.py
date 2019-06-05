@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 Type_CHOICES = (
     ('home', 'Home'),
@@ -25,7 +26,8 @@ class GestorContenidos(models.Model):
     TipoContenido = models.CharField(max_length=4000, blank=True, choices=Type_CHOICES)
     TipoSeccion = models.CharField(max_length=4000, blank=True, choices=TypeSeccion_CHOICES)
     urlHTML = models.TextField(blank=False)
-    texto = models.TextField(blank=True)
+    # texto = models.TextField(blank=True)
+    texto = RichTextField(blank=True)
     img = models.ImageField(upload_to='portal/imgs')
     Posiciones = models.DecimalField(max_digits=3000, blank=False, decimal_places=1)
     class Meta:

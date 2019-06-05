@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^Componentes/Equidad/$', views.Equidad_view, name='Equidad_view'),
     url(r'^Componentes/Mercados/$', views.Mercados_view, name='Mercados_view'),
     url(r'^Componentes/Participacion_Y_Democracia/$', views.ParticipacionDemocracia_view, name='ParticipacionDemocracia_view'),
-url(r'^Componentes/Etnozoologia/$', views.Etnozoologia_view, name='Etnozoologia_view'),
+    url(r'^Componentes/Etnozoologia/$', views.Etnozoologia_view, name='Etnozoologia_view'),
+
 ]
