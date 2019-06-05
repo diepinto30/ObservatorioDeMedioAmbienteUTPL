@@ -1,0 +1,45 @@
+{% extends 'master.html' %}
+{% block tittle %} Participación y democracia {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+{% endblock %}
+{% block content1 %}
+<br><br><br><br><br>
+<center>
+    <div>
+        <h1>Participación y democracia</h1><br>
+
+        <div class="text-justify " style="width: 80%">
+
+            {% for cont in list_contenido %}
+            {% if cont.TipoContenido == 'conocenos' %}
+            {% if cont.TipoSeccion == 'Seccion_1' %}
+            <hr>
+            <br>
+            <h2>{{ cont.TituloContenido }}</h2><br>
+            {% if cont.SubiTituloContenido == subtitulo %}
+
+            {% else %}
+            <h5>{{ cont.SubiTituloContenido }}</h5>
+            {% endif %}
+            <p>{{ cont.texto }}</p>
+            {% if user.is_superuser %}
+            <div class="col-sm-12">
+               <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"  href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"  style="text-decoration: none;">Editar contenidor</a>
+                <a class="btn btn-outline-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar contenido</a>
+            </div>
+            {% endif %}
+            <br>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+</center>
+<br><br>
+{% endblock %}
+
+

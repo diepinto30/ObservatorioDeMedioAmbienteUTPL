@@ -81,21 +81,49 @@ a:focus {
                         Componentes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="{% url 'Agua_view' %}">Agua</a>
+                        <a class="dropdown-item" href="{% url 'MedioAmbiente_view' %}">Medio Ambiente</a>
+                        <a class="dropdown-item" href="{% url 'CalidadDeVida_view' %}">Calidad de vida</a>
+                        <a class="dropdown-item" href="{% url 'Equidad_view' %}">Equidad</a>
+                        <a class="dropdown-item" href="{% url 'Mercados_view' %}">Mercados</a>
+                        <a class="dropdown-item" href="{% url 'ParticipacionDemocracia_view' %}">Participación y democracia</a>
+                        <a class="dropdown-item" href="{% url 'Etnozoologia_view' %}">Etnozoología</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="{% url 'conocenos' %}">Conócenos</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Publicaciones
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Revistas indexadas</a>
+                        <a class="dropdown-item" href="#">Artículos de Divulgación</a>
+                        <a class="dropdown-item" href="#">Calidad de vida</a>
+                        <a class="dropdown-item" href="#">Ponencias</a>
+                        <a class="dropdown-item" href="#">Tesis</a>
+
+                    </div>
+                </li>
                 {% if user.is_authenticated %}
 
                 {% if user.is_superuser %}
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="{% url 'GestorContenido' %}">Gestor de Contenido</a>
-                    </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Gestor de Contenido
+                    </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item"  href="{% url 'GestorContenido' %}">Gestor de Contenido de sitios</a>
+                    <a class="dropdown-item"  href="{% url 'GestorContenido' %}">Gestor de Publicaciones</a>
+                    <a class="dropdown-item"  href="{% url 'GestorContenido' %}">Gestor de Participantes</a>
+                    </div>
+                </li>
+
                 {% endif %}
                 <li class="nav-item">
                 </li>

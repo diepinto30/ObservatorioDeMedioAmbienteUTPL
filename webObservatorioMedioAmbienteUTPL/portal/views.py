@@ -68,7 +68,7 @@ def GestorContenido(request):
         return redirect("/")
     else:
         form = ContenidoFrom()
-    return render(request, 'observatorio/GestorContenido.html', {'form': form})
+    return render(request, 'observatorio/GestorContenido/GestorContenido.html', {'form': form})
 
 
 def Contenido_edit(request, id):
@@ -80,7 +80,7 @@ def Contenido_edit(request, id):
         if form.is_valid():
             form.save()
         return redirect('/')
-    return render(request, 'observatorio/EditorDeContenido.html', {'form': form})
+    return render(request, 'observatorio/GestorContenido/EditorDeContenido.html', {'form': form})
 
 
 def EliminarContenido(request, id):
@@ -88,4 +88,54 @@ def EliminarContenido(request, id):
     if request.method == 'POST':
         Contenido.delete()
         return redirect('/')
-    return render(request, 'observatorio/EliminarContenido.html', {'Contenido': Contenido})
+    return render(request, 'observatorio/GestorContenido/EliminarContenido.html', {'Contenido': Contenido})
+
+
+def Agua_view(request):
+    contenido = GestorContenidos.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Componentes/agua.html", dic)
+
+
+def MedioAmbiente_view(request):
+    contenido = GestorContenidos.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Componentes/MedioAmbiente.html", dic)
+
+
+def CalidadDeVida_view(request):
+    contenido = GestorContenidos.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Componentes/CalidadDeVida.html", dic)
+
+
+def Equidad_view(request):
+    contenido = GestorContenidos.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Componentes/Equidad.html", dic)
+
+
+def Mercados_view(request):
+    contenido = GestorContenidos.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Componentes/Mercados.html", dic)
+
+
+def ParticipacionDemocracia_view(request):
+    contenido = GestorContenidos.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Componentes/ParticipacionDemocracia.html", dic)
+
+
+def Etnozoologia_view(request):
+    contenido = GestorContenidos.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Componentes/Etnozoologia.html", dic)
+
