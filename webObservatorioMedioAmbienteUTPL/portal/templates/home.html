@@ -101,7 +101,7 @@
             </div>
         </div>
         <center>
-        <div class="m-5">
+        <div>
             <hr>
             <div class="text-justify " style="width: 80%;padding:1%;">
 
@@ -116,7 +116,7 @@
                 {% else %}
                 <h5><i>{{ cont.SubiTituloContenido }}</i></h5>
                 {% endif %}
-                <p>{{ cont.texto }}</p>
+                <p>{{ cont.texto|safe  }}</p>
                 <p><a href="{{ cont.urlHTML }}"  class="btn btn-outline-primary">Ver más +</a></p>
                 {% if user.is_superuser %}
 

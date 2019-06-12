@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, render_to_response
-from .forms import LoginFrom, SignUp, ContenidoFrom
+from .forms import LoginFrom, SignUp, ContenidoFrom, PublicacionesFrom
 from django.contrib.auth import login, authenticate, logout
 from .models import GestorContenidos
+from .models import GestorPublicaciones
 
 
 def home(request):
@@ -91,6 +92,39 @@ def EliminarContenido(request, id):
     return render(request, 'observatorio/GestorContenido/EliminarContenido.html', {'Contenido': Contenido})
 
 
+# gestor de publicaciones del sitio
+def GestorPublicacion(request):
+    if request.method == 'POST':
+        form = PublicacionesFrom(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect("/")
+    else:
+        form = PublicacionesFrom()
+    return render(request, 'observatorio/GestorContenido/GestorPublicaciones.html', {'form': form})
+
+
+def Publicaciones_edit(request, id):
+    Contenido = GestorPublicaciones.objects.get(idGestorPublicaciones=id)
+    if request.method == 'GET':
+        form = PublicacionesFrom(instance=Contenido)
+    else:
+        form = PublicacionesFrom(request.POST, instance=Contenido)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+    return render(request, 'observatorio/GestorContenido/EditorDePublicaciones.html', {'form': form})
+
+
+def EliminarPublicaciones(request, id):
+    Contenido = GestorPublicaciones.objects.get(idGestorPublicaciones=id)
+    if request.method == 'POST':
+        Contenido.delete()
+        return redirect('/')
+    return render(request, 'observatorio/GestorContenido/EliminarPublicaciones.html', {'Contenido': Contenido})
+
+
+# sitios de los contenido
 def Agua_view(request):
     contenido = GestorContenidos.objects.all()
     subtitulo = ""
@@ -139,3 +173,10 @@ def Etnozoologia_view(request):
     dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
     return render(request, "observatorio/Componentes/Etnozoologia.html", dic)
 
+
+# sitios de las publicaciones
+def RevistasIn_view(request):
+    contenido = GestorPublicaciones.objects.all()
+    subtitulo = ""
+    dic = {'list_Publicaciones': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Publicaciones/RevistasIndexadas.html", dic)

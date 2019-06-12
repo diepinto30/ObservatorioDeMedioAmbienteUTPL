@@ -1,4 +1,5 @@
 {% extends 'master.html' %}
+{% load staticfiles %}
 {% load static %}
 {% block tittle %} Gestor de Contenido {% endblock %}
 {% block head %}
@@ -9,6 +10,13 @@
 {% endblock %}
 {% block content1 %}
 <br><br><br>
+
+<script src="{% static 'js/ckeditor.js' %}"></script>
+<script src="{% static 'js/sample.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/samples.css' %}">
+<link rel="stylesheet" href="{% static 'toolbarconfigurator/lib/codemirror/neo.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 <center>
     <h3 class="text-center h1 mt-5">Gestor de Contenido del Sitio</h3>
     <hr class="bg-warning mb-6">
@@ -17,7 +25,7 @@
         <div class="col-md-5 mx-auto"><br>
             <div class="card">
                 <div class="card-body   mx-auto col-md-10 ">
-                    <form method="post" class="text-left">
+                    <form method="post" class="text-left" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="form-group" style="text-align: center">
                             <label>Titulo del contenido: <b style="color:red;">*</b>
@@ -65,6 +73,11 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        initSample();
+    </script>
     <br><br> <br><br>
     {% else %}
     <div class="row">

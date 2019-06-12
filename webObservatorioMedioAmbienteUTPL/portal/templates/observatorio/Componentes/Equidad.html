@@ -1,5 +1,7 @@
 {% extends 'master.html' %}
 {% block tittle %} Equidad {% endblock %}
+{% load staticfiles %}
+{% load static %}
 {% block head %}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -14,7 +16,7 @@
         <div class="text-justify " style="width: 80%">
 
             {% for cont in list_contenido %}
-            {% if cont.TipoContenido == 'conocenos' %}
+            {% if cont.TipoContenido == 'equidad' %}
             {% if cont.TipoSeccion == 'Seccion_1' %}
             <hr>
             <br>

@@ -24,7 +24,7 @@
             {% else %}
             <h5>{{ cont.SubiTituloContenido }}</h5>
             {% endif %}
-            <p>{{ cont.texto }}</p>
+            <p>{{ cont.texto|safe  }}</p>
             {% if user.is_superuser %}
             <div class="col-sm-12">
                <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"  href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"  style="text-decoration: none;">Editar contenidor</a>

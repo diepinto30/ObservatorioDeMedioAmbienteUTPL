@@ -26,6 +26,18 @@ TypeSeccion_CHOICES = (
 )
 
 
+Type2_CHOICES = (
+    ('home', 'Home'),
+    ('conocenos', 'Conocenos'),
+    ('site_Revistas_indexadas', 'Página - Revistas indexadas'),
+    ('site_Articulos_Divulgacion', 'Página - Artículos de Divulgación'),
+    ('site_CalidadDeVida', 'Página - Calidad de Vida'),
+    ('site_Ponencias', 'Página - Ponencias'),
+    ('site_Tesis', 'Página - Tesis'),
+)
+
+
+
 class GestorContenidos(models.Model):
     idGestorContenidos = models.AutoField(primary_key=True)
     TituloContenido = models.CharField(max_length=4000, blank=True)
@@ -35,7 +47,28 @@ class GestorContenidos(models.Model):
     urlHTML = models.TextField(blank=True)
     # texto = models.TextField(blank=True)
     texto = RichTextField(blank=True)
-    img = models.ImageField(upload_to='portal/imgs', blank=True)
+    # img = models.ImageField(upload_to='portal/imgs', blank=True)
+    img = models.FileField(blank=True)
     Posiciones = models.DecimalField(max_digits=3000, blank=True, decimal_places=1)
+
+    def __unicode__(self):
+        return "%s - %s" % (self.idGestorContenidos, self.TituloContenido)
+
+
     class Meta:
         db_table = 'GestorContenidos'
+
+
+class GestorPublicaciones(models.Model):
+    idGestorPublicaciones = models.AutoField(primary_key=True)
+    TituloPublicaciones = models.CharField(max_length=4000, blank=True)
+    SubiTituloPublicaciones = models.CharField(max_length=4000, blank=True)
+    TipoContenido = models.CharField(max_length=4000, blank=True, choices=Type2_CHOICES)
+    TipoSeccion = models.CharField(max_length=4000, blank=True, choices=TypeSeccion_CHOICES)
+    texto = RichTextField(blank=True)
+    Posiciones = models.DecimalField(max_digits=3000, blank=True, decimal_places=1)
+
+    class Meta:
+        db_table = 'GestorPublicaciones'
+
+

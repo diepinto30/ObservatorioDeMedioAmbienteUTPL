@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
+    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+
 
     <style>
         a:hover,
@@ -106,7 +108,7 @@
                         Publicaciones
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Revistas indexadas</a>
+                        <a class="dropdown-item" href="{% url 'RevistasIn_view' %}">Revistas indexadas</a>
                         <a class="dropdown-item" href="#">Artículos de Divulgación</a>
                         <a class="dropdown-item" href="#">Calidad de vida</a>
                         <a class="dropdown-item" href="#">Ponencias</a>
@@ -125,7 +127,7 @@
                     </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="{% url 'GestorContenido' %}">Gestor de Contenido de sitios</a>
-                    <a class="dropdown-item"  href="{% url 'GestorContenido' %}">Gestor de Publicaciones</a>
+                    <a class="dropdown-item"  href="{% url 'GestorPublicacion' %}">Gestor de Publicaciones</a>
                     <a class="dropdown-item"  href="{% url 'GestorContenido' %}">Gestor de Participantes</a>
                     </div>
                 </li>
@@ -144,12 +146,18 @@
                     </div>
                 </li>
                 {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Inicia sesión</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'signup' %}">Registrarse</a>
-                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              &nbsp;&nbsp;<i class="fa fa-unlock-alt"></i> &nbsp;| Cuenta
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'login' %}">Iniciar sesión</a>
+                            <hr>
+                            <a class="dropdown-item" href="{% url 'signup' %}">Registrarse</a>
+
+                        </div>
+                    </li>
                 {% endif %}
 
             </ul>
@@ -207,6 +215,7 @@
 
 <!-- Custom scripts for this template -->
 <script src="{% static 'portal/js/grayscale.min.js' %}"></script>
+
 
 <script>
     var slideIndex = 0;
