@@ -1,6 +1,6 @@
 certifi==2019.3.9
 chardet==3.0.4
-Django==2.1.6
+Django==2.1
 idna==2.8
 mysql-connector-python==8.0.16
 Pillow==6.0.0
