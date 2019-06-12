@@ -55,7 +55,7 @@
             } else {
                 document.getElementById("mainNav").style.backgroundColor = "";
                 document.getElementById("mainNav").style.borderBottom = "0px solid ";
-                document.getElementById("imgIAMU").style.width = "40%";
+                document.getElementById("imgIAMU").style.width = "35%";
             }
         }
 
@@ -70,7 +70,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}"><img
-                src="{% static '/portal/img/logo-y-nombre-468x140.png' %}" alt="" width="210" id="imgIAMU"></a>
+                src="{% static '/portal/img/logo-y-nombre-468x140.png' %}" alt="Logo IAMU" width="110" id="imgIAMU"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -109,10 +109,10 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'RevistasIn_view' %}">Revistas indexadas</a>
-                        <a class="dropdown-item" href="#">Artículos de Divulgación</a>
-                        <a class="dropdown-item" href="#">Calidad de vida</a>
-                        <a class="dropdown-item" href="#">Ponencias</a>
-                        <a class="dropdown-item" href="#">Tesis</a>
+                        <a class="dropdown-item" href="{% url 'Tesis_view' %}">Tesis</a>
+                        <a class="dropdown-item" href="{% url 'ArticulosDiv_view' %}">Artículos de Divulgación</a>
+                        <a class="dropdown-item" href="{% url 'ActasCon_view' %}">Ponencias</a>
+
 
                     </div>
                 </li>
@@ -128,7 +128,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="{% url 'GestorContenido' %}">Gestor de Contenido de sitios</a>
                     <a class="dropdown-item"  href="{% url 'GestorPublicacion' %}">Gestor de Publicaciones</a>
-                    <a class="dropdown-item"  href="{% url 'GestorContenido' %}">Gestor de Participantes</a>
+                    <a class="dropdown-item"  href="{% url 'GestorParticipantess' %}">Gestor de Participantes</a>
                     </div>
                 </li>
 

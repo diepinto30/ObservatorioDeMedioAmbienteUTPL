@@ -1,0 +1,106 @@
+{% extends 'master.html' %}
+{% load staticfiles %}
+{% load static %}
+{% block tittle %} Gestor de Participantes {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+{% endblock %}
+{% block content1 %}
+<br><br><br>
+
+<script src="{% static 'js/ckeditor.js' %}"></script>
+<script src="{% static 'js/sample.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/samples.css' %}">
+<link rel="stylesheet" href="{% static 'toolbarconfigurator/lib/codemirror/neo.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<center>
+    <h3 class="text-center h1 mt-5">Gestor de Participantes</h3>
+    <hr class="bg-warning mb-6">
+    {% if user.is_superuser %}
+    <div class="row">
+        <div class="col-md-5 mx-auto"><br>
+            <div class="card">
+                <div class="card-body   mx-auto col-md-10 ">
+                    <form method="post" class="text-left" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <center><h5><i>Datos del participante</i></h5></center>
+                        <hr>
+                         <div class="form-group" style="text-align: center">
+                            <label>Nombres: <b style="color:red;">*</b>
+                            </label>
+                            {{ form.Nombres }}
+                        </div>
+                        <div class="form-group" style="text-align: center">
+                            <label>Apellidos:
+                            </label>
+                            {{ form.Apellidos }}
+                        </div>
+                        <div class="form-group" style="text-align: center">
+                            <label>Tipo de participante: <b style="color:red;">*</b>
+                            </label>
+                            {{ form.TipoParticipante }}
+                        </div>
+                        <div class="form-group" style="text-align: center">
+                            <label>Tipo del cargo: <b style="color:red;">*</b>
+                            </label>
+                            {{ form.TipoCargo }}
+                        </div>
+                        <div class="form-group" style="text-align: center">
+                            <label>Tipo de sección en el sitio: <b style="color:red;">*</b>
+                            </label>
+                            {{ form.TipoSeccion }}
+                        </div>
+                        <div class="form-group" style="text-align: center">
+                            <label>Texto del contenido: <b style="color:red;">*</b>
+                            </label>
+                            {{ form.textoAmbitosAccion }}
+                        </div>
+                        <div class="form-group" style="text-align: center">
+                            <label>Imagen o foto del participante: <b style="color:red;">*</b>
+                            </label>
+                            {{ form.img }}
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-warning btn-block">Guardar contendio nuevo</button>
+                        <br>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        initSample();
+    </script>
+    <br><br> <br><br>
+    {% else %}
+    <div class="row">
+        <div class="col-md-6 mx-auto"><br><br><br>
+            <div class="card">
+                <div class="card-body   mx-auto col-md-10 ">
+                    <div class="w3-twothird">
+                        <div class="w3-container w3-card w3-white">
+                            <div class="w3-container">
+                                <p>Esta acción no puede ser realizar por usted</p>
+                                <a class="btn btn-warning" href="{% url 'home' %}">Regresar</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+
+</center>
+<br><br>
+{% endblock %}

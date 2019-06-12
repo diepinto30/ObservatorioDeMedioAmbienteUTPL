@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 
+
 Type_CHOICES = (
     ('home', 'Home'),
     ('conocenos', 'Conocenos'),
@@ -36,6 +37,19 @@ Type2_CHOICES = (
     ('site_Tesis', 'Página - Tesis'),
 )
 
+
+TypeParticipante_CHOICES = (
+    ('DocenteInvestigador', 'Docente Investigador'),
+    ('Estudiantes', 'Estudiantes'),
+
+)
+
+TypeCargo_CHOICES = (
+    ('Coordinacion', 'Coordinación'),
+    ('DocenteInvestigador', 'Docente Investigador Participante'),
+    ('Estudiantes', 'Estudiantes'),
+
+)
 
 
 class GestorContenidos(models.Model):
@@ -71,4 +85,18 @@ class GestorPublicaciones(models.Model):
     class Meta:
         db_table = 'GestorPublicaciones'
 
+
+class GestorParticipantes(models.Model):
+    idGestorParticipantes = models.AutoField(primary_key=True)
+    Nombres = models.CharField(max_length=4000, blank=False)
+    Apellidos = models.CharField(max_length=4000, blank=False)
+    TipoParticipante = models.CharField(max_length=4000, blank=False, choices=TypeParticipante_CHOICES)
+    TipoCargo = models.CharField(max_length=4000, blank=False, choices=TypeCargo_CHOICES)
+    TipoSeccion = models.CharField(max_length=4000, blank=False, choices=TypeSeccion_CHOICES)
+    textoAmbitosAccion = RichTextField(blank=True)
+    img = models.FileField(upload_to='portal/Participantes', blank=True)
+    Posiciones = models.DecimalField(max_digits=3000, blank=True, decimal_places=1)
+
+    class Meta:
+        db_table = 'GestorParticipantes'
 

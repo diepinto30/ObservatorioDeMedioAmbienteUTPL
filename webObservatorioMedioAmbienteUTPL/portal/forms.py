@@ -3,13 +3,14 @@ from logging import disable
 from django import forms
 from django.contrib.auth.management import get_default_username
 from django.contrib.auth.models import User
-from .models import GestorContenidos, GestorPublicaciones
+from .models import GestorContenidos, GestorPublicaciones, GestorParticipantes
 from django.contrib.auth.forms import UserCreationForm
 from ckeditor.widgets import CKEditorWidget
 from django.utils.safestring import mark_safe
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.utils.safestring import mark_safe
+
 
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=False)
@@ -42,8 +43,6 @@ class LoginFrom(forms.ModelForm):
     class Meta:
         model = User
         fields = ('username', 'password')
-
-
 
 
 class ContenidoFrom(forms.ModelForm):
@@ -89,13 +88,12 @@ class ContenidoFrom(forms.ModelForm):
 class PublicacionesFrom(forms.ModelForm):
     Type2_CHOICES = (
         ('Seleccione ...', 'Seleccione ...'),
-        ('home', 'Home'),
-        ('conocenos', 'Conocenos'),
         ('site_Revistas_indexadas', 'Página - Revistas indexadas'),
+        ('site_Tesis', 'Página - Tesis'),
         ('site_Articulos_Divulgacion', 'Página - Artículos de Divulgación'),
         ('site_CalidadDeVida', 'Página - Calidad de Vida'),
         ('site_Ponencias', 'Página - Ponencias'),
-        ('site_Tesis', 'Página - Tesis'),
+
     )
 
 
@@ -116,3 +114,41 @@ class PublicacionesFrom(forms.ModelForm):
     class Meta:
         model = GestorPublicaciones
         fields = ('TituloPublicaciones', 'SubiTituloPublicaciones', 'TipoContenido', 'TipoSeccion', 'texto')
+
+
+class ParticipantesFrom(forms.ModelForm):
+    TypeParticipante_CHOICES = (
+        ('Seleccione ...', 'Seleccione ...'),
+        ('DocenteInvestigador', 'Docente Investigador'),
+        ('Estudiantes', 'Estudiantes'),
+
+    )
+
+    TypeCargo_CHOICES = (
+        ('Seleccione ...', 'Seleccione ...'),
+        ('Coordinacion', 'Coordinación'),
+        ('DocenteInvestigador', 'Docente Investigador Participante'),
+        ('Estudiantes', 'Estudiantes'),
+
+    )
+
+    TypeSeccion_CHOICES = (
+        ('Seleccione ...', 'Seleccione ...'),
+        ('Seccion_1', 'Seccion 1'),
+        ('Seccion_2', 'Seccion 2'),
+        ('Seccion_3', 'Seccion 3'),
+        ('Seccion_4', 'Seccion 4'),
+    )
+
+    Nombres = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=True)
+    Apellidos = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=False)
+    TipoParticipante = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=TypeParticipante_CHOICES)
+    TipoCargo = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=TypeCargo_CHOICES)
+    TipoSeccion = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=TypeSeccion_CHOICES)
+    textoAmbitosAccion = forms.CharField(widget=CKEditorWidget(attrs={'id': 'editor'}), required=False)
+
+
+
+    class Meta:
+        model = GestorParticipantes
+        fields = ('Nombres', 'Apellidos', 'TipoParticipante', 'TipoCargo', 'TipoSeccion', 'textoAmbitosAccion', 'img')

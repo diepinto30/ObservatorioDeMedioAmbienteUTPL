@@ -1,0 +1,136 @@
+{% extends 'master.html' %}
+{% block tittle %} Actas de congresos {% endblock %}
+{% load staticfiles %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+{% endblock %}
+{% block content1 %}
+<br><br><br><br><br>
+<center>
+    <div>
+        <h1>Actas de congresos</h1><br>
+
+        <div class="text-justify " style="width: 70%">
+
+            {% for cont in list_Publicaciones %}
+            {% if cont.TipoContenido == 'site_Ponencias' %}
+            {% if cont.TipoSeccion == 'Seccion_1' %}
+            <hr>
+            <br>
+
+            <div>{{ cont.texto|safe }}</div>
+            {% if user.is_authenticated %}
+            <div class="btn-group container2">
+                <div class="btn btn-outline-primary" >Clic en el icon para copiar la cita</div>
+                <button type="button" class="btn btn-default btn-copy js-tooltip js-copy  btn-outline-primary" data-toggle="tooltip" data-placement="bottom" data-copy="{{ cont.texto }}" title="Copy to clipboard">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z" /></svg>
+                </button>
+            </div>
+            {% endif %}
+            {% if user.is_superuser %}
+
+            <div class="col-sm-12">
+                <br>
+                <a id="data2-{{ cont.idGestorPublicaciones}}" class="btn btn-outline-warning"
+                   href="{% url 'Publicaciones_edit' id=cont.idGestorPublicaciones %}" style="text-decoration: none;">Editar
+                    contenidor</a>
+                <a class="btn btn-outline-danger"
+                   href="{% url 'EliminarPublicaciones' id=cont.idGestorPublicaciones %}">Eliminar contenido</a>
+
+            </div>
+            {% endif %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            <br>
+            <hr>
+            <br>
+
+        </div>
+
+    </div>
+
+</center>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<style>
+
+.contact {
+  background-color: #fff;
+  padding: 15px;
+  max-width: 200px;
+  margin: 30px auto;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+
+}
+
+    .container2 {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+</style>
+
+<script>
+
+function copyToClipboard(text, el) {
+  var copyTest = document.queryCommandSupported('copy');
+  var elOriginalText = el.attr('data-original-title');
+
+  if (copyTest === true) {
+    var copyTextArea = document.createElement("textarea");
+    copyTextArea.value = text;
+    document.body.appendChild(copyTextArea);
+    copyTextArea.select();
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'Copied!' : 'Whoops, not copied!';
+      el.attr('data-original-title', msg).tooltip('show');
+    } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+    document.body.removeChild(copyTextArea);
+    el.attr('data-original-title', elOriginalText);
+  } else {
+    // Fallback if browser doesn't support .execCommand('copy')
+    window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
+  }
+}
+
+$(document).ready(function() {
+  // Initialize
+  // ---------------------------------------------------------------------
+
+  // Tooltips
+  // Requires Bootstrap 3 for functionality
+  $('.js-tooltip').tooltip();
+
+  // Copy to clipboard
+  // Grab any text in the attribute 'data-copy' and pass it to the
+  // copy function
+  $('.js-copy').click(function() {
+    var text = $(this).attr('data-copy');
+    var el = $(this);
+    copyToClipboard(text, el);
+  });
+});
+</script>
+
+
+
+<br><br>
+{% endblock %}
+
+

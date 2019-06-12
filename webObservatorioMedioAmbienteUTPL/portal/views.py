@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, render_to_response
-from .forms import LoginFrom, SignUp, ContenidoFrom, PublicacionesFrom
+from .forms import LoginFrom, SignUp, ContenidoFrom, PublicacionesFrom, ParticipantesFrom
 from django.contrib.auth import login, authenticate, logout
 from .models import GestorContenidos
-from .models import GestorPublicaciones
+from .models import GestorPublicaciones, GestorParticipantes
 
 
 def home(request):
@@ -124,6 +124,18 @@ def EliminarPublicaciones(request, id):
     return render(request, 'observatorio/GestorContenido/EliminarPublicaciones.html', {'Contenido': Contenido})
 
 
+# Gestor de Participantes
+def GestorParticipantess(request):
+    if request.method == 'POST':
+        form = ParticipantesFrom(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect("/")
+    else:
+        form = ParticipantesFrom()
+    return render(request, 'observatorio/GestorContenido/GestorParticipantes.html', {'form': form})
+
+
 # sitios de los contenido
 def Agua_view(request):
     contenido = GestorContenidos.objects.all()
@@ -180,3 +192,22 @@ def RevistasIn_view(request):
     subtitulo = ""
     dic = {'list_Publicaciones': contenido, 'subtitulo': subtitulo}
     return render(request, "observatorio/Publicaciones/RevistasIndexadas.html", dic)
+
+
+def Tesis_view(request):
+    contenido = GestorPublicaciones.objects.all()
+    subtitulo = ""
+    dic = {'list_Publicaciones': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Publicaciones/TrabajosTitulacion.html", dic)
+
+def ArticulosDiv_view(request):
+    contenido = GestorPublicaciones.objects.all()
+    subtitulo = ""
+    dic = {'list_Publicaciones': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Publicaciones/ArticulosDivulgacion.html", dic)
+
+def ActasCon_view(request):
+    contenido = GestorPublicaciones.objects.all()
+    subtitulo = ""
+    dic = {'list_Publicaciones': contenido, 'subtitulo': subtitulo}
+    return render(request, "observatorio/Publicaciones/ActasCongresos.html", dic)

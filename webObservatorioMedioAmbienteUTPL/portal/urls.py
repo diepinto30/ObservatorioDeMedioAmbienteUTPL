@@ -19,6 +19,9 @@ urlpatterns = [
     url(r'^Publicaciones_edit/(?P<id>\d+)/$', views.Publicaciones_edit, name='Publicaciones_edit'),
     url(r'^EliminarPublicaciones/(?P<id>\d+)/$', views.EliminarPublicaciones, name='EliminarPublicaciones'),
 
+    # url Gestor Participante
+    url(r'^GestorParticipantes/$', views.GestorParticipantess, name="GestorParticipantess"),
+
     # url de los sitio principales de la app
     url(r'^Componentes/Agua/$', views.Agua_view, name='Agua_view'),
     url(r'^Componentes/MedioAmbiente/$', views.MedioAmbiente_view, name='MedioAmbiente_view'),
@@ -30,5 +33,8 @@ urlpatterns = [
 
     # url de los sitio publicaciones
     url(r'^Publicaciones/RevistasIndexadas/$', views.RevistasIn_view, name='RevistasIn_view'),
+    url(r'^Publicaciones/Tesis/$', views.Tesis_view, name='Tesis_view'),
+    url(r'^Publicaciones/ArticulosDivulgados/$', views.ArticulosDiv_view, name='ArticulosDiv_view'),
+    url(r'^Publicaciones/ActasCongresos/$', views.ActasCon_view, name='ActasCon_view'),
 
 ]

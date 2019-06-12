@@ -1,5 +1,7 @@
 {% extends 'master.html' %}
 {% block tittle %} Conócenos {% endblock %}
+{% load staticfiles %}
+{% load static %}
 {% block head %}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -10,7 +12,30 @@
 <center>
     <div>
         <h1>Conócenos</h1><br>
+        <nav class="navbar navbar-expand navbar-light bg-light " style="width: 80%">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-3 mt-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#1">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#2">Misión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#3">Visión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#4">Acerca de nosotros</a>
+                    </li>
 
+                </ul>
+
+            </div>
+        </nav>
         <div class="text-justify " style="width: 80%">
 
             {% for cont in list_contenido %}
@@ -24,18 +49,32 @@
             {% else %}
             <h5>{{ cont.SubiTituloContenido }}</h5>
             {% endif %}
-            <p>{{ cont.texto|safe  }}</p>
+            <p> <a name="{{ cont.Posiciones }}" id="{{ cont.Posiciones }}"></a>  {{ cont.texto|safe }}</p>
+
+
             {% if user.is_superuser %}
             <div class="col-sm-12">
-               <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"  href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"  style="text-decoration: none;">Editar contenidor</a>
-                <a class="btn btn-outline-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar contenido</a>
+                <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"
+                   href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}" style="text-decoration: none;">Editar
+                    contenidor</a>
+                <a class="btn btn-outline-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar
+                    contenido</a>
             </div>
             {% endif %}
             <br>
             {% endif %}
             {% endif %}
             {% endfor %}
+            <hr>
         </div>
+
+        <br>
+        <div id="seccion2">
+
+            <h2><a name="4" id="4"></a>Acerca de nosotros</h2><br>
+            <img src="{% static '/images/img-Nosotros.jpg' %}" alt="Foto grupal de IAMU" style="width: 70%; border-radius: 5px" >
+        </div>
+
     </div>
 
 </center>
