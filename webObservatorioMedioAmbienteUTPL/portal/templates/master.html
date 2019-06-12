@@ -134,16 +134,16 @@
 
                 {% endif %}
                 <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdownMenuLink" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-user"></i>
-                            |
-                            {{ user.username }}</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Perfil</a>
-                            <hr>
-                            <a class="dropdown-item" href="{% url 'logout_view' %}">Salir</a>
-                        </div>
-                    </li>
+                    <a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-user"></i>
+                        |
+                        {{ user.username }}</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Perfil</a>
+                        <hr>
+                        <a class="dropdown-item" href="{% url 'logout_view' %}">Salir</a>
+                    </div>
+                </li>
                 {% else %}
                 <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
