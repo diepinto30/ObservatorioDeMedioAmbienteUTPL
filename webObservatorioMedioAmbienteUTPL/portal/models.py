@@ -52,6 +52,14 @@ TypeCargo_CHOICES = (
 )
 
 
+Typereque_CHOICES = (
+    ('seleccione...', 'seleccione...'),
+    ('True', 'Verdadero'),
+    ('False', 'Falso'),
+
+)
+
+
 class GestorContenidos(models.Model):
     idGestorContenidos = models.AutoField(primary_key=True)
     TituloContenido = models.CharField(max_length=4000, blank=True)
@@ -65,8 +73,8 @@ class GestorContenidos(models.Model):
     img = models.FileField(blank=True)
     Posiciones = models.DecimalField(max_digits=3000, blank=True, decimal_places=1)
 
-    def __unicode__(self):
-        return "%s - %s" % (self.idGestorContenidos, self.TituloContenido)
+    def __str__(self):
+        return self.TituloContenido
 
 
     class Meta:
@@ -81,6 +89,9 @@ class GestorPublicaciones(models.Model):
     TipoSeccion = models.CharField(max_length=4000, blank=True, choices=TypeSeccion_CHOICES)
     texto = RichTextField(blank=True)
     Posiciones = models.DecimalField(max_digits=3000, blank=True, decimal_places=1)
+
+    def __str__(self):
+        return self.TituloPublicaciones
 
     class Meta:
         db_table = 'GestorPublicaciones'
@@ -97,6 +108,41 @@ class GestorParticipantes(models.Model):
     img = models.FileField(upload_to='portal/Participantes', blank=True)
     Posiciones = models.DecimalField(max_digits=3000, blank=True, decimal_places=1)
 
+    def __str__(self):
+        return self.Nombres, self.TipoCargo
+
     class Meta:
         db_table = 'GestorParticipantes'
+
+
+
+class Encuestas(models.Model):
+    idEncuestas = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=4000, blank=True)
+    seccion = models.CharField(max_length=4000, blank=True)
+
+
+    def __str__(self):
+        return self.nombre
+
+
+    class Meta:
+        db_table = 'Encuestas'
+
+
+
+class Pregunta(models.Model):
+    idPregunta = models.AutoField(primary_key=True)
+    nombrePregunta = models.CharField(max_length=4000, blank=True)
+    requerida = models.CharField(max_length=11, blank=True, choices=Typereque_CHOICES)
+    tipoOpcion = models.CharField(max_length=4000, blank=True)
+    idEncuesta = models.ForeignKey(Encuestas, on_delete=None)
+
+    def __str__(self):
+        return self.nombrePregunta
+
+
+    class Meta:
+        db_table = 'Pregunta'
+
 

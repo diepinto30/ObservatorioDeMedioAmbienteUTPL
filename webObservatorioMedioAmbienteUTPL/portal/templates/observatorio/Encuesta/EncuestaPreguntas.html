@@ -1,0 +1,110 @@
+{% extends 'master.html' %}
+{% block tittle %} Nueva Encuesta Preguntas {% endblock %}
+% load staticfiles %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+    .gencuesta {
+        text-decoration: none;
+        color: white;
+    }
+    .gencuesta:hover{
+        text-decoration: none;
+        color: white;
+    }
+</style>
+
+{% endblock %}
+{% block content1 %}
+<br><br><br><br><br>
+<center>
+    <h2 class="w3-text-grey w3-padding-16">
+        <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Creando las preguntas de la
+        <strong><i>Encuesta 1 </i></strong>
+    </h2>
+    <hr class="bg-warning mb-6">
+    {% if user.is_superuser %}
+
+    <div class="row">
+        <div class="col-md-9 mx-auto"><br>
+            <div class="card">
+                <div class="card-body   mx-auto col-md-10 ">
+                    <div class="w3-twothird">
+                        <div class="w3-container w3-card w3-white">
+                            <div class="w3-container">
+
+                                <p class="text-justify">
+                                    Usted se encuentra en la encuesta creado por usted.
+                                </p>
+                                <div class="text-justify">
+                                    <h6>Nombre Encuesta:</h6>
+                                    <h4><i><strong>Encuesta 1</strong></i></h4>
+                                    <h6>Sección Encuesta:</h6>
+                                    <h4><i><strong>Seccion 1</strong></i></h4><br>
+                                </div>
+
+
+
+                                <form method="post" class="text-left col-xl-6" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="nombreEncuesta"><i><strong>Nombre de la Encuesta:</strong></i></label>
+                                        <input type="text" class="form-control" id="nombreEncuesta">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SeccionSelect"><i><strong>Selecciones la sección</strong></i></label>
+                                        <select class="form-control" id="SeccionSelect">
+                                            <option>Seleccione...</option>
+                                            <option>Seccion 1</option>
+                                            <option>Seccion 2</option>
+                                            <option>Seccion 3</option>
+                                            <option>Seccion 4</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <button type="submit" class="btn btn-success btn-block"><a class="gencuesta" href="{% url 'home' %}">Guarda Encuesta</a>
+                                    </button><br>
+
+                                    <a class="btn btn-warning btn-block" href="{% url 'EncuestasCreate' %}">Cancelar</a>
+                                    <br>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    {% else %}
+
+    <div class="row">
+        <div class="col-md-6 mx-auto"><br><br><br>
+            <div class="card">
+                <div class="card-body   mx-auto col-md-10 ">
+                    <div class="w3-twothird">
+                        <div class="w3-container w3-card w3-white">
+                            <div class="w3-container">
+                                <p>Esta acción no puede ser realizar por usted</p>
+                                <a class="btn btn-warning" href="{% url 'home' %}">Regresar</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+</center>
+
+
+
+{% endblock %}

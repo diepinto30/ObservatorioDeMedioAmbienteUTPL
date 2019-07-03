@@ -22,6 +22,12 @@ urlpatterns = [
     # url Gestor Participante
     url(r'^GestorParticipantes/$', views.GestorParticipantess, name="GestorParticipantess"),
 
+    # url de las encuesta
+    url(r'^EncuestaNuevaGeneral/$', views.EncuestaFromsG, name="EncuestaFromsG"),
+    url(r'^EncuestasCreate/$', views.EncuestasCreate, name="EncuestasCreate"),
+    url(r'^EncuestasCreatePreguntas/$', views.EncuestasCreatePreguntas, name="EncuestasCreatePreguntas"),
+
+
     # url de los sitio principales de la app
     url(r'^Componentes/Agua/$', views.Agua_view, name='Agua_view'),
     url(r'^Componentes/MedioAmbiente/$', views.MedioAmbiente_view, name='MedioAmbiente_view'),

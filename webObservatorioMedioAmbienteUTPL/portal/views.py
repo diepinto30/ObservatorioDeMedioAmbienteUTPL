@@ -200,14 +200,34 @@ def Tesis_view(request):
     dic = {'list_Publicaciones': contenido, 'subtitulo': subtitulo}
     return render(request, "observatorio/Publicaciones/TrabajosTitulacion.html", dic)
 
+
 def ArticulosDiv_view(request):
     contenido = GestorPublicaciones.objects.all()
     subtitulo = ""
     dic = {'list_Publicaciones': contenido, 'subtitulo': subtitulo}
     return render(request, "observatorio/Publicaciones/ArticulosDivulgacion.html", dic)
 
+
 def ActasCon_view(request):
     contenido = GestorPublicaciones.objects.all()
     subtitulo = ""
     dic = {'list_Publicaciones': contenido, 'subtitulo': subtitulo}
     return render(request, "observatorio/Publicaciones/ActasCongresos.html", dic)
+
+
+def EncuestaFromsG(request):
+    subtitulo = ""
+    dic = { 'subtitulo': subtitulo}
+    return render(request, "observatorio/Encuesta/NuevaEncuesta.html", dic)
+
+
+def EncuestasCreate(request):
+    subtitulo = ""
+    dic = {'subtitulo': subtitulo}
+    return render(request, "observatorio/Encuesta/EncuestasCreate.html", dic)
+
+
+def EncuestasCreatePreguntas(request):
+    subtitulo = ""
+    dic = {'subtitulo': subtitulo}
+    return render(request, "observatorio/Encuesta/EncuestaPreguntas.html", dic)

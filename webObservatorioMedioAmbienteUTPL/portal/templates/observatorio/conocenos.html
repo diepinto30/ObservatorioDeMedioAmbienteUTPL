@@ -5,7 +5,7 @@
 {% block head %}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+<link rel="stylesheet" href="{% static 'css/contenidos.css' %}">
 {% endblock %}
 {% block content1 %}
 <br><br><br><br><br>
@@ -49,7 +49,7 @@
             {% else %}
             <h5>{{ cont.SubiTituloContenido }}</h5>
             {% endif %}
-            <p> <a name="{{ cont.Posiciones }}" id="{{ cont.Posiciones }}"></a>  {{ cont.texto|safe }}</p>
+            <p><a name="{{ cont.Posiciones }}" id="{{ cont.Posiciones }}"></a> {{ cont.texto|safe }}</p>
 
 
             {% if user.is_superuser %}
@@ -69,10 +69,25 @@
         </div>
 
         <br>
-        <div id="seccion2">
+        <div id="seccion2-container">
 
             <h2><a name="4" id="4"></a>Acerca de nosotros</h2><br>
-            <img src="{% static '/images/img-Nosotros.jpg' %}" alt="Foto grupal de IAMU" style="width: 70%; border-radius: 5px" >
+            <img src="{% static '/images/img-Nosotros.jpg' %}" alt="Foto grupal de IAMU"
+                 style="width: 70%; border-radius: 5px">
+            <br><br>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-success">
+                    <input type="radio" name="options" id="option1" autocomplete="off"> Docentes Invesgadores
+                </label>
+
+                <label class="btn btn-outline-danger">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Estudiantes
+                </label>
+                    <a href="{% url 'ArticulosDiv_view' %}" id="optionid" class="btn btn-outline-success" autocomplete="off">Publicassciones</a>
+
+            </div>
+
+
         </div>
 
     </div>

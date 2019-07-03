@@ -1,0 +1,69 @@
+{% extends 'master.html' %}
+{% block tittle %} Nueva Encuesta {% endblock %}
+% load staticfiles %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+{% endblock %}
+{% block content1 %}
+<br><br><br><br><br>
+<center>
+    <h2 class="w3-text-grey w3-padding-16">
+        Nueva Encuesta
+    </h2>
+    <hr class="bg-warning mb-6">
+    {% if user.is_superuser %}
+
+    <div class="row">
+        <div class="col-md-6 mx-auto"><br><br><br>
+            <div class="card">
+                <div class="card-body   mx-auto col-md-10 ">
+                    <div class="w3-twothird">
+                        <div class="w3-container w3-card w3-white">
+                            <div class="w3-container">
+
+                                <p class="text-justify">
+                                    Usted se encuentra en la sección de creación de encuentas, si usted desea
+                                    añadir una nueva encuesta haga clic en el botón de crear nueva encuentas; caso contario
+                                    Puedes acceder a las encuentas antiguas.
+                                </p>
+                                <a class="btn btn-info" href="{% url 'home' %}">Hisorial de encuestas</a>
+                                <a class="btn btn-success" href="{% url 'EncuestaFromsG' %}">Crear nueva encuesta</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    {% else %}
+
+    <div class="row">
+        <div class="col-md-6 mx-auto"><br><br><br>
+            <div class="card">
+                <div class="card-body   mx-auto col-md-10 ">
+                    <div class="w3-twothird">
+                        <div class="w3-container w3-card w3-white">
+                            <div class="w3-container">
+                                <p>Esta acción no puede ser realizar por usted</p>
+                                <a class="btn btn-warning" href="{% url 'home' %}">Regresar</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br>
+    {% endif %}
+</center>
+
+{% endblock %}

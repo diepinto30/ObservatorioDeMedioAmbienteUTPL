@@ -1,0 +1,8 @@
+#optionid {
+    text-decoration: none;
+    color: green;
+}
+
+#optionid:hover {
+    color: white;
+}
