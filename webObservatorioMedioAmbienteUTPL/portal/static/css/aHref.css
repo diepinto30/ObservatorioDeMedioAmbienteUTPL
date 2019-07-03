@@ -1,0 +1,19 @@
+.gencuesta {
+    text-decoration: none;
+    color: white;
+}
+
+.gencuesta:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.gencuestas {
+    text-decoration: none;
+    color: black;
+}
+
+.gencuestas:hover {
+    text-decoration: none;
+    color: black;
+}

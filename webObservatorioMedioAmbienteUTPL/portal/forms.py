@@ -4,6 +4,7 @@ from django import forms
 from django.contrib.auth.management import get_default_username
 from django.contrib.auth.models import User
 from .models import GestorContenidos, GestorPublicaciones, GestorParticipantes
+from .models import Encuestas, Pregunta
 from django.contrib.auth.forms import UserCreationForm
 from ckeditor.widgets import CKEditorWidget
 from django.utils.safestring import mark_safe
@@ -152,3 +153,50 @@ class ParticipantesFrom(forms.ModelForm):
     class Meta:
         model = GestorParticipantes
         fields = ('Nombres', 'Apellidos', 'TipoParticipante', 'TipoCargo', 'TipoSeccion', 'textoAmbitosAccion', 'img')
+
+
+class NameEncuestaFrom(forms.ModelForm):
+    TypeSeccion_CHOICES = (
+        ('Seleccione ...', 'Seleccione ...'),
+        ('Seccion 1', 'Seccion 1'),
+        ('Seccion 2', 'Seccion 2'),
+        ('Seccion 3', 'Seccion 3'),
+
+    )
+    nombre = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=True)
+    seccion = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=TypeSeccion_CHOICES)
+
+
+
+    class Meta:
+        model = Encuestas
+        fields = ('nombre', 'seccion')
+
+
+class NamePreguntaFrom(forms.ModelForm):
+    TypePregunta_CHOICES = (
+        ('Seleccione ...', 'Seleccione ...'),
+        ('texto', 'Texto'),
+        ('TrueOrFalse', 'Verdadero o Falso'),
+        ('CheckBox', 'Selección Multiple'),
+        ('Check', 'Selección Única'),
+
+
+    )
+
+    Typereque_CHOICES = (
+        ('seleccione...', 'seleccione...'),
+        ('True', 'Verdadero'),
+        ('False', 'Falso'),
+
+    )
+    nombrePregunta = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=True)
+    #requerida = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=Typereque_CHOICES)
+    #tipoOpcion = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=TypePregunta_CHOICES)
+    #idEncuesta = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}))
+
+
+
+    class Meta:
+        model = Pregunta
+        fields = ('nombrePregunta', 'requerida', 'tipoOpcion', 'idEncuesta')

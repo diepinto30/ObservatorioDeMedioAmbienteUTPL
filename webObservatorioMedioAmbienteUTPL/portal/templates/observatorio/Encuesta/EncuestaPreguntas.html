@@ -5,24 +5,21 @@
 {% block head %}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<style>
-    .gencuesta {
-        text-decoration: none;
-        color: white;
-    }
-    .gencuesta:hover{
-        text-decoration: none;
-        color: white;
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/aHref.css' %}">
 
 {% endblock %}
 {% block content1 %}
 <br><br><br><br><br>
 <center>
     <h2 class="w3-text-grey w3-padding-16">
-        <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Creando las preguntas de la
-        <strong><i>Encuesta 1 </i></strong>
+        <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Creando las preguntas de
+        <strong>
+            <i>
+                {% for cont in valorUltimo %}
+                {{ cont.nombre }}
+                {% endfor %}
+            </i>
+        </strong>
     </h2>
     <hr class="bg-warning mb-6">
     {% if user.is_superuser %}
@@ -34,41 +31,99 @@
                     <div class="w3-twothird">
                         <div class="w3-container w3-card w3-white">
                             <div class="w3-container">
+                                <div class="header-pregunta">
+                                    <p class="text-justify">
+                                        Usted se encuentra en la encuesta creado por usted.
 
-                                <p class="text-justify">
-                                    Usted se encuentra en la encuesta creado por usted.
-                                </p>
-                                <div class="text-justify">
-                                    <h6>Nombre Encuesta:</h6>
-                                    <h4><i><strong>Encuesta 1</strong></i></h4>
-                                    <h6>Sección Encuesta:</h6>
-                                    <h4><i><strong>Seccion 1</strong></i></h4><br>
+                                    </p>
+                                    <div class="text-justify">
+                                        <h6>Nombre Encuesta:</h6>
+                                        <h4>
+                                            <strong>
+                                                <i>
+                                                    {% for cont in valorUltimo %}
+                                                    {{ cont.nombre }}
+                                                    {% endfor %}
+                                                </i>
+                                            </strong>
+                                        </h4>
+                                        <h6>Sección Encuesta:</h6>
+                                        <h4>
+                                            <strong>
+                                                <i>
+                                                    {% for cont in valorUltimo %}
+                                                    {{ cont.seccion }}
+                                                    {% endfor %}
+                                                </i>
+                                            </strong>
+                                        </h4><br>
+                                    </div>
                                 </div>
 
+                                <h5 class="text-left">Sección de creación de las preguntas</h5> <br>
 
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                        data-target="#collapseOne" aria-expanded="true"
+                                                        aria-controls="collapseOne">
+                                                    Formulario para la creación de encuestas
+                                                </button>
+                                            </h2>
+                                        </div>
 
-                                <form method="post" class="text-left col-xl-6" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label for="nombreEncuesta"><i><strong>Nombre de la Encuesta:</strong></i></label>
-                                        <input type="text" class="form-control" id="nombreEncuesta">
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                             data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <form method="post" class="text-left col-xl-6   "
+                                                      enctype="multipart/form-data">
+                                                    {% csrf_token %}
+                                                    <div class="form-group" style="text-align: center">
+                                                        <label><i><strong>Pregunta:</strong></i> <b style="color:red;">*</b>
+                                                        </label>
+                                                        {{ form.nombrePregunta }}
+                                                    </div>
+
+                                                    <div class="form-group" style="text-align: center">
+                                                        <label><i><strong>Requerida:</strong></i> <b style="color:red;">*</b>
+                                                        </label>
+                                                        {{ form.requerida }}
+                                                    </div>
+
+                                                     <div class="form-group" style="text-align: center">
+                                                        <label><i><strong>Tipo opcion:</strong></i> <b style="color:red;">*</b>
+                                                        </label>
+                                                        {{ form.tipoOpcion }}
+                                                    </div>
+
+                                                     <div class="form-group" style="text-align: center">
+                                                        <label><i><strong>Pertenece a la encuesta:</strong></i> <b style="color:red;">*</b>
+                                                        </label>
+                                                        {{ form.idEncuesta }}
+                                                    </div>
+                                                    <br>
+                                                    <button type="submit" class="btn btn-success btn-block">
+                                                        Guardar y añadir nueva pregunta
+                                                    </button>
+
+                                                    <a class="btn btn-warning btn-block gencuestas"
+                                                       href="{% url 'home' %}" onclick="myFunction(this, event)">
+                                                        Terminar y no guardar más preguntas
+                                                    </a>
+                                                    <br>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="SeccionSelect"><i><strong>Selecciones la sección</strong></i></label>
-                                        <select class="form-control" id="SeccionSelect">
-                                            <option>Seleccione...</option>
-                                            <option>Seccion 1</option>
-                                            <option>Seccion 2</option>
-                                            <option>Seccion 3</option>
-                                            <option>Seccion 4</option>
-                                        </select>
-                                    </div>
-                                    <br>
-                                    <button type="submit" class="btn btn-success btn-block"><a class="gencuesta" href="{% url 'home' %}">Guarda Encuesta</a>
-                                    </button><br>
+                                    <div class="card">
 
-                                    <a class="btn btn-warning btn-block" href="{% url 'EncuestasCreate' %}">Cancelar</a>
-                                    <br>
-                                </form>
+
+                                    </div>
+
+                                </div>
+
 
                             </div>
 
@@ -106,5 +161,15 @@
 </center>
 
 
+<script>
+    function myFunction(el, ev) {
+        var confirm = window.confirm("Desea terminar y no guardar la última pregunta");
+        if (confirm) {
+            window.location.href = $(el).attr("href");
+        } else {
+            ev.preventDefault();
+        }
+    }
+</script>
 
 {% endblock %}

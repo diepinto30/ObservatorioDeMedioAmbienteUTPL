@@ -10,7 +10,8 @@
         text-decoration: none;
         color: white;
     }
-    .gencuesta:hover{
+
+    .gencuesta:hover {
         text-decoration: none;
         color: white;
     }
@@ -21,7 +22,7 @@
 <br><br><br><br><br>
 <center>
     <h2 class="w3-text-grey w3-padding-16">
-        <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Creando Encuesta
+        <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Creando Encuesta Principal
     </h2>
     <hr class="bg-warning mb-6">
     {% if user.is_superuser %}
@@ -38,28 +39,67 @@
                                     Usted se encuentra en al sección de creación de nueva encuesta, tenga encuenta de
                                     los siguientes campos son de caracter obligatorios.
                                 </p>
+
                                 <form method="post" class="text-left col-xl-6" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label for="nombreEncuesta"><i><strong>Nombre de la Encuesta:</strong></i></label>
-                                        <input type="text" class="form-control" id="nombreEncuesta">
+
+                                   {% csrf_token %}
+                                    {{ form }}
+                                    <!--<div class="form-group" style="text-align: center">
+                                        <label<i><strong>Nombre de la
+                                        Encuesta:</strong></i> <b style="color:red;">*</b>
+                                        </label>
+                                        {{ form.nombre }}
                                     </div>
-                                    <div class="form-group">
-                                        <label for="SeccionSelect"><i><strong>Selecciones la sección</strong></i></label>
-                                        <select class="form-control" id="SeccionSelect">
-                                            <option>Seleccione...</option>
-                                            <option>Seccion 1</option>
-                                            <option>Seccion 2</option>
-                                            <option>Seccion 3</option>
-                                            <option>Seccion 4</option>
-                                        </select>
+                                    <div class="form-group" style="text-align: center">
+                                        <label><i><strong>Selecciones la
+                                            sección</strong></i> <b style="color:red;">*</b>
+                                        </label>
+                                        {{ form.seccion }}
                                     </div>
+                                    -->
                                     <br>
-                                    <button type="submit" class="btn btn-success btn-block"><a class="gencuesta" href="{% url 'EncuestasCreatePreguntas' %}">Guarda Encuesta</a>
-                                    </button><br>
+                                    <button type="submit" class="btn btn-success btn-block">Guardar contendio nuevo
+                                    </button>
+                                    <br>
 
                                     <a class="btn btn-warning btn-block" href="{% url 'EncuestasCreate' %}">Cancelar</a>
                                     <br>
                                 </form>
+
+
+                                <!--<h6>viejo</h6>
+                                <form method="post" class="text-left col-xl-6" enctype="multipart/form-data">
+                                    <div>
+                                        <div class="form-group">
+                                            <label for="nombreEncuesta"><i><strong>Nombre de la
+                                                Encuesta:</strong></i></label>
+                                            <input type="text" class="form-control" id="nombreEncuesta">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="SeccionSelect"><i><strong>Selecciones la
+                                                sección</strong></i></label>
+                                            <select class="form-control" id="SeccionSelect">
+                                                <option>Seleccione...</option>
+                                                <option>Seccion 1</option>
+                                                <option>Seccion 2</option>
+                                                <option>Seccion 3</option>
+                                                <option>Seccion 4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <button type="submit" class="btn btn-success btn-block"><a class="gencuesta"
+                                                                                               href="{% url 'EncuestasCreatePreguntas' %}">Guarda
+                                        Encuesta</a>
+                                    </button>
+                                    <br>
+
+                                    <a class="btn btn-warning btn-block" href="{% url 'EncuestasCreate' %}">Cancelar</a>
+                                    <br>
+                                </form>
+                                -->
+
 
                             </div>
 
@@ -95,7 +135,6 @@
 
     {% endif %}
 </center>
-
 
 
 {% endblock %}

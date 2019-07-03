@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect, render_to_response
-from .forms import LoginFrom, SignUp, ContenidoFrom, PublicacionesFrom, ParticipantesFrom
+from .forms import LoginFrom, SignUp, ContenidoFrom, PublicacionesFrom, ParticipantesFrom, NameEncuestaFrom, NamePreguntaFrom
 from django.contrib.auth import login, authenticate, logout
-from .models import GestorContenidos
+from .models import GestorContenidos, Pregunta
+from .models import Encuestas
 from .models import GestorPublicaciones, GestorParticipantes
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 
 
 def home(request):
@@ -215,19 +218,37 @@ def ActasCon_view(request):
     return render(request, "observatorio/Publicaciones/ActasCongresos.html", dic)
 
 
+# gestor de las encuentas
 def EncuestaFromsG(request):
+    if request.method == 'POST':
+        form = NameEncuestaFrom(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('EncuestasCreatePreguntas')
+    else:
+        form = NameEncuestaFrom()
+    return render(request, 'observatorio/Encuesta/NuevaEncuesta.html', {'form': form})
+
+
+def EncuestasCreatePreguntas(request):
+    print("lISDugfb")
+    valorUltimo = [Encuestas.objects.latest('idEncuestas')]
     subtitulo = ""
-    dic = { 'subtitulo': subtitulo}
-    return render(request, "observatorio/Encuesta/NuevaEncuesta.html", dic)
+    print("hola: ", valorUltimo)
+
+
+    if request.method == 'POST':
+        form = NamePreguntaFrom(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('EncuestasCreatePreguntas')
+    else:
+        form = NamePreguntaFrom()
+    dic = {'subtitulo': subtitulo, 'valorUltimo': valorUltimo, 'form': form}
+    return render(request, 'observatorio/Encuesta/EncuestaPreguntas.html', dic)
 
 
 def EncuestasCreate(request):
     subtitulo = ""
     dic = {'subtitulo': subtitulo}
     return render(request, "observatorio/Encuesta/EncuestasCreate.html", dic)
-
-
-def EncuestasCreatePreguntas(request):
-    subtitulo = ""
-    dic = {'subtitulo': subtitulo}
-    return render(request, "observatorio/Encuesta/EncuestaPreguntas.html", dic)

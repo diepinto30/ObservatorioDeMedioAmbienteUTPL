@@ -53,9 +53,17 @@ TypeCargo_CHOICES = (
 
 
 Typereque_CHOICES = (
-    ('seleccione...', 'seleccione...'),
     ('True', 'Verdadero'),
     ('False', 'Falso'),
+
+)
+
+TypePregunta_CHOICES = (
+    ('texto', 'Texto'),
+    ('TrueOrFalse', 'Verdadero o Falso'),
+    ('CheckBox', 'Selección Multiple'),
+    ('Check', 'Selección Única'),
+
 
 )
 
@@ -135,7 +143,7 @@ class Pregunta(models.Model):
     idPregunta = models.AutoField(primary_key=True)
     nombrePregunta = models.CharField(max_length=4000, blank=True)
     requerida = models.CharField(max_length=11, blank=True, choices=Typereque_CHOICES)
-    tipoOpcion = models.CharField(max_length=4000, blank=True)
+    tipoOpcion = models.CharField(max_length=4000, blank=True, choices=TypePregunta_CHOICES)
     idEncuesta = models.ForeignKey(Encuestas, on_delete=None)
 
     def __str__(self):
