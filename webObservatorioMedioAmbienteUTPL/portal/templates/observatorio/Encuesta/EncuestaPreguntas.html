@@ -167,6 +167,7 @@
         if (confirm) {
             window.location.href = $(el).attr("href");
         } else {
+            alert("Primero guarde y una vez vacio el formulario puede terminar la edición")
             ev.preventDefault();
         }
     }
