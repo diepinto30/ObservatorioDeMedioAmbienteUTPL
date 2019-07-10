@@ -85,10 +85,10 @@
                             </center>
                             {% if user.is_superuser %}
                             <div class="text-center">
-                                <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"
+                                <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-warning"
                                    href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"
                                    style="text-decoration: none;">Editar contenidor</a><br>
-                                <br> <a class="btn btn-outline-danger"
+                                <br> <a class="btn btn-danger"
                                         href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar
                                 contenido</a>
                             </div>
@@ -123,8 +123,8 @@
                 {% if user.is_superuser %}
 
                 <div class="col-sm-12">
-                   <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"  href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"  style="text-decoration: none;">Editar contenidor</a>
-                    <a class="btn btn-outline-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar contenido</a>
+                   <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-warning"  href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"  style="text-decoration: none;">Editar contenidor</a>
+                    <a class="btn btn-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar contenido</a>
                 </div>
                 {% endif %}
                 <br>

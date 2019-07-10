@@ -17,8 +17,9 @@ def home(request):
 
 def conocenos(request):
     contenido = GestorContenidos.objects.all()
+    participantes = GestorParticipantes.objects.all()
     subtitulo = ""
-    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo, 'list_participantes': participantes}
     return render(request, "observatorio/conocenos.html", dic)
 
 
@@ -236,7 +237,6 @@ def EncuestasCreatePreguntas(request):
     subtitulo = ""
     print("hola: ", valorUltimo)
 
-
     if request.method == 'POST':
         form = NamePreguntaFrom(request.POST)
         if form.is_valid():
@@ -252,3 +252,10 @@ def EncuestasCreate(request):
     subtitulo = ""
     dic = {'subtitulo': subtitulo}
     return render(request, "observatorio/Encuesta/EncuestasCreate.html", dic)
+
+
+def Encuestas_list(request):
+    encuestas = Encuestas.objects.all()
+    subtitulo = ""
+    dic = {'subtitulo': subtitulo, 'list_encuestas': encuestas}
+    return render(request, "observatorio/Encuesta/ListEncuestas.html", dic)

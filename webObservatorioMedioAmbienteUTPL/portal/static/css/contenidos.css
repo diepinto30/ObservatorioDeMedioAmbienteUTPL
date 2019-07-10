@@ -6,3 +6,40 @@
 #optionid:hover {
     color: white;
 }
+
+.Coordinacion {
+    padding: 8px;
+    width: 20%;
+    border-top: 6px solid darkblue;
+    border-bottom: 6px solid darkblue;
+}
+.docentes {
+    padding: 8px;
+    width: 32%;
+    border-top: 6px solid darkolivegreen;
+    border-bottom: 6px solid darkolivegreen;
+}
+
+.Estudiantes {
+    padding: 8px;
+    width: 35%;
+    border-top: 6px solid red;
+    border-bottom: 6px solid red;
+}
+
+.background {
+    padding: 4%;
+    align-content: center;
+    background-color: #d3d3d3;
+    border-radius: 7px;
+}
+
+
+.trans2 {
+    opacity: 1;
+}
+
+
+.imgCoos {
+    margin-left: -30%;
+}

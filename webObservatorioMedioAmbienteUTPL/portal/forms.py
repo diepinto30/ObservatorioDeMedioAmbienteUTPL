@@ -192,7 +192,7 @@ class NamePreguntaFrom(forms.ModelForm):
     )
     nombrePregunta = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=True)
     #requerida = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=Typereque_CHOICES)
-    tipoOpcion = forms.ChoiceField(widget=forms.Select(attrs={'onclick': 'myFunction()'}), required=True, choices=TypePregunta_CHOICES)
+    #tipoOpcion = forms.ChoiceField(widget=forms.Select(attrs={'onclick': 'myFunction()'}), required=True, choices=TypePregunta_CHOICES)
     #idEncuesta = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}))
 
 

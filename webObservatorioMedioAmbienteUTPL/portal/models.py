@@ -117,8 +117,8 @@ class GestorParticipantes(models.Model):
     Posiciones = models.DecimalField(max_digits=3000, blank=True, decimal_places=1)
 
     def __str__(self):
-        return self.Nombres, self.TipoCargo
-
+        template = '{0.Nombres} {0.Apellidos} - {0.TipoParticipante} - {0.TipoCargo} - {0.TipoSeccion} - {0.img} - {0.Posiciones}'
+        return template.format(self)
     class Meta:
         db_table = 'GestorParticipantes'
 

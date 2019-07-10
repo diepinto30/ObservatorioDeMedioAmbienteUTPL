@@ -36,7 +36,7 @@
 
             </div>
         </nav>
-        <div class="text-justify " style="width: 80%">
+        <div class="Bloque1 text-justify " style="width: 80%">
 
             {% for cont in list_contenido %}
             {% if cont.TipoContenido == 'conocenos' %}
@@ -67,9 +67,8 @@
             {% endfor %}
             <hr>
         </div>
-
         <br>
-        <div id="seccion2-container">
+        <div id="Bloque2-container">
 
             <h2><a name="4" id="4"></a>Acerca de nosotros</h2><br>
             <img src="{% static '/images/img-Nosotros.jpg' %}" alt="Foto grupal de IAMU"
@@ -83,8 +82,163 @@
                 <label class="btn btn-outline-danger">
                     <input type="radio" name="options" id="option2" autocomplete="off"> Estudiantes
                 </label>
-                    <a href="{% url 'ArticulosDiv_view' %}" id="optionid" class="btn btn-outline-success" autocomplete="off">Publicassciones</a>
+                <a href="{% url 'ArticulosDiv_view' %}" id="optionid" class="btn btn-outline-success"
+                   autocomplete="off">Publicassciones</a>
 
+            </div>
+            <br><br>
+            <hr class="col-xl-8">
+            <br>
+
+            <div class="text-justify coordinacion" style="width: 80%">
+
+                <center>
+                    <div class="Coordinacion">
+                        <h3>Coordinación</h3>
+                    </div>
+                </center>
+                <br><br>
+                <center>
+                    {% for cont in list_participantes %}
+                    {% if cont.TipoParticipante == 'DocenteInvestigador' %}
+                    {% if cont.TipoCargo == 'Coordinacion' %}
+                    {% if cont.TipoSeccion == 'Bloque_2' %}
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-xl-4" style="margin-top: 3%">
+                                <img src="{{cont.img.url}}" alt="{{ cont.Nombres }} {{ cont.Apellidos }}" height="250"
+                                 width="280" style="border-radius: 8px">
+                            </div>
+                            <div class="col-xl-8 alert alert-heading text-left">
+                                <br><br>
+                                <i>{{ cont.Nombres }} {{ cont.Apellidos }}</i><br>
+                                <strong>{{ cont.TipoParticipante }} </strong><br>
+                                <hr class="col-xl-3 text-left" style="float: left">
+                                <br><br>
+                            {{ cont.textoAmbitosAccion|safe }}
+                                {% if user.is_superuser %}
+                                <div class="col-sm-12">
+                                    <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"
+                                       href="{% url 'Contenido_edit' id=cont.idGestorParticipantes %}"
+                                       style="text-decoration: none;">Editar
+                                        contenido</a>
+                                    <a class="btn btn-outline-danger"
+                                       href="{% url 'EliminarContenido' id=cont.idGestorParticipantes %}">Eliminar
+                                        contenido</a>
+                                </div>
+                                {% endif %}
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <br>
+                    <hr>
+                    <br>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </center>
+            </div>
+
+            <div class="text-justify ParticipacionDocentes" style="width: 80%">
+
+                <center>
+                    <div class="docentes">
+                        <h3>Participación de Docentes</h3>
+                    </div>
+                </center>
+                <br><br>
+                <center>
+                    {% for cont in list_participantes %}
+                    {% if cont.TipoParticipante == 'DocenteInvestigador' %}
+                    {% if cont.TipoCargo == 'DocenteInvestigador' %}
+                    {% if cont.TipoSeccion == 'Bloque_2' %}
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-xl-8 alert alert-heading text-right">
+                                <br><br>
+                                <i>{{ cont.Nombres }} {{ cont.Apellidos }}</i><br>
+                                <strong>{{ cont.TipoParticipante }} </strong><br>
+                                <hr class="col-xl-3 text-right" style="float: right">
+                                <br><br>
+                            {{ cont.textoAmbitosAccion|safe }}
+                                {% if user.is_superuser %}
+                                <div class="col-sm-12">
+                                    <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"
+                                       href="{% url 'Contenido_edit' id=cont.idGestorParticipantes %}"
+                                       style="text-decoration: none;">Editar
+                                        contenido</a>
+                                    <a class="btn btn-outline-danger"
+                                       href="{% url 'EliminarContenido' id=cont.idGestorParticipantes %}">Eliminar
+                                        contenido</a>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-xl-4" style="margin-top: 3%">
+                                <img src="{{cont.img.url}}" alt="{{ cont.Nombres }} {{ cont.Apellidos }}" height="250"
+                                 width="280" style="border-radius: 8px">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <br>
+                    <hr>
+                    <br>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </center>
+            </div>
+
+            <div class="text-justify ParticipacionEstudiantes" style="width: 80%">
+
+                <center>
+                    <div class="Estudiantes">
+                        <h3>Participación de Estudiantes</h3>
+                    </div>
+                </center>
+                <br><br>
+                <center>
+                    <div class="container">
+                        <div class="row">
+                            {% for cont in list_participantes %}
+                            {% if cont.TipoParticipante == 'Estudiantes' %}
+                            {% if cont.TipoCargo == 'Estudiantes' %}
+                            {% if cont.TipoSeccion == 'Bloque_2' %}
+                            <br>
+                            <div class="col-xl-2 alert alert-dark text-right">
+                                <i>{{ cont.Nombres }} {{ cont.Apellidos }}</i><br>
+                                <strong>{{ cont.TipoParticipante }} </strong><br>
+                                <hr class="col-xl-3 text-right" style="float: right">
+                                <br>
+                                {{ cont.textoAmbitosAccion|safe }}
+                                {% if user.is_superuser %}
+                                <div>
+                                    <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-warning"
+                                       href="{% url 'Contenido_edit' id=cont.idGestorParticipantes %}"
+                                       style="text-decoration: none;">Editar
+                                        Cont.</a>
+                                    <a class="btn btn-danger"
+                                       href="{% url 'EliminarContenido' id=cont.idGestorParticipantes %}">Eliminar
+                                        Cont.</a>
+                                </div>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        </div>
+                    </div>
+                </center>
             </div>
 
 

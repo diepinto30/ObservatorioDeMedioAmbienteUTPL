@@ -1,0 +1,109 @@
+{% extends 'master.html' %}
+{% block tittle %} lista de Encuesta {% endblock %}
+% load staticfiles %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+{% endblock %}
+{% block content1 %}
+<br><br><br><br><br>
+<center>
+    <h2 class="w3-text-grey w3-padding-16">
+        <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Creando Encuesta Principal
+    </h2>
+    <hr class="bg-warning mb-6">
+    {% if user.is_staff %}
+
+    <div class="row">
+        <div class="col-md-9 mx-auto"><br>
+            <div class="card">
+                <div class="card-body   mx-auto col-md-10 ">
+                    <div class="w3-twothird">
+                        <div class="w3-container w3-card w3-white">
+                            <div class="w3-container">
+
+                                <p class="text-center">
+                                    <i>Usted puede ver todas las encuestas creadas y añadir más preguntas a cada
+                                        encuesta.</i>
+                                </p>
+                                {% for cont in list_encuestas %}
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xl-4 text-right">
+                                            <br>
+                                            <a href="#" class="btn btn-outline-primary btnss"> {{ cont.nombre }} </a>
+                                            {% if user.is_superuser %}
+                                            <div>
+                                                <br>
+                                                <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-warning"
+                                                   href="{% url 'Contenido_edit' id=cont.idEncuestas %}"
+                                                   style="text-decoration: none;">Editar nombre encuesta</a>
+                                                <a class="btn btn-danger"
+                                                   href="{% url 'EliminarContenido' id=cont.idEncuestas %}">Eliminar
+                                                    Encuesta</a>
+                                            </div>
+                                            {% endif %}
+
+                                            <br>
+
+                                        </div>
+
+                                        <div class="col-xl-8 text-left mb-3" style="border-left: 4px solid #bc8d07;">
+                                            <p style="float: left">
+                                                Esta encuesta busca más información de las personas a respecto de sus
+                                                casa
+                                            </p>
+                                            <br>
+                                            <a class="btn btn-primary"
+                                               href="{% url 'home' %}">Realizar
+                                                Encuesta</a>
+                                            {% if user.is_superuser %}
+                                                <a class="btn btn-info"
+                                                   href="{% url 'EliminarContenido' id=cont.idEncuestas %}">Añadir
+                                                    Preguntas</a>
+                                                <a class="btn btn-secondary"
+                                                   href="{% url 'EliminarContenido' id=cont.idEncuestas %}">Ver Preguntas
+                                                    Preguntas</a>
+                                                <br>
+                                            {% endif %}  
+                                            
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                {% endfor %}   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                {% else %}
+
+                <div class="row">
+                    <div class="col-md-6 mx-auto"><br><br><br>
+                        <div class="card">
+                            <div class="card-body   mx-auto col-md-10 ">
+                                <div class="w3-twothird">
+                                    <div class="w3-container w3-card w3-white">
+                                        <div class="w3-container">
+                                            <p>Esta acción no puede ser realizar por usted</p>
+                                            <a class="btn btn-warning" href="{% url 'home' %}">Regresar</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+</center>
+
+
+{% endblock %}

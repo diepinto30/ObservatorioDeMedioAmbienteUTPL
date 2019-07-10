@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^EncuestaNuevaGeneral/$', views.EncuestaFromsG, name="EncuestaFromsG"),
     url(r'^EncuestasCreate/$', views.EncuestasCreate, name="EncuestasCreate"),
     url(r'^EncuestasCreatePreguntas/$', views.EncuestasCreatePreguntas, name="EncuestasCreatePreguntas"),
+    url(r'^ListarEncuestas/$', views.Encuestas_list, name="Encuestas_list"),
 
 
     # url de los sitio principales de la app

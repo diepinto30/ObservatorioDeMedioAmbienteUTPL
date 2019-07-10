@@ -116,6 +116,11 @@
 
                     </div>
                 </li>
+                {% if user.is_staff  %}
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="{% url 'Encuestas_list' %}">Encuentas</a>
+                    </li>
+                {% endif %}
                 {% if user.is_authenticated %}
 
                 {% if user.is_superuser %}
@@ -198,7 +203,7 @@
         </div>
     </div>
     <hr>
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
         <a href="https://github.com/diepinto30"> Diepinto30 </a> and <a href="https://github.com/AnthonyOrtiz">AnthonyOrtiz</a>
     </div>
     <!-- Copyright -->
