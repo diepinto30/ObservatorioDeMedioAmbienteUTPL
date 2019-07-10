@@ -17,7 +17,7 @@
 
             {% for cont in list_contenido %}
                 {% if cont.TipoContenido == 'site_Etnozoologia' %}
-                    {% if cont.TipoSeccion == 'Seccion_1' %}
+                    {% if cont.TipoSeccion == 'Bloque_1' %}
                     <hr>
                     <br>
                     <h2>{{ cont.TituloContenido }}</h2><br>
@@ -39,7 +39,7 @@
                 <ol>
                 {% for cont in list_contenido %}
                     {% if cont.TipoContenido == 'site_MedioAmbiente' %}
-                        {% if cont.TipoSeccion == 'Seccion_2' %}
+                        {% if cont.TipoSeccion == 'Bloque_2' %}
 
                                 <a href="#" class="btn btn-outline-primary btnss" style="padding: 1.4%">
                                 {{ cont.TituloContenido }}

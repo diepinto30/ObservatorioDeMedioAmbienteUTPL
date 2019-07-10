@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4890a1e7-9102-4117-85a0-18a363070208" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/optionSelect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ObservatorioDeMedioAmbienteUTPL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ObservatorioDeMedioAmbienteUTPL.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/EditorDeContenido.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/EditorDeContenido.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/CalidadDeVida.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/CalidadDeVida.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Equidad.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Equidad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Etnozoologia.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Etnozoologia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/MedioAmbiente.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/MedioAmbiente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Mercados.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Mercados.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/ParticipacionDemocracia.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/ParticipacionDemocracia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestaPreguntas.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestaPreguntas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,56 +28,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="123" column="30" lean-forward="true" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+              <folding>
+                <element signature="e#1359#1928#0" />
+                <element signature="e#2070#2088#0" expanded="true" />
+                <element signature="e#2613#2643#0" expanded="true" />
+                <element signature="e#3334#3355#0" expanded="true" />
+                <element signature="e#3747#3777#0" expanded="true" />
+                <element signature="e#0#6#0" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#0#7#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
-              <folding>
-                <element signature="e#349#375#0" expanded="true" />
-                <element signature="e#486#516#0" expanded="true" />
-                <element signature="e#544#570#0" expanded="true" />
-                <element signature="e#811#841#0" expanded="true" />
-                <element signature="e#869#908#0" expanded="true" />
-                <element signature="e#1166#1196#0" expanded="true" />
-                <element signature="e#1224#1267#0" expanded="true" />
-                <element signature="e#1514#1544#0" expanded="true" />
-                <element signature="e#1572#1598#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="e#4505#4535#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="128" column="4" lean-forward="true" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
-              <folding>
-                <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-661">
-              <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="65" column="11" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="11" />
+            <state relative-caret-position="194">
+              <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -77,76 +72,83 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/NuevaEncuesta.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestaPreguntas.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1196">
+              <caret line="165" column="4" selection-start-line="165" selection-start-column="4" selection-end-line="173" selection-end-column="5" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#label#0;n#div#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#label#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/optionSelect.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1665">
+              <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="37" selection-end-column="14" />
+            <state relative-caret-position="15">
+              <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
               <folding>
+                <element signature="n#style#0;n#nav#0;n#div#0;n#center#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#center#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/EditorDeContenido.html">
+        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestasCreate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#label#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
-              <caret line="90" column="77" selection-start-line="90" selection-start-column="68" selection-end-line="90" selection-end-column="77" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/migrations/0002_auto_20190528_0308.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/migrations/0001_initial.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            <state relative-caret-position="-124">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -159,6 +161,7 @@
         <option value="Python Script" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -166,7 +169,16 @@
     <findStrings>
       <find>envOb</find>
       <find>envFe</find>
+      <find>us po</find>
+      <find>lib</find>
+      <find>Contenido_edit</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -174,41 +186,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/envObMA/bin/activate" />
-        <option value="$PROJECT_DIR$/envObMA/bin/activate.csh" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/migrations/__init__.py" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/__init__.py" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/__init__.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/manage.py" />
-        <option value="$USER_HOME$/Downloads/paper-kit-2-html-v2.2.0/index.html" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/index.html" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/header.css" />
-        <option value="$PROJECT_DIR$/envObMA/lib/python3.7/site-packages/django/forms/__init__.py" />
-        <option value="$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/__init__.py" />
         <option value="$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/settings.py" />
         <option value="$PROJECT_DIR$/webObMedUTPL/portal/forms.py" />
         <option value="$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/urls.py" />
         <option value="$PROJECT_DIR$/webObMedUTPL/portal/views.py" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/data.html" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/signup.html" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/login.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/EliminarContenido.html" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/homeContenido.css" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings.py" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/urls.py" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/migrations/0001_initial.py" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/urls.py" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido.html" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/EditorDeContenido.html" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py" />
-        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/style.css" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/MedioAmbiento.html" />
+        <option value="$USER_HOME$/Downloads/ckeditor/samples/index.html" />
+        <option value="$USER_HOME$/Downloads/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$USER_HOME$/Downloads/ckeditor-4/samples/index.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/EditorDeContenido.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/urls.py" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/GestorContenido.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/EditorDePublicaciones.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/GestorPublicaciones.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/EliminarPublicaciones.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Publicaciones/RevistasIndexadas.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Publicaciones/ActasCongresos.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Publicaciones/ArticulosDivulgacion.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/homeContenido.css" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Publicaciones/TrabajosTitulacion.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/GestorParticipantes.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/contenidos.css" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/login.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestasCreate.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/urls.py" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings.py" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/admin.py" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/NuevaEncuesta.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/aHref.css" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/MedioAmbiente.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/CalidadDeVida.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Equidad.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Etnozoologia.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Mercados.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/ParticipacionDemocracia.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html" />
         <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestaPreguntas.html" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/optionSelect.js" />
+        <option value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py" />
       </list>
     </option>
   </component>
@@ -240,35 +268,7 @@
               <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
               <item name="ObservatorioDeMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
               <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ObservatorioDeMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ObservatorioDeMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="imgs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ObservatorioDeMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ObservatorioDeMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
@@ -283,7 +283,7 @@
               <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
@@ -304,11 +304,34 @@
               <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
               <item name="ObservatorioDeMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
               <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
-              <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
+              <item name="portal" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="observatorio" type="462c0819:PsiDirectoryNode" />
+              <item name="Encuesta" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="ObservatorioDeMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
+              <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
+              <item name="portal" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="observatorio" type="462c0819:PsiDirectoryNode" />
+              <item name="GestorContenido" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ObservatorioDeMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
+              <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
+              <item name="portal" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="observatorio" type="462c0819:PsiDirectoryNode" />
+              <item name="Publicaciones" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ObservatorioDeMedioAmbienteUTPL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ObservatorioDeMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
+              <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
+              <item name="webObservatorioMedioAmbienteUTPL" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -321,13 +344,23 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta" />
+      <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -383,17 +416,52 @@
       <workItem from="1558535594088" duration="153000" />
       <workItem from="1559085811509" duration="12656000" />
       <workItem from="1559146051852" duration="2803000" />
-      <workItem from="1559149157079" duration="1538000" />
+      <workItem from="1559149157079" duration="2633000" />
+      <workItem from="1559180302553" duration="657000" />
+      <workItem from="1559185036659" duration="1111000" />
+      <workItem from="1559249302866" duration="555000" />
+      <workItem from="1559577391301" duration="599000" />
+      <workItem from="1559605051925" duration="147000" />
+      <workItem from="1559690754565" duration="4472000" />
+      <workItem from="1559703213978" duration="1321000" />
+      <workItem from="1559706188861" duration="2329000" />
+      <workItem from="1559753255888" duration="8496000" />
+      <workItem from="1559838751092" duration="402000" />
+      <workItem from="1559861008309" duration="1906000" />
+      <workItem from="1559913423036" duration="46000" />
+      <workItem from="1560276392815" duration="18425000" />
+      <workItem from="1560350275340" duration="9202000" />
+      <workItem from="1560371209978" duration="2371000" />
+      <workItem from="1560398061293" duration="323000" />
+      <workItem from="1560465871901" duration="264000" />
+      <workItem from="1560967250128" duration="2609000" />
+      <workItem from="1561001472762" duration="409000" />
+      <workItem from="1561002763015" duration="335000" />
+      <workItem from="1561065044899" duration="384000" />
+      <workItem from="1561069513121" duration="340000" />
+      <workItem from="1561082827410" duration="2353000" />
+      <workItem from="1561167940040" duration="464000" />
+      <workItem from="1561386946117" duration="534000" />
+      <workItem from="1561468872605" duration="1035000" />
+      <workItem from="1561504727834" duration="8201000" />
+      <workItem from="1561558702476" duration="3578000" />
+      <workItem from="1562036785803" duration="518000" />
+      <workItem from="1562119151758" duration="8996000" />
+      <workItem from="1562162895141" duration="569000" />
+      <workItem from="1562164997308" duration="7593000" />
+      <workItem from="1562620242788" duration="816000" />
+      <workItem from="1562623432478" duration="586000" />
+      <workItem from="1562716220759" duration="4009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52575000" />
+    <option name="totallyTimeSpent" value="149625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19466881" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3368336" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -406,8 +474,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016155" side_tool="true" weight="0.36746144" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4983845" visible="true" weight="0.36746144" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503231" side_tool="true" weight="0.36746144" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49676898" visible="true" weight="0.36746144" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -415,281 +483,284 @@
       <window_info anchor="right" id="SciView" order="3" weight="0.32956383" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16720517" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.32959327" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49919224" weight="0.36746144" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/admin.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/EditorDePublicaciones.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="30" selection-start-line="22" selection-start-column="23" selection-end-line="46" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Publicaciones/ActasCongresos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="22" lean-forward="true" selection-end-line="136" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Publicaciones/RevistasIndexadas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="17" column="14" lean-forward="true" selection-end-line="136" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Publicaciones/ArticulosDivulgacion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/homeContenido.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/imgs/portal/imgs/Captura_de_Pantalla_2019-06-10_a_las_16.33.13.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/portal/imgs/1553187215_320935_1553188345_noticia_normal.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/Captura de Pantalla 2019-06-10 a la(s) 17.11.18.png" />
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/Captura de Pantalla 2019-06-10 a la(s) 22.28.24.png" />
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/Captura de Pantalla 2019-06-10 a la(s) 22.28.24_AMBMijC.png" />
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/Captura_de_Pantalla_2019-06-10_a_las_22.28.24.png" />
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/portal/Participantes/IMG_20190607_123846_767.jpg" />
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Publicaciones/TrabajosTitulacion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/GestorParticipantes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/contenidos.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/index-3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="67" selection-start-line="67" selection-end-line="471" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#html#0;n#!!top" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#0#7#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/GestorPublicaciones.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="57" column="27" selection-start-line="27" selection-start-column="20" selection-end-line="57" selection-end-column="27" />
+          <folding>
+            <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/EliminarContenido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="31" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1541">
+          <caret line="646" selection-start-line="646" selection-end-line="646" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="128" column="75" selection-start-line="128" selection-start-column="60" selection-end-line="128" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/__init__.py">
+    <entry file="file://$PROJECT_DIR$/envObMaD2P3/lib/python3.7/site-packages/django/template/defaulttags.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="141">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/assets/img/apple-icon.png" />
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/assets/img/antoine-barres.jpg" />
-    <entry file="file://$USER_HOME$/Downloads/paper-kit-2-html-v2.2.0/examples/landing-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="316" column="106" selection-start-line="302" selection-start-column="2" selection-end-line="316" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/portal/img/bg-signup.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/portal/img/demo-image-01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/portal/img/demo-image-02.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/portal/img/ipad.png" />
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/portal/img/bg-masthead.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/paper-kit-2-html-v2.2.0/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="73" column="103" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="103" />
+        <state relative-caret-position="390">
+          <caret line="27" column="102" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="102" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/Slideshow.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/header.css" />
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/nucleo-icons.html" />
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/envObMA/lib/python3.7/site-packages/django/forms/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/envObMA/lib/python3.7/site-packages/django/core/management/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/envObMA/lib/python3.7/site-packages/django/core/management/base.py" />
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/settings.py" />
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/portal/forms.py" />
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/webObMedUTPL/urls.py" />
-    <entry file="file://$PROJECT_DIR$/webObMedUTPL/portal/views.py" />
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/data.html" />
-    <entry file="file://$USER_HOME$/Downloads/startbootstrap-grayscale-gh-pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="213" selection-end-column="11" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="117" column="9" selection-start-line="117" selection-start-column="9" selection-end-line="117" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="26" selection-start-line="17" selection-start-column="20" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/EliminarContenido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/homeContenido.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/portal/imgs/Captura_de_Pantalla_2019-05-23_a_las_10.47.25.png" />
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" selection-start-line="12" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="38" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#label#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/EditorDeContenido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#label#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="90" column="77" selection-start-line="90" selection-start-column="68" selection-end-line="90" selection-end-column="77" />
+        <state relative-caret-position="3540">
+          <caret line="243" column="51" selection-start-line="243" selection-start-column="51" selection-end-line="243" selection-end-column="51" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/urls.py">
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/aHref.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido/GestorContenido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="40" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#label#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/migrations/0002_auto_20190528_0308.py">
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/MedioAmbiente.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="-196">
+          <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#center#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#center#0;n#!!top" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#0#7#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/migrations/0001_initial.py">
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        <state relative-caret-position="107">
+          <caret line="123" column="30" lean-forward="true" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+          <folding>
+            <element signature="e#1359#1928#0" />
+            <element signature="e#2070#2088#0" expanded="true" />
+            <element signature="e#2613#2643#0" expanded="true" />
+            <element signature="e#3334#3355#0" expanded="true" />
+            <element signature="e#3747#3777#0" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#0#7#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html">
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/CalidadDeVida.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="37" selection-end-column="14" />
+        <state relative-caret-position="74">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#ol#0;n#div#0;n#center#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#ol#0;n#div#0;n#center#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Equidad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
@@ -697,51 +768,159 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Etnozoologia.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-661">
-          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="65" column="11" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="11" />
+        <state relative-caret-position="285">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#ol#0;n#div#0;n#center#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#ol#0;n#div#0;n#center#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html">
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/Mercados.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="128" column="4" lean-forward="true" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
+        <state relative-caret-position="143">
+          <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
           <folding>
-            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#ol#0;n#div#0;n#center#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#ol#0;n#div#0;n#center#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/ParticipacionDemocracia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="63" column="16" lean-forward="true" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#ol#0;n#div#0;n#center#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#ol#0;n#div#0;n#center#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/NuevaEncuesta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestasCreate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/Chart.bundle.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/ckeditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/Slideshow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1528">
+          <caret line="146" selection-start-line="146" selection-end-line="146" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/sample.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestaPreguntas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="165" column="4" selection-start-line="165" selection-start-column="4" selection-end-line="173" selection-end-column="5" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#label#0;n#div#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#label#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#label#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/optionSelect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+        <state relative-caret-position="1665">
+          <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
           <folding>
-            <element signature="e#349#375#0" expanded="true" />
-            <element signature="e#486#516#0" expanded="true" />
-            <element signature="e#544#570#0" expanded="true" />
-            <element signature="e#811#841#0" expanded="true" />
-            <element signature="e#869#908#0" expanded="true" />
-            <element signature="e#1166#1196#0" expanded="true" />
-            <element signature="e#1224#1267#0" expanded="true" />
-            <element signature="e#1514#1544#0" expanded="true" />
-            <element signature="e#1572#1598#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="e#4505#4535#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/conocenos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>

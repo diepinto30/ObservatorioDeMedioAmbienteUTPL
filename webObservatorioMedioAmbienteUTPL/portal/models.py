@@ -20,10 +20,10 @@ Type_CHOICES = (
 )
 
 TypeSeccion_CHOICES = (
-    ('Seccion_1', 'Seccion 1'),
-    ('Seccion_2', 'Seccion 2'),
-    ('Seccion_3', 'Seccion 3'),
-    ('Seccion_4', 'Seccion 4'),
+    ('Bloque_1', 'Bloque 1'),
+    ('Bloque_2', 'Bloque 2'),
+    ('Bloque_3', 'Bloque 3'),
+    ('Bloque_4', 'Bloque 4'),
 )
 
 

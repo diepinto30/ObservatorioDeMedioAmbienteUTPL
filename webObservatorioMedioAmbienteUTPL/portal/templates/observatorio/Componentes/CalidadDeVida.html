@@ -15,12 +15,12 @@
 
             {% for cont in list_contenido %}
                 {% if cont.TipoContenido == 'site_CalidadDeVida' %}
-                    {% if cont.TipoSeccion == 'Seccion_1' %}
+                    {% if cont.TipoSeccion == 'Bloque_1' %}
                     <hr>
                     <br>
                     <h2>{{ cont.TituloContenido }}</h2><br>
 
-                    <p>{{ cont.texto }}</p>
+                    <p>{{ cont.texto|safe }}</p>
                         {% if user.is_superuser %}
                         <div class="col-sm-12">
                            <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"  href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"  style="text-decoration: none;">Editar contenidor</a>
@@ -37,7 +37,7 @@
                 <ol>
                 {% for cont in list_contenido %}
                     {% if cont.TipoContenido == 'site_MedioAmbiente' %}
-                        {% if cont.TipoSeccion == 'Seccion_2' %}
+                        {% if cont.TipoSeccion == 'Bloque_2' %}
 
                                 <a href="#" class="btn btn-outline-primary btnss" style="padding: 1.4%">
                                 {{ cont.TituloContenido }}

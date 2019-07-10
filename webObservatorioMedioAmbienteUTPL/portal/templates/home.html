@@ -18,8 +18,8 @@
 
         <img src="{% static 'portal/img/antoine-barres.jpg' %}" alt="img1" style="width:100%;height: 80%">
         <div class="text" style="margin-bottom: 20%">
-            <h1><i>Lorem Ipsum</i></h1>
-            <strong><i>1914 translation by H. Rackham</i></strong>
+            <h1><i>Agua</i></h1>
+            <strong><i>Mágicos lugares de nuestro planeta</i></strong>
         </div>
     </div>
 
@@ -27,20 +27,21 @@
 
         <img src="{% static 'portal/img/bg-masthead.jpg' %}" alt="img2" style="width:100%;height: 80%">
         <div class="text" style="margin-bottom: 20%;color: black">
-            <h1><i>Lorem Ipsum img 2</i></h1>
-            <strong><i>1914 translation by H. Rackham</i></strong>
+            <h1><i>Medio Ambiente</i></h1>
+            <strong><i>Cada rincón del ecosistema único </i></strong>
         </div>
     </div>
     <div class="mySlides fade">
 
         <img src="{% static 'portal/img/IMG-20180830-WA0022-01.jpeg' %}" alt="img1" style="width:100%;height: 80%">
         <div class="text" style="margin-bottom: 15%;margin-left: 30%">
-            <h1><i>Lorem Ipsum img 3</i></h1>
-            <strong><i>1914 translation by H. Rackham</i></strong>
+            <h1><i>Calidad de Vida</i></h1>
+            <strong><i>1997 translation by H. Rackham</i></strong>
         </div>
     </div>
 
-    <div class="mySlides fade">
+   <!--
+   <div class="mySlides fade">
 
         <img src="{% static 'portal/img/bg-masthead.jpg' %}" alt="img3" style="width:100%;height: 80%">
         <div class="text" style="margin-bottom: 20%">
@@ -48,13 +49,14 @@
             <strong><i>1914 translation by H. Rackham</i></strong>
         </div>
     </div>
+    -->
 
 </div>
 <div style="text-align:center; display: none">
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-    <span class="dot"></span>
+    <!--<span class="dot"></span>-->
 </div>
 <hr class="bg-warning">
 <center>
@@ -71,7 +73,7 @@
             <div class="w1-row-padding w2-margin-top" style="padding: 1%">
                 {% for cont in list_contenido %}
                 {% if cont.TipoContenido == 'home' %}
-                {% if cont.TipoSeccion == 'Seccion_1' %}
+                {% if cont.TipoSeccion == 'Bloque_1' %}
                 <div class="w3-third" style="padding: 1%;height: 20%;">
                     <div class="w3-card">
                         <img src="/media/{{ cont.img }}" alt="" style="width:100%;" height="210" id="imgIAMU">
@@ -107,7 +109,7 @@
 
                 {% for cont in list_contenido %}
                 {% if cont.TipoContenido == 'home' %}
-                {% if cont.TipoSeccion == 'Seccion_2' %}
+                {% if cont.TipoSeccion == 'Bloque_2' %}
 
                 <br>
                 <h1>{{ cont.TituloContenido }}</h1>

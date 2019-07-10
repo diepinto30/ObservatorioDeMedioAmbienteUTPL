@@ -65,10 +65,10 @@ class ContenidoFrom(forms.ModelForm):
 
     TypeSeccion_CHOICES = (
         ('Seleccione ...', 'Seleccione ...'),
-        ('Seccion_1', 'Seccion 1'),
-        ('Seccion_2', 'Seccion 2'),
-        ('Seccion_3', 'Seccion 3'),
-        ('Seccion_4', 'Seccion 4'),
+        ('Bloque_1', 'Bloque 1'),
+        ('Bloque_2', 'Bloque 2'),
+        ('Bloque_3', 'Bloque 3'),
+        ('Bloque_4', 'Bloque 4'),
     )
 
     TituloContenido = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=True)
@@ -100,10 +100,10 @@ class PublicacionesFrom(forms.ModelForm):
 
     TypeSeccion_CHOICES = (
         ('Seleccione ...', 'Seleccione ...'),
-        ('Seccion_1', 'Seccion 1'),
-        ('Seccion_2', 'Seccion 2'),
-        ('Seccion_3', 'Seccion 3'),
-        ('Seccion_4', 'Seccion 4'),
+        ('Bloque_1', 'Bloque 1'),
+        ('Bloque_2', 'Bloque 2'),
+        ('Bloque_3', 'Bloque 3'),
+        ('Bloque_4', 'Bloque 4'),
     )
 
     TituloPublicaciones = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=True)
@@ -135,10 +135,10 @@ class ParticipantesFrom(forms.ModelForm):
 
     TypeSeccion_CHOICES = (
         ('Seleccione ...', 'Seleccione ...'),
-        ('Seccion_1', 'Seccion 1'),
-        ('Seccion_2', 'Seccion 2'),
-        ('Seccion_3', 'Seccion 3'),
-        ('Seccion_4', 'Seccion 4'),
+        ('Bloque_1', 'Bloque 1'),
+        ('Bloque_2', 'Bloque 2'),
+        ('Bloque_3', 'Bloque 3'),
+        ('Bloque_4', 'Bloque 4'),
     )
 
     Nombres = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=True)
@@ -192,7 +192,7 @@ class NamePreguntaFrom(forms.ModelForm):
     )
     nombrePregunta = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=True)
     #requerida = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=Typereque_CHOICES)
-    #tipoOpcion = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=TypePregunta_CHOICES)
+    tipoOpcion = forms.ChoiceField(widget=forms.Select(attrs={'onclick': 'myFunction()'}), required=True, choices=TypePregunta_CHOICES)
     #idEncuesta = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}))
 
 
