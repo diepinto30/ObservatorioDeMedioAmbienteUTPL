@@ -126,8 +126,9 @@ class GestorParticipantes(models.Model):
 
 class Encuestas(models.Model):
     idEncuestas = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=4000, blank=True)
-    seccion = models.CharField(max_length=4000, blank=True)
+    nombre = models.CharField(max_length=3000, blank=True)
+    seccion = models.CharField(max_length=3000, blank=True)
+    descripcion = models.CharField(max_length=5000, blank=True)
 
 
     def __str__(self):

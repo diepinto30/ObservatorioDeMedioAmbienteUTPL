@@ -17,7 +17,7 @@
 
             {% for cont in list_Publicaciones %}
             {% if cont.TipoContenido == 'site_Ponencias' %}
-            {% if cont.TipoSeccion == 'Seccion_1' %}
+            {% if cont.TipoSeccion == 'Bloque_1' %}
             <hr>
             <br>
 
@@ -36,7 +36,7 @@
                 <br>
                 <a id="data2-{{ cont.idGestorPublicaciones}}" class="btn btn-outline-warning"
                    href="{% url 'Publicaciones_edit' id=cont.idGestorPublicaciones %}" style="text-decoration: none;">Editar
-                    contenidor</a>
+                    contenido</a>
                 <a class="btn btn-outline-danger"
                    href="{% url 'EliminarPublicaciones' id=cont.idGestorPublicaciones %}">Eliminar contenido</a>
 

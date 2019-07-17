@@ -1,6 +1,6 @@
 {% extends 'master.html' %}
 {% block tittle %} lista de Encuesta {% endblock %}
-% load staticfiles %}
+{% load staticfiles %}
 {% load static %}
 {% block head %}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -23,8 +23,8 @@
                     <div class="w3-twothird">
                         <div class="w3-container w3-card w3-white">
                             <div class="w3-container">
-
-                                <p class="text-center">
+                                <br>
+                                <p class="text-center alert alert-dark" role="alert">
                                     <i>Usted puede ver todas las encuestas creadas y añadir más preguntas a cada
                                         encuesta.</i>
                                 </p>
@@ -51,14 +51,15 @@
                                         </div>
 
                                         <div class="col-xl-8 text-left mb-3" style="border-left: 4px solid #bc8d07;">
-                                            <p style="float: left">
-                                                Esta encuesta busca más información de las personas a respecto de sus
-                                                casa
+                                            <p style="float: left" >
+                                                <br>
+                                                {{ cont.descripcion|safe }}
                                             </p>
                                             <br>
                                             <a class="btn btn-primary"
                                                href="{% url 'home' %}">Realizar
                                                 Encuesta</a>
+
                                             {% if user.is_superuser %}
                                                 <a class="btn btn-info"
                                                    href="{% url 'EliminarContenido' id=cont.idEncuestas %}">Añadir

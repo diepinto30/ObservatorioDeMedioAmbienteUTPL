@@ -5,63 +5,105 @@
 {% block head %}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/contenidos.css' %}">
+<link rel="stylesheet" href="{% static 'css/accionBotones.css' %}">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script type="text/javascript" src="{% static 'js/maps1.js' %}"></script>
 
 {% endblock %}
 {% block content1 %}
 <br><br><br><br><br>
 <center>
+
     <div>
-        <h1>Etnozoología</h1><br>
+        <h1> Etnozoología</h1><br>
 
         <div class="text-justify " style="width: 80%">
 
             {% for cont in list_contenido %}
-                {% if cont.TipoContenido == 'site_Etnozoologia' %}
-                    {% if cont.TipoSeccion == 'Bloque_1' %}
-                    <hr>
-                    <br>
-                    <h2>{{ cont.TituloContenido }}</h2><br>
+            {% if cont.TipoContenido == 'site_Etnozoologia' %}
+            {% if cont.TipoSeccion == 'Bloque_1' %}
+            <hr>
+            <br>
 
-                    <p>{{ cont.texto }}</p>
-                        {% if user.is_superuser %}
-                        <div class="col-sm-12">
-                           <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"  href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"  style="text-decoration: none;">Editar contenidor</a>
-                            <a class="btn btn-outline-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar contenido</a>
-                        </div>
-                        {% endif %}
-                    {% endif %}
-                {% endif %}
+            <p>{{ cont.texto|safe }}</p>
+            {% if user.is_superuser %}
+            <div class="col-sm-12">
+                <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"
+                   href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}" style="text-decoration: none;">Editar
+                    contenido</a>
+                <a class="btn btn-outline-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar
+                    contenido</a>
+            </div>
+            {% endif %}
+            {% endif %}
+            {% endif %}
             {% endfor %}
             <br>
             <hr>
             <center>
-            <div >
-                <ol>
-                {% for cont in list_contenido %}
-                    {% if cont.TipoContenido == 'site_MedioAmbiente' %}
-                        {% if cont.TipoSeccion == 'Seccion_2' %}
+                <div>
+                    <ol>
+                        {% for cont in list_contenido %}
+                        {% if cont.TipoContenido == 'site_Etnozoologia' %}
+                        {% if cont.TipoSeccion == 'Bloque_2' %}
 
-                                <a href="#" class="btn btn-outline-primary btnss" style="padding: 1.4%">
-                                {{ cont.TituloContenido }}
-                                </a>
-                                {% if user.is_superuser %}
-                                    <div class="col-sm-12">
-                                        <br>
-                                       <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"  href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"  style="text-decoration: none;">Editar contenidor</a>
-                                        <a class="btn btn-outline-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar contenido</a>
-                                    </div>
-                                {% endif %}
-
+                        <a href="#" class="btn btn-outline-primary btnss" style="padding: 1.4%;border-radius: 25px"> {{ cont.TituloContenido }} </a>
+                        <br>
+                        {% if user.is_superuser %}
+                        <div class="col-sm-12">
                             <br>
+                            <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"
+                               href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}"
+                               style="text-decoration: none;">Editar contenido</a>
+                            <a class="btn btn-outline-danger"
+                               href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar contenido</a>
+                        </div>
                         {% endif %}
 
-                    {% endif %}
-                {% endfor %}
-                </ol>
-            </div>
+                        <br>
+                        {% endif %}
+
+                        {% endif %}
+                        {% endfor %}
+                    </ol>
+                </div>
+
             </center>
+
+
+            {% if list_contenido.TipoSeccion == 'Bloque_2' %}
             <hr>
             <br>
+            <ol>
+
+                <li>{{ list_contenido.TituloContenido }}</li>
+                <br>
+            </ol>
+
+            {% if user.is_superuser %}
+            <div class="col-sm-12">
+                <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"
+                   href="{% url 'Contenido_edit' id=cont.idGestorContenidos %}" style="text-decoration: none;">Editar
+                    contenido</a>
+                <a class="btn btn-outline-danger" href="{% url 'EliminarContenido' id=cont.idGestorContenidos %}">Eliminar
+                    contenido</a>
+            </div>
+            {% endif %}
+            {% endif %}
 
         </div>
     </div>
