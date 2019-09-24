@@ -259,3 +259,23 @@ def Encuestas_list(request):
     subtitulo = ""
     dic = {'subtitulo': subtitulo, 'list_encuestas': encuestas}
     return render(request, "observatorio/Encuesta/ListEncuestas.html", dic)
+
+
+def Encuestas_edit(request, id):
+    Encuesta = Encuestas.objects.get(idEncuestas=id)
+    if request.method == 'GET':
+        form = ContenidoFrom(instance=Encuesta)
+    else:
+        form = ContenidoFrom(request.POST, instance=Encuesta)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+    return render(request, 'observatorio/Encuesta/EditorDeEncuestas.html', {'form': form})
+
+
+def EliminarEncuesta(request, id):
+    Encuesta = Encuestas.objects.get(idEncuestas=id)
+    if request.method == 'POST':
+        Encuesta.delete()
+        return redirect('/')
+    return render(request, 'observatorio/Encuesta/EliminarEncuesta.html', {'Encuesta': Encuesta})

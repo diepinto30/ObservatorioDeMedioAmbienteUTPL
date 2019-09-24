@@ -38,10 +38,10 @@
                                             <div>
                                                 <br>
                                                 <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-warning"
-                                                   href="{% url 'Contenido_edit' id=cont.idEncuestas %}"
+                                                   href="{% url 'Encuestas_edit' id=cont.idEncuestas %}"
                                                    style="text-decoration: none;">Editar nombre encuesta</a>
                                                 <a class="btn btn-danger"
-                                                   href="{% url 'EliminarContenido' id=cont.idEncuestas %}">Eliminar
+                                                   href="{% url 'EliminarEncuesta' id=cont.idEncuestas %}">Eliminar
                                                     Encuesta</a>
                                             </div>
                                             {% endif %}
@@ -60,7 +60,7 @@
                                                href="{% url 'home' %}">Realizar
                                                 Encuesta</a>
 
-                                            {% if user.is_superuser %}
+                                           <!-- {% if user.is_superuser %}
                                                 <a class="btn btn-info"
                                                    href="{% url 'EliminarContenido' id=cont.idEncuestas %}">Añadir
                                                     Preguntas</a>
@@ -68,7 +68,7 @@
                                                    href="{% url 'EliminarContenido' id=cont.idEncuestas %}">Ver Preguntas
                                                     Preguntas</a>
                                                 <br>
-                                            {% endif %}  
+                                            {% endif %}   -->
                                             
 
                                         </div>
