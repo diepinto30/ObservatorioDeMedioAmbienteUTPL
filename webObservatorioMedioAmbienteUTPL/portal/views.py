@@ -67,7 +67,7 @@ def logout_view(request):
 
 def GestorContenido(request):
     if request.method == 'POST':
-        form = ContenidoFrom(request.POST)
+        form = ContenidoFrom(request.POST, request.FILES)
         if form.is_valid():
             form.save()
         return redirect("/")
@@ -81,7 +81,7 @@ def Contenido_edit(request, id):
     if request.method == 'GET':
         form = ContenidoFrom(instance=Contenido)
     else:
-        form = ContenidoFrom(request.POST, instance=Contenido)
+        form = ContenidoFrom(request.POST, request.FILES, instance=Contenido)
         if form.is_valid():
             form.save()
         return redirect('/')
@@ -131,13 +131,35 @@ def EliminarPublicaciones(request, id):
 # Gestor de Participantes
 def GestorParticipantess(request):
     if request.method == 'POST':
-        form = ParticipantesFrom(request.POST)
+        form = ParticipantesFrom(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            message = "Image uploaded succesfully!"
         return redirect("/")
     else:
         form = ParticipantesFrom()
     return render(request, 'observatorio/GestorContenido/GestorParticipantes.html', {'form': form})
+
+
+def Participantes_edit(request, id):
+    Contenido = GestorParticipantes.objects.get(idGestorParticipantes=id)
+    if request.method == 'GET':
+        form = ParticipantesFrom(instance=Contenido)
+    else:
+        form = ParticipantesFrom(request.POST, request.FILES, instance=Contenido)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+    return render(request, 'observatorio/GestorContenido/EditorDeParticipantes.html', {'form': form})
+
+
+def EliminarParticipantes(request, id):
+    Contenido = GestorParticipantes.objects.get(idGestorParticipantes=id)
+    if request.method == 'POST':
+        Contenido.delete()
+        return redirect('/')
+    return render(request, 'observatorio/GestorContenido/EliminarDeParticipantes.html', {'Contenido': Contenido})
+
 
 
 # sitios de los contenido

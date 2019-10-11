@@ -1,0 +1,65 @@
+{% extends 'master.html' %}
+{% block tittle %} Eliminar Participante {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+{% endblock %}
+{% block content1 %}
+<br><br><br><br><br>
+<center>
+    <h2 class="w3-text-grey w3-padding-16">
+        <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Eliminar participante del grupo
+    </h2>
+    <hr class="bg-warning mb-6">
+    {% if user.is_superuser %}
+
+    <div class="row">
+        <div class="col-md-6 mx-auto"><br><br><br>
+            <div class="card">
+                <div class="card-body   mx-auto col-md-10 ">
+                    <div class="w3-twothird">
+                        <div class="w3-container w3-card w3-white">
+
+                            <div class="w3-container">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <p>Esta segura que desea <i>Eliminar al participante </i> <strong>{{ Contenido.Apellidos }}, {{ Contenido.Nombres }} </strong> el cual es de tipo <strong>{{ Contenido.TipoParticipante }}</strong></p>
+                                    <button type="submit" class="btn btn-danger">Si, Eliminar</button>
+                                    <a class="btn btn-warning" href="{% url 'home' %}">Cancelar</a>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br> <br><br><br>
+    {% else %}
+
+    <div class="row">
+        <div class="col-md-6 mx-auto"><br><br><br>
+            <div class="card">
+                <div class="card-body   mx-auto col-md-10 ">
+                    <div class="w3-twothird">
+                        <div class="w3-container w3-card w3-white">
+                            <div class="w3-container">
+                                <p>Esta acción no puede ser realizar por usted</p>
+                                <a class="btn btn-warning" href="{% url 'home' %}">Regresar</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+</center>
+
+{% endblock %}

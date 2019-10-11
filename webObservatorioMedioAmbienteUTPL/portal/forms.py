@@ -83,7 +83,7 @@ class ContenidoFrom(forms.ModelForm):
     #img = forms.FileField()
     class Meta:
         model = GestorContenidos
-        fields = ('TituloContenido', 'SubiTituloContenido', 'TipoContenido', 'TipoSeccion', 'urlHTML', 'texto', 'img')
+        fields = ['TituloContenido', 'SubiTituloContenido', 'TipoContenido', 'TipoSeccion', 'urlHTML', 'texto', 'img']
 
 
 class PublicacionesFrom(forms.ModelForm):
@@ -150,9 +150,10 @@ class ParticipantesFrom(forms.ModelForm):
 
 
 
+
     class Meta:
         model = GestorParticipantes
-        fields = ('Nombres', 'Apellidos', 'TipoParticipante', 'TipoCargo', 'TipoSeccion', 'textoAmbitosAccion', 'img')
+        fields = ['Nombres', 'Apellidos', 'TipoParticipante', 'TipoCargo', 'TipoSeccion', 'textoAmbitosAccion', 'img']
 
 
 class NameEncuestaFrom(forms.ModelForm):

@@ -116,11 +116,11 @@
                                 {% if user.is_superuser %}
                                 <div class="col-sm-12">
                                     <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"
-                                       href="{% url 'Contenido_edit' id=cont.idGestorParticipantes %}"
+                                       href="{% url 'Participantes_edit' id=cont.idGestorParticipantes %}"
                                        style="text-decoration: none;">Editar
                                         contenido</a>
                                     <a class="btn btn-outline-danger"
-                                       href="{% url 'EliminarContenido' id=cont.idGestorParticipantes %}">Eliminar
+                                       href="{% url 'EliminarParticipantes' id=cont.idGestorParticipantes %}">Eliminar
                                         contenido</a>
                                 </div>
                                 {% endif %}
@@ -166,18 +166,20 @@
                                 {% if user.is_superuser %}
                                 <div class="col-sm-12">
                                     <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-outline-warning"
-                                       href="{% url 'Contenido_edit' id=cont.idGestorParticipantes %}"
+                                       href="{% url 'Participantes_edit' id=cont.idGestorParticipantes %}"
                                        style="text-decoration: none;">Editar
                                         contenido</a>
                                     <a class="btn btn-outline-danger"
-                                       href="{% url 'EliminarContenido' id=cont.idGestorParticipantes %}">Eliminar
+                                       href="{% url 'EliminarParticipantes' id=cont.idGestorParticipantes %}">Eliminar
                                         contenido</a>
                                 </div>
                                 {% endif %}
                             </div>
                             <div class="col-xl-4" style="margin-top: 3%">
-                                <img src="{{cont.img.url}}" alt="{{ cont.Nombres }} {{ cont.Apellidos }}" height="250"
+                                {% if cont.img %}
+                                <img src="{{ cont.img.url }}" alt="{{ cont.Nombres }} {{ cont.Apellidos }}" height="250"
                                  width="280" style="border-radius: 8px">
+                                {% endif %}
                             </div>
 
 
@@ -219,11 +221,11 @@
                                 {% if user.is_superuser %}
                                 <div>
                                     <a id="data2-{{ cont.idGestorContenidos}}" class="btn btn-warning"
-                                       href="{% url 'Contenido_edit' id=cont.idGestorParticipantes %}"
+                                       href="{% url 'Participantes_edit' id=cont.idGestorParticipantes %}"
                                        style="text-decoration: none;">Editar
                                         Cont.</a>
                                     <a class="btn btn-danger"
-                                       href="{% url 'EliminarContenido' id=cont.idGestorParticipantes %}">Eliminar
+                                       href="{% url 'EliminarParticipantes' id=cont.idGestorParticipantes %}">Eliminar
                                         Cont.</a>
                                 </div>
                                 {% endif %}

@@ -77,8 +77,8 @@ class GestorContenidos(models.Model):
     urlHTML = models.TextField(blank=True)
     # texto = models.TextField(blank=True)
     texto = RichTextField(blank=True)
-    # img = models.ImageField(upload_to='portal/imgs', blank=True)
-    img = models.FileField(blank=True)
+    img = models.ImageField(upload_to='portal/imgs/', blank=True)
+    #img = models.FileField(blank=True)
     Posiciones = models.DecimalField(max_digits=3000, blank=True, decimal_places=1)
 
     def __str__(self):
@@ -113,7 +113,7 @@ class GestorParticipantes(models.Model):
     TipoCargo = models.CharField(max_length=4000, blank=False, choices=TypeCargo_CHOICES)
     TipoSeccion = models.CharField(max_length=4000, blank=False, choices=TypeSeccion_CHOICES)
     textoAmbitosAccion = RichTextField(blank=True)
-    img = models.FileField(upload_to='portal/Participantes', blank=True)
+    img = models.ImageField(upload_to='portal/Participantes/', blank=True)
     Posiciones = models.DecimalField(max_digits=3000, blank=True, decimal_places=1)
 
     def __str__(self):
