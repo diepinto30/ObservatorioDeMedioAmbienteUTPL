@@ -56,20 +56,9 @@
                                                 {{ cont.descripcion|safe }}
                                             </p>
                                             <br>
-                                            <a class="btn btn-primary"
-                                               href="{% url 'home' %}">Realizar
+                                            <a class="btn btn-primary" id="{{ cont.idEncuestas }}"
+                                               href="{% url 'RealizarEncuestas' id=cont.idEncuestas %}">Realizar
                                                 Encuesta</a>
-
-                                           <!-- {% if user.is_superuser %}
-                                                <a class="btn btn-info"
-                                                   href="{% url 'EliminarContenido' id=cont.idEncuestas %}">Añadir
-                                                    Preguntas</a>
-                                                <a class="btn btn-secondary"
-                                                   href="{% url 'EliminarContenido' id=cont.idEncuestas %}">Ver Preguntas
-                                                    Preguntas</a>
-                                                <br>
-                                            {% endif %}   -->
-                                            
 
                                         </div>
 

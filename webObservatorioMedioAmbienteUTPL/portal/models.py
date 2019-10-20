@@ -132,7 +132,7 @@ class Encuestas(models.Model):
 
 
     def __str__(self):
-        return self.nombre
+        return self.nombre, self.descripcion
 
 
     class Meta:
@@ -148,10 +148,23 @@ class Pregunta(models.Model):
     idEncuesta = models.ForeignKey(Encuestas, on_delete=None)
 
     def __str__(self):
-        return self.nombrePregunta
+        return self.nombrePregunta, self.tipoOpcion
 
 
     class Meta:
         db_table = 'Pregunta'
 
 
+
+class Respuestas(models.Model):
+    idRespuestas = models.AutoField(primary_key=True)
+    idEncuesta = models.ForeignKey(Pregunta, on_delete=None)
+    idPreguntas = models.ForeignKey(Encuestas, on_delete=None)
+    RespuestaNombres = models.CharField(max_length=4000, blank=False)
+
+    def __str__(self):
+        return self.idEncuesta, self.idPreguntas, self.RespuestaNombres
+
+
+    class Meta:
+        db_table = 'Respuestas'

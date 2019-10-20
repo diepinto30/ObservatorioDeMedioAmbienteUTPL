@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^GestorParticipantes/$', views.GestorParticipantess, name="GestorParticipantess"),
     url(r'^Participantes_edit/(?P<id>\d+)/$', views.Participantes_edit, name='Participantes_edit'),
     url(r'^EliminarParticipantes/(?P<id>\d+)/$', views.EliminarParticipantes, name='EliminarParticipantes'),
+    url(r'^RealizarEncuestas/(?P<id>\d+)/$', views.RealizarEncuestas, name='RealizarEncuestas'),
 
     # url de las encuesta
     url(r'^EncuestaNuevaGeneral/$', views.EncuestaFromsG, name="EncuestaFromsG"),

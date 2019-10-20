@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, render_to_response
-from .forms import LoginFrom, SignUp, ContenidoFrom, PublicacionesFrom, ParticipantesFrom, NameEncuestaFrom, NamePreguntaFrom
+from .forms import LoginFrom, SignUp, ContenidoFrom, PublicacionesFrom, ParticipantesFrom, NameEncuestaFrom, NamePreguntaFrom, RealizarEncuestaFrom
 from django.contrib.auth import login, authenticate, logout
 from .models import GestorContenidos, Pregunta
 from .models import Encuestas
@@ -301,3 +301,15 @@ def EliminarEncuesta(request, id):
         Encuesta.delete()
         return redirect('/')
     return render(request, 'observatorio/Encuesta/EliminarEncuesta.html', {'Encuesta': Encuesta})
+
+
+def RealizarEncuestas(request, id):
+    if request.method == 'POST':
+        form = RealizarEncuestaFrom(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            message = "Image uploaded succesfully!"
+        return redirect("/")
+    else:
+        form = RealizarEncuestaFrom()
+    return render(request, 'observatorio/Encuesta/RealizarEncuesta.html', {'form': form})

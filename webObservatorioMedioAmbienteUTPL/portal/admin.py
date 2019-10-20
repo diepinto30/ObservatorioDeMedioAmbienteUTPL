@@ -8,3 +8,5 @@ admin.site.register(GestorPublicaciones)
 admin.site.register(GestorParticipantes)
 admin.site.register(Encuestas)
 admin.site.register(Pregunta)
+admin.site.register(Respuestas)
+

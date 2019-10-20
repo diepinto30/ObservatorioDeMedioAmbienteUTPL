@@ -4,7 +4,7 @@ from django import forms
 from django.contrib.auth.management import get_default_username
 from django.contrib.auth.models import User
 from .models import GestorContenidos, GestorPublicaciones, GestorParticipantes
-from .models import Encuestas, Pregunta
+from .models import Encuestas, Pregunta, Respuestas
 from django.contrib.auth.forms import UserCreationForm
 from ckeditor.widgets import CKEditorWidget
 from django.utils.safestring import mark_safe
@@ -201,3 +201,32 @@ class NamePreguntaFrom(forms.ModelForm):
     class Meta:
         model = Pregunta
         fields = ('nombrePregunta', 'requerida', 'tipoOpcion', 'idEncuesta')
+
+
+class RealizarEncuestaFrom(forms.ModelForm):
+    TypePregunta_CHOICES = (
+        ('Seleccione ...', 'Seleccione ...'),
+        ('texto', 'Texto'),
+        ('TrueOrFalse', 'Verdadero o Falso'),
+        ('CheckBox', 'Selección Multiple'),
+        ('Check', 'Selección Única'),
+
+
+    )
+
+    Typereque_CHOICES = (
+        ('seleccione...', 'seleccione...'),
+        ('True', 'Verdadero'),
+        ('False', 'Falso'),
+
+    )
+    #nombrePregunta = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), required=True)
+    #requerida = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), required=True, choices=Typereque_CHOICES)
+    #tipoOpcion = forms.ChoiceField(widget=forms.Select(attrs={'onclick': 'myFunction()'}), required=True, choices=TypePregunta_CHOICES)
+    #idEncuesta = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}))
+
+
+
+    class Meta:
+        model = Respuestas
+        fields = ['idRespuestas', 'idEncuesta', 'idPreguntas', 'RespuestaNombres']
