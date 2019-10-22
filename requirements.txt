@@ -3,7 +3,7 @@ chardet==3.0.4
 Django==2.1.9
 idna==2.8
 mysql-connector-python==8.0.16
-Pillow==6.0.0
+Pillow==6.2.0
 protobuf==3.7.1
 PyMySQL==0.9.3
 pytz==2019.1
