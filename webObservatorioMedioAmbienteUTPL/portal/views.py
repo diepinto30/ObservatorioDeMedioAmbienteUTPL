@@ -149,7 +149,7 @@ def Participantes_edit(request, id):
         form = ParticipantesFrom(request.POST, request.FILES, instance=Contenido)
         if form.is_valid():
             form.save()
-        return redirect('/')
+        return redirect("/")
     return render(request, 'observatorio/GestorContenido/EditorDeParticipantes.html', {'form': form})
 
 
@@ -157,7 +157,7 @@ def EliminarParticipantes(request, id):
     Contenido = GestorParticipantes.objects.get(idGestorParticipantes=id)
     if request.method == 'POST':
         Contenido.delete()
-        return redirect('/')
+        return redirect("/")
     return render(request, 'observatorio/GestorContenido/EliminarDeParticipantes.html', {'Contenido': Contenido})
 
 

@@ -1,11 +1,17 @@
+attrs==19.1.0
 certifi==2019.3.9
 chardet==3.0.4
 Django==2.1.9
+django-ckeditor==5.7.1
+django-js-asset==1.2.2
+gunicorn==19.9.0
 idna==2.8
+jsonschema==3.0.1
 mysql-connector-python==8.0.16
 Pillow==6.0.0
 protobuf==3.7.1
 PyMySQL==0.9.3
+pyrsistent==0.15.2
 pytz==2019.1
 requests==2.21.0
 six==1.12.0

@@ -111,6 +111,8 @@ local_settings.py
 db.sqlite3
 *settings.py*
 *wsgi.py*
+*local.py*
+settings/local.py
 # Environments
 envObMA/
 envObMaD2P3/
