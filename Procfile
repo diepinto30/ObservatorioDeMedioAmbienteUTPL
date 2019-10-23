@@ -1,1 +1,1 @@
-web: gunicorn webObservatorioMedioAmbienteUTPL.wsgi
+web: gunicorn gettingstarted.wsgi --log-file -
