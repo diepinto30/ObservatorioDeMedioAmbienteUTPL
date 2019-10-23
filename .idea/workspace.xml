@@ -28,7 +28,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL" />
   </component>
   <component name="ProjectId" id="1STXid82Xqg6izj6kkgqeCCgcGv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -170,7 +170,7 @@
       <workItem from="1571588727782" duration="2192000" />
       <workItem from="1571670777318" duration="138000" />
       <workItem from="1571671278271" duration="277000" />
-      <workItem from="1571803484026" duration="3556000" />
+      <workItem from="1571803484026" duration="3810000" />
     </task>
     <servers />
   </component>

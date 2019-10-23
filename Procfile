@@ -1,1 +1,1 @@
-web: gunicorn webObservatorioMedioAmbienteUTPL.webObservatorioMedioAmbienteUTPL.wsgi:application --log-file -
+web: python manage.py runserver
