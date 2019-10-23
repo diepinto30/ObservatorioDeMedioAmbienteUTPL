@@ -1,1 +1,1 @@
-web: gunicorn webObservatorioMedioAmbienteUTPL.wsgi --log-file -
+web: gunicorn webObservatorioMedioAmbienteUTPL.webObservatorioMedioAmbienteUTPL.wsgi:application --log-file -
