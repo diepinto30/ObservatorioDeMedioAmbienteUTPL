@@ -50,12 +50,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/portal/imgs" />
-      <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta" />
+      <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/portal/imgs" />
       <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido" />
     </key>
   </component>
@@ -170,7 +170,7 @@
       <workItem from="1571588727782" duration="2192000" />
       <workItem from="1571670777318" duration="138000" />
       <workItem from="1571671278271" duration="277000" />
-      <workItem from="1571803484026" duration="3902000" />
+      <workItem from="1571803484026" duration="4177000" />
     </task>
     <servers />
   </component>
