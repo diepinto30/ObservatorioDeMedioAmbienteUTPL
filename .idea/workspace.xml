@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4890a1e7-9102-4117-85a0-18a363070208" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/estadisticas.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/RespaldoAgua.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestaGoogle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/respaldoListEncuestas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/portal/Participantes/Copia_de_Copia_de_ama.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/maps1.js" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/maps1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/ListEncuestas.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/ListEncuestas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings/production.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL" />
   </component>
   <component name="ProjectId" id="1STXid82Xqg6izj6kkgqeCCgcGv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -198,7 +184,7 @@
       <workItem from="1578536780118" duration="2921000" />
       <workItem from="1578607725373" duration="1036000" />
       <workItem from="1579726600792" duration="10465000" />
-      <workItem from="1579813681848" duration="335000" />
+      <workItem from="1579813681848" duration="2454000" />
     </task>
     <servers />
   </component>

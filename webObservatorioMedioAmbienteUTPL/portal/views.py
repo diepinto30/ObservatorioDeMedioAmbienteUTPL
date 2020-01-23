@@ -171,10 +171,10 @@ def Agua_view(request):
     viven14 = DataGrupo.objects.filter(r1p1='1-4').annotate(Count('r1p1'))
     viven58 = DataGrupo.objects.filter(r1p1='5-8').annotate(Count('r1p1'))
     viven910 = DataGrupo.objects.filter(r1p1='9-10').annotate(Count('r1p1'))
-    # vivenDes = Feminicidios.objects.filter(pais='Chile').annotate(Count('pais'))
+    vivenDes = DataGrupo.objects.filter(r1p1='').annotate(Count('r1p1'))
 
     dic = {'list_contenido': contenido, 'subtitulo': subtitulo, 'viven14': viven14, 'viven58': viven58,
-           'viven910': viven910}
+           'viven910': viven910, 'vivenDes':vivenDes}
     return render(request, "observatorio/Componentes/agua.html", dic)
 
 

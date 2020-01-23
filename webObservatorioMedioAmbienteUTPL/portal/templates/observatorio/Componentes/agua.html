@@ -70,6 +70,7 @@
             <center>
                 <div>
                     <ol>
+                        <i id="inicio"><i/>
                         <a href="#pregunta1" class="btn btn-outline-primary btnss" style="padding: 1.4%;border-radius: 25px"> ¿Cuántas personas viven en su hogar? </a>
                         <br><div class="col-sm-12"> <br> </div>
                         <a href="#pregunta2" class="btn btn-outline-primary btnss" style="padding: 1.4%;border-radius: 25px">Ingreso económico familiar</a>
@@ -88,13 +89,47 @@
         </div>
     </div>
     <hr class="col-xl-9">
-
+    <i id="anterior1"></i>
     <!-- Grafica Pregunta 1-->
-    <h2 id="pregunta1"> ¿Cuántas personas viven en su hogar?</h2><br>
+    <h2 id="pregunta1" style="color: rgba(13,17,255,0.66)"> <i>¿Cuántas personas viven en su hogar?</i></h2>
+    <driv class="text-center">
+        <p></p>
+        <a href="#inicio" class="btn btn-outline-primary btnss" > <i class="fas fa-home"></i> Inicio</a>
+        <button type="button" class="btn btn-primary">DATOS (.XLS)</button>
+        <button type="button" class="btn btn-primary">DATOS (.CSV)</button>
+        <button type="button" class="btn btn-primary">Opcional</button>
+        <a href="#siguiente2" class="btn btn-outline-primary btnss" ><i class="fas fa-angle-right"></i></a>
+    </driv>
+    <br><br>
     <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
     <br>
 
-     <!--Estadisticas pregunta 1-->
+
+    <hr class="col-xl-9">
+    <!-- Grafica Pregunta 2-->
+    <i id="siguiente2"></i>
+    <h2 id="pregunta1" style="color: rgba(13,17,255,0.66)"> <i>Ingreso económico familiar</i></h2>
+    <driv class="text-center">
+        <p></p>
+        <a href="#anterior1" class="btn btn-outline-primary btnss" ><i class="fas fa-angle-left"></i></a>
+        <button type="button" class="btn btn-primary">DATOS (.XLS)</button>
+        <button type="button" class="btn btn-primary">DATOS (.CSV)</button>
+        <button type="button" class="btn btn-primary">Opcional</button>
+        <a href="#siguiente3" class="btn btn-outline-primary btnss" ><i class="fas fa-angle-right"></i></a>
+    </driv>
+    <br><br>
+    <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+    <br>
+
+    <br>
+
+
+
+
+
+
+    <!-- Script de todas las graficas para las preguntas-->
+    <!--Estadisticas pregunta 1-->
     <script>
         // Build the chart
         Highcharts.chart('container', {
@@ -139,13 +174,13 @@
                     selected: true
                 }, {
                     name: 'Entre 5 a 8 ',
-                    y: {{ viven14.count }}
+                    y: {{ viven58.count }}
                 }, {
                     name: 'Entre 9 a 10',
-                    y: {{ viven14.count }}
+                    y: {{ viven910.count }}
                 }, {
                     name: 'Desconcen',
-                    y: 43
+                    y: {{ vivenDes.count}}
                 }]
             }]
         });
