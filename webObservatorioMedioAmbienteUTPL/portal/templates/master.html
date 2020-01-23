@@ -122,14 +122,31 @@
 
                     </div>
                 </li>
-                {% if user.is_staff  %}
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="{% url 'Encuestas_list' %}">Encuestas</a>
+
+                <!--{% if user.is_staff  %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Encuesta
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'EncuestaGoogle' %}">Agua</a>
+                            <a class="dropdown-item" href="#">#</a>
+
+
+                        </div>
                     </li>
-                {% endif %}
+                {% endif %}-->
+
                 {% if user.is_authenticated %}
 
                 {% if user.is_superuser %}
+                <!--<li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="{% url 'Encuestas_list' %}">Encuestas</a>
+                    </li>-->
+
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown"
@@ -137,7 +154,7 @@
                         Gestor de Contenido
                     </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="{% url 'EncuestasCreate' %}">Encuestas Formularios</a>
+<!--                    <a class="dropdown-item"  href="{% url 'EncuestasCreate' %}">Encuestas Formularios</a>-->
                     <a class="dropdown-item"  href="{% url 'GestorContenido' %}">Gestor de Contenido de sitios</a>
                     <a class="dropdown-item"  href="{% url 'GestorPublicacion' %}">Gestor de Publicaciones</a>
                     <a class="dropdown-item"  href="{% url 'GestorParticipantess' %}">Gestor de Participantes</a>

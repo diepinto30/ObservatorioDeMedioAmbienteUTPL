@@ -14,7 +14,7 @@
         <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Creando Encuesta Principal
     </h2>
     <hr class="bg-warning mb-6">
-    {% if user.is_superuser %}
+    {% if user.is_staff %}
 
     <div class="row">
         <div class="col-md-9 mx-auto"><br>
@@ -25,7 +25,8 @@
                             <div class="w3-container">
                                 <br>
                                 <p class="text-center alert alert-dark" role="alert">
-                                    <i>Usted puede ver todas las encuestas creadas y puede realizarlas.</i>
+                                    <i>Usted puede ver todas las encuestas creadas y añadir más preguntas a cada
+                                        encuesta.</i>
                                 </p>
                                 {% for cont in list_encuestas %}
                                 <div class="container">
@@ -63,7 +64,7 @@
 
                                     </div>
                                 </div>
-                                {% endfor %}   
+                                {% endfor %}
                             </div>
                         </div>
                     </div>

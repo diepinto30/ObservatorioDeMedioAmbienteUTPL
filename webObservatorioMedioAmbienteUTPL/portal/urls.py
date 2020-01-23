@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^ListarEncuestas/$', views.Encuestas_list, name="Encuestas_list"),
     url(r'^Encuestas_edit/(?P<id>\d+)/$', views.Encuestas_edit, name='Encuestas_edit'),
     url(r'^EliminarEncuesta/(?P<id>\d+)/$', views.EliminarEncuesta, name='EliminarEncuesta'),
+    url(r'^EncuestaRealizar/', views.EncuestaGoogle, name='EncuestaGoogle'),
 
 
     # url de los sitio principales de la app
@@ -48,5 +49,7 @@ urlpatterns = [
     url(r'^Publicaciones/Tesis/$', views.Tesis_view, name='Tesis_view'),
     url(r'^Publicaciones/ArticulosDivulgados/$', views.ArticulosDiv_view, name='ArticulosDiv_view'),
     url(r'^Publicaciones/ActasCongresos/$', views.ActasCon_view, name='ActasCon_view'),
+
+# url de los sitio publicaciones
 
 ]

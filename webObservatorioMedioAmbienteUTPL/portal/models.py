@@ -155,7 +155,6 @@ class Pregunta(models.Model):
         db_table = 'Pregunta'
 
 
-
 class Respuestas(models.Model):
     idRespuestas = models.AutoField(primary_key=True)
     idEncuesta = models.ForeignKey(Pregunta, on_delete=None)
@@ -168,3 +167,46 @@ class Respuestas(models.Model):
 
     class Meta:
         db_table = 'Respuestas'
+
+
+class DataGrupo(models.Model):
+    idDataGrupo = models.AutoField(primary_key=True)
+    CodigoEncuentas = models.CharField(max_length=10, blank=True)
+    Anio = models.CharField(max_length=4)
+    Mes = models.CharField(max_length=90)
+    Encuestador = models.CharField(max_length=8, blank=True)
+    CodigoEncuesta = models.CharField(max_length=8000, blank=True)
+    FechaAplicacion = models.CharField(max_length=1000, blank=True)
+    Genero = models.CharField(max_length=1000, blank=True)
+    edad = models.CharField(max_length=1000, blank=True)
+    edad2 = models.CharField(max_length=1000, blank=True)
+    NivelEducacion = models.IntegerField(default=0, null=True)
+    ClasificacionOcupacionCIUO08 = models.CharField(max_length=1000, blank=True)
+    LocalidadVive = models.CharField(max_length=1000, blank=True)
+    CantonDondeVive = models.CharField(max_length=1000, blank=True)
+    Provincia = models.CharField(max_length=1000, blank=True)
+    Sector = models.IntegerField(default=0, null=True)
+    SuCasaes = models.CharField(max_length=1000, blank=True)
+    Pregunta1 = models.TextField(blank=True)
+    r1p1 = models.TextField(blank=True)
+    Pregunta2 = models.TextField(blank=True)
+    r1p2 = models.TextField(blank=True)
+    Pregunta3 = models.TextField(blank=True)
+    r1p3 = models.TextField(blank=True)
+    Pregunta4 = models.TextField(blank=True)
+    r1p4 = models.TextField(blank=True)
+    Pregunta5 = models.TextField(blank=True)
+    r1p5 = models.TextField(blank=True)
+    Pregunta6 = models.TextField(blank=True)
+    r1p6 = models.TextField(blank=True)
+    Pregunta7 = models.TextField(blank=True)
+    r1p7 = models.TextField(blank=True)
+    Pregunta8 = models.URLField(blank=True)
+    r1p8 = models.TextField(blank=True)
+    Pregunta9 = models.URLField(blank=True)
+    r1p9 = models.TextField(blank=True)
+    Pregunta10 = models.TextField(blank=True)
+    r1p10 = models.TextField(blank=True)
+
+    class Meta:
+        db_table = 'DataGrupo'

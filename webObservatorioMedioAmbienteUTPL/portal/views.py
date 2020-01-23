@@ -1,8 +1,9 @@
+from django.db.models import Count
 from django.shortcuts import render, redirect, render_to_response
 from .forms import LoginFrom, SignUp, ContenidoFrom, PublicacionesFrom, ParticipantesFrom, NameEncuestaFrom, NamePreguntaFrom, RealizarEncuestaFrom
 from django.contrib.auth import login, authenticate, logout
 from .models import GestorContenidos, Pregunta
-from .models import Encuestas
+from .models import Encuestas, DataGrupo
 from .models import GestorPublicaciones, GestorParticipantes
 from django.urls import reverse
 from django.http import HttpResponseRedirect
@@ -161,12 +162,19 @@ def EliminarParticipantes(request, id):
     return render(request, 'observatorio/GestorContenido/EliminarDeParticipantes.html', {'Contenido': Contenido})
 
 
-
 # sitios de los contenido
 def Agua_view(request):
     contenido = GestorContenidos.objects.all()
     subtitulo = ""
-    dic = {'list_contenido': contenido, 'subtitulo': subtitulo}
+    # estadista agua
+    # paisEc_count = DataGrupo.objects.annotate(Count('pais', Avg('pais')))
+    viven14 = DataGrupo.objects.filter(r1p1='1-4').annotate(Count('r1p1'))
+    viven58 = DataGrupo.objects.filter(r1p1='5-8').annotate(Count('r1p1'))
+    viven910 = DataGrupo.objects.filter(r1p1='9-10').annotate(Count('r1p1'))
+    # vivenDes = Feminicidios.objects.filter(pais='Chile').annotate(Count('pais'))
+
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo, 'viven14': viven14, 'viven58': viven58,
+           'viven910': viven910}
     return render(request, "observatorio/Componentes/agua.html", dic)
 
 
@@ -313,3 +321,13 @@ def RealizarEncuestas(request, id):
     else:
         form = RealizarEncuestaFrom()
     return render(request, 'observatorio/Encuesta/RealizarEncuesta.html', {'form': form})
+
+
+def EncuestaGoogle(request):
+    contenido = GestorContenidos.objects.all()
+    participantes = GestorParticipantes.objects.all()
+    subtitulo = ""
+    dic = {'list_contenido': contenido, 'subtitulo': subtitulo, 'list_participantes': participantes}
+    return render(request, "observatorio/Encuesta/EncuestaGoogle.html", dic)
+
+

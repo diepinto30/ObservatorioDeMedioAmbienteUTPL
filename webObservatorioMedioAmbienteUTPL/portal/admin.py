@@ -9,4 +9,5 @@ admin.site.register(GestorParticipantes)
 admin.site.register(Encuestas)
 admin.site.register(Pregunta)
 admin.site.register(Respuestas)
+admin.site.register(DataGrupo)
 

@@ -2,16 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4890a1e7-9102-4117-85a0-18a363070208" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings/local.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings/production.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/estadisticas.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/RespaldoAgua.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/EncuestaGoogle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/respaldoListEncuestas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/media/portal/Participantes/Copia_de_Copia_de_ama.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/maps1.js" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/maps1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/ListEncuestas.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta/ListEncuestas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/settings/production.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/webObservatorioMedioAmbienteUTPL/wsgi.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,18 +28,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL" />
   </component>
   <component name="ProjectId" id="1STXid82Xqg6izj6kkgqeCCgcGv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -59,15 +72,15 @@
       <recent name="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/GestorContenido" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -170,7 +183,20 @@
       <workItem from="1571588727782" duration="2192000" />
       <workItem from="1571670777318" duration="138000" />
       <workItem from="1571671278271" duration="277000" />
-      <workItem from="1571803484026" duration="4177000" />
+      <workItem from="1571803484026" duration="4550000" />
+      <workItem from="1572366950741" duration="1637000" />
+      <workItem from="1572451130493" duration="1526000" />
+      <workItem from="1572481530937" duration="501000" />
+      <workItem from="1572567610433" duration="564000" />
+      <workItem from="1572748773680" duration="574000" />
+      <workItem from="1572918453653" duration="562000" />
+      <workItem from="1572921900005" duration="317000" />
+      <workItem from="1573056374271" duration="541000" />
+      <workItem from="1573073797331" duration="178000" />
+      <workItem from="1573779532779" duration="236000" />
+      <workItem from="1578536780118" duration="2921000" />
+      <workItem from="1578607725373" duration="1036000" />
+      <workItem from="1579726600792" duration="10201000" />
     </task>
     <servers />
   </component>
