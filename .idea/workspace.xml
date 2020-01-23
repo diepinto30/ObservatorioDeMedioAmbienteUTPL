@@ -36,7 +36,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1STXid82Xqg6izj6kkgqeCCgcGv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,6 +48,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Encuesta" />
@@ -196,7 +197,8 @@
       <workItem from="1573779532779" duration="236000" />
       <workItem from="1578536780118" duration="2921000" />
       <workItem from="1578607725373" duration="1036000" />
-      <workItem from="1579726600792" duration="10201000" />
+      <workItem from="1579726600792" duration="10465000" />
+      <workItem from="1579813681848" duration="335000" />
     </task>
     <servers />
   </component>
