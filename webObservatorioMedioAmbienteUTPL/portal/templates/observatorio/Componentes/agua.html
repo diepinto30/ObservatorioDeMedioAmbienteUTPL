@@ -7,7 +7,6 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/contenidos.css' %}">
 <link rel="stylesheet" href="{% static 'css/accionBotones.css' %}">
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -21,7 +20,7 @@
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script type="text/javascript" src="{% static 'js/maps1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/accionesPreguntas.js' %}"></script>
 
 
 <!-- highchat librerias-->
@@ -33,6 +32,13 @@
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="{% static 'css/estadisticas.css' %}">
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
 
 
 
@@ -43,6 +49,7 @@
 
     <div>
         <h1> Agua</h1><br>
+        <i id="inicio2"><i/>
 
         <div class="text-justify " style="width: 80%">
 
@@ -75,9 +82,9 @@
                         <br><div class="col-sm-12"> <br> </div>
                         <a href="#pregunta2" class="btn btn-outline-primary btnss" style="padding: 1.4%;border-radius: 25px">Ingreso económico familiar</a>
                         <br><div class="col-sm-12"> <br> </div>
-                        <a href="#pregunta3" class="btn btn-outline-primary btnss" style="padding: 1.4%;border-radius: 25px"> Servicios básicos con los que cuenta</a>
+                        <a href="#pregunta3" class="btn btn-outline-primary btnss" style="padding: 1.4%;border-radius: 25px"> ¿Ha escuchado alguna vez sobre el término biodiversidad? </a>
                         <br><div class="col-sm-12"> <br> </div>
-                        <a href="#pregunta4" class="btn btn-outline-primary btnss" style="padding: 1.4%;border-radius: 25px"> ¿Ha escuchado alguna vez sobre el término biodiversidad? </a>
+                        <a href="#pregunta4" class="btn btn-outline-primary btnss" style="padding: 1.4%;border-radius: 25px"> Servicios básicos con los que cuenta</a>
                         <br><div class="col-sm-12"> <br> </div>
                         <a href="#pregunta5" class="btn btn-outline-primary btnss" style="padding: 1.4%;border-radius: 25px"> ¿Qué cree usted que representa la mayor amenaza para la biodiversidad?</a>
                         <br><div class="col-sm-12"> <br> </div>
@@ -88,6 +95,7 @@
             </center>
         </div>
     </div>
+
     <hr class="col-xl-9">
     <i id="anterior1"></i>
     <!-- Grafica Pregunta 1-->
@@ -95,8 +103,8 @@
     <driv class="text-center">
         <p></p>
         <a href="#inicio" class="btn btn-outline-primary btnss" > <i class="fas fa-home"></i> Inicio</a>
-        <button type="button" class="btn btn-primary">DATOS (.XLS)</button>
-        <button type="button" class="btn btn-primary">DATOS (.CSV)</button>
+        <!--<button type="button" class="btn btn-primary">DATOS (.XLS)</button>
+        <button type="button" class="btn btn-primary">DATOS (.CSV)</button>-->
         <button type="button" class="btn btn-primary">Opcional</button>
         <a href="#siguiente2" class="btn btn-outline-primary btnss" ><i class="fas fa-angle-right"></i></a>
     </driv>
@@ -107,24 +115,57 @@
 
     <hr class="col-xl-9">
     <!-- Grafica Pregunta 2-->
+    <i id="anterior2"></i>
     <i id="siguiente2"></i>
-    <h2 id="pregunta1" style="color: rgba(13,17,255,0.66)"> <i>Ingreso económico familiar</i></h2>
+    <h2 id="pregunta2" style="color: rgba(13,17,255,0.66)"> <i>Ingreso económico familiar</i></h2>
     <driv class="text-center">
         <p></p>
         <a href="#anterior1" class="btn btn-outline-primary btnss" ><i class="fas fa-angle-left"></i></a>
-        <button type="button" class="btn btn-primary">DATOS (.XLS)</button>
-        <button type="button" class="btn btn-primary">DATOS (.CSV)</button>
+        <!--<button type="button" class="btn btn-primary">DATOS (.XLS)</button>
+        <button type="button" class="btn btn-primary">DATOS (.CSV)</button>-->
         <button type="button" class="btn btn-primary">Opcional</button>
         <a href="#siguiente3" class="btn btn-outline-primary btnss" ><i class="fas fa-angle-right"></i></a>
     </driv>
     <br><br>
-    <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-    <br>
+    <figure class="highcharts-figure">
+        <div id="container2" style="min-width: 310px; margin: 0 auto">SS</div>
+        <br>
+    </figure>
 
     <br>
 
 
+    <hr class="col-xl-9">
+    <!-- Grafica Pregunta 3-->
+    <i id="anterior3"></i>
+    <i id="siguiente3"></i>
+    <h2 id="pregunta2" style="color: rgba(13,17,255,0.66)"> <i>¿Ha escuchado alguna vez sobre el término biodiversidad?</i></h2>
+    <driv class="text-center">
+        <p></p>
+        <a href="#anterior2" class="btn btn-outline-primary btnss" ><i class="fas fa-angle-left"></i></a>
+        <!--<button type="button" class="btn btn-primary">DATOS (.XLS)</button>
+        <button type="button" class="btn btn-primary">DATOS (.CSV)</button>-->
+        <button class="btn btn-primary btnss P3Año16" >Año 2016</button>
+        <button class="btn btn-success btnss P3Año17" >Año 2017</button>
+        <button class="btn btn-primary btnss P3Año18" >Opcional</button>
+        <a href="#inicio2" class="btn btn-outline-primary btnss" > <i class="fas fa-home"></i> Inicio</a>
+    </driv>
+    <br><br>
+    <div id="P3Año16Esconder" >
+        <figure class="highcharts-figure">
+            <div id="container3" style="min-width: 310px; margin: 0 auto">SS</div>
+            <br>
+        </figure>
+    </div>
 
+    <div id="P3Año17Esconder" style="display: none;">
+        <figure class="highcharts-figure">
+            <div id="container4" style="min-width: 310px; margin: 0 auto">SS</div>
+            <br>
+        </figure>
+    </div>
+
+    <br>
 
 
 
@@ -185,6 +226,545 @@
             }]
         });
     </script>
+
+
+    <!--Estadisticas pregunta 2-->
+    <script>
+        Highcharts.chart('container2', {
+            chart: {
+                type: 'packedbubble',
+                height: '60%'
+            },
+            title: {
+                text: 'Total del ingresos económicos por años por las familiaas'
+            },
+            tooltip: {
+                useHTML: true,
+                pointFormat: 'Total del ingresos entre <b>{point.name}$ </b> son de <b>{point.value}</b> familiar</sub>'
+            },
+            plotOptions: {
+                packedbubble: {
+                    minSize: '100%',
+                    maxSize: '120%',
+                    zMin: 0,
+                    zMax: 1000,
+                    layoutAlgorithm: {
+                        splitSeries: false,
+                        gravitationalConstant: 0.03
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}',
+                        filter: {
+                            property: 'y',
+                            operator: '>',
+                            value: 250
+                        },
+                        style: {
+                            color: 'black',
+                            textOutline: 'none',
+                            fontWeight: 'normal'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: '2016',
+                data: [{
+                    name: '<366',
+                    value: {{ ingre366_16.count }}
+                }, {
+                    name: '366 - <500',
+                    value: {{ ingre366500_16.count }}
+                },
+                {
+                    name: "500 - <1000",
+                    value: {{ ingre5001000_16.count }}
+                },
+                {
+                    name: "1000 - <2000",
+                    value: {{ ingre10002000_16.count }}
+                },
+                {
+                    name: ">2000",
+                    value: {{ ingre200_16.count }}
+                }]
+            }, {
+                name: '2017',
+                data: [{
+                    name: '<366',
+                    value: {{ ingre366_17.count }}
+                }, {
+                    name: '366 - <500',
+                    value: {{ ingre366500_17.count }}
+                },
+                {
+                    name: "500 - <1000",
+                    value: {{ ingre5001000_17.count }}
+                },
+                {
+                    name: "1000 - <2000",
+                    value: {{ ingre10002000_17.count }}
+                },
+                {
+                    name: ">2000",
+                    value: {{ ingre200_17.count }}
+                }]
+            }, {
+                name: '2018',
+                data: [{
+                    name: '<366',
+                    value: {{ ingre366_18.count }}
+                }, {
+                    name: '366 - <500',
+                    value: {{ ingre366500_18.count }}
+                },
+                {
+                    name: "500 - <1000",
+                    value: {{ ingre5001000_18.count }}
+                },
+                {
+                    name: "1000 - <2000",
+                    value: {{ ingre10002000_18.count }}
+                },
+                {
+                    name: ">2000",
+                    value: {{ ingre200_18.count }}
+                }]
+            }, {
+                name: '2019',
+                data: [{
+                    name: "<366",
+                    value: 0
+                },
+                {
+                    name: "366 - <500",
+                    value: 0
+                },
+                {
+                    name: "500 - <1000",
+                    value: 0
+                },{
+                    name: "1000 - <2000",
+                    value: 0
+
+                },{
+                    name: ">2000",
+                    value: 0
+                }]
+            }]
+        });
+
+    </script>
+
+
+    <!--Estadisticas pregunta 3-->
+        <!-- año 2016-->
+        <script>
+
+            function renderIcons() {
+
+                // Move icon
+                if (!this.series[0].icon) {
+                    this.series[0].icon = this.renderer.path(['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8])
+                        .attr({
+                            stroke: '#303030',
+                            'stroke-linecap': 'round',
+                            'stroke-linejoin': 'round',
+                            'stroke-width': 2,
+                            zIndex: 10
+                        })
+                        .add(this.series[2].group);
+                }
+                this.series[0].icon.translate(
+                    this.chartWidth / 2 - 10,
+                    this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
+                        (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
+                );
+
+                // Exercise icon
+                if (!this.series[1].icon) {
+                    this.series[1].icon = this.renderer.path(
+                        ['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8,
+                            'M', 8, -8, 'L', 16, 0, 8, 8]
+                    )
+                        .attr({
+                            stroke: '#ffffff',
+                            'stroke-linecap': 'round',
+                            'stroke-linejoin': 'round',
+                            'stroke-width': 2,
+                            zIndex: 10
+                        })
+                        .add(this.series[2].group);
+                }
+                this.series[1].icon.translate(
+                    this.chartWidth / 2 - 10,
+                    this.plotHeight / 2 - this.series[1].points[0].shapeArgs.innerR -
+                        (this.series[1].points[0].shapeArgs.r - this.series[1].points[0].shapeArgs.innerR) / 2
+                );
+
+                // Stand icon
+                if (!this.series[2].icon) {
+                    this.series[2].icon = this.renderer.path(['M', 0, 8, 'L', 0, -8, 'M', -8, 0, 'L', 0, -8, 8, 0])
+                        .attr({
+                            stroke: '#303030',
+                            'stroke-linecap': 'round',
+                            'stroke-linejoin': 'round',
+                            'stroke-width': 2,
+                            zIndex: 10
+                        })
+                        .add(this.series[2].group);
+                }
+
+                this.series[2].icon.translate(
+                    this.chartWidth / 2 - 10,
+                    this.plotHeight / 2 - this.series[2].points[0].shapeArgs.innerR -
+                        (this.series[2].points[0].shapeArgs.r - this.series[2].points[0].shapeArgs.innerR) / 2
+                );
+            }
+
+            Highcharts.chart('container3', {
+
+                chart: {
+                    type: 'solidgauge',
+                    height: '60%',
+                    events: {
+                        render: renderIcons
+                    }
+                },
+
+                title: {
+                    text: 'Término biodiversidad en el 2016',
+                    style: {
+                        fontSize: '24px'
+                    }
+                },
+
+                tooltip: {
+                    borderWidth: 0,
+                    backgroundColor: 'none',
+                    shadow: false,
+                    style: {
+                        fontSize: '16px'
+                    },
+                    valueSuffix: '',
+                    pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}</span> <sub>personas</sub> ',
+                    positioner: function (labelWidth) {
+                        return {
+                            x: (this.chart.chartWidth - labelWidth) / 2,
+                            y: (this.chart.plotHeight / 2) + 15
+                        };
+                    }
+                },
+
+                pane: {
+                    startAngle: 0,
+                    endAngle: 360,
+                    background: [{ // Track for Move
+                        outerRadius: '112%',
+                        innerRadius: '88%',
+                        backgroundColor: Highcharts.color(Highcharts.getOptions().colors[0])
+                            .setOpacity(0.3)
+                            .get(),
+                        borderWidth: 0
+                    }, { // Track for Exercise
+                        outerRadius: '87%',
+                        innerRadius: '63%',
+                        backgroundColor: Highcharts.color(Highcharts.getOptions().colors[1])
+                            .setOpacity(0.3)
+                            .get(),
+                        borderWidth: 0
+                    }, { // Track for Stand
+                        outerRadius: '62%',
+                        innerRadius: '38%',
+                        backgroundColor: Highcharts.color(Highcharts.getOptions().colors[2])
+                            .setOpacity(0.3)
+                            .get(),
+                        borderWidth: 0
+                    }]
+                },
+
+                yAxis: {
+                    min: 0,
+                    max: 500,
+                    lineWidth: 0,
+                    tickPositions: []
+                },
+
+                plotOptions: {
+                    solidgauge: {
+                        dataLabels: {
+                            enabled: false
+                        },
+                        linecap: 'round',
+                        stickyTracking: false,
+                        rounded: true
+                    }
+                },
+
+                series: [{
+                    name: 'He escuchado pero no <br> se lo que significa',
+                    data: [{
+                        color: Highcharts.getOptions().colors[0],
+                        radius: '112%',
+                        innerRadius: '88%',
+                        y: {{ terminoEsNo16.count }}
+                    }]
+                }, {
+                    name: 'He escuchado <br> y se lo que significa',
+                    data: [{
+                        color: Highcharts.getOptions().colors[1],
+                        radius: '87%',
+                        innerRadius: '63%',
+                        y: {{ terminoEsSi16.count }}
+                    }]
+                }, {
+                    name: 'No lo sé',
+                    data: [{
+                        color: Highcharts.getOptions().colors[2],
+                        radius: '62%',
+                        innerRadius: '38%',
+                        y: {{ terminoNose16.count }}
+                    }]
+                }]
+            });
+        </script>
+        <!-- año 2017-->
+        <script>
+
+            function renderIcons() {
+
+                // Move icon
+                if (!this.series[0].icon) {
+                    this.series[0].icon = this.renderer.path(['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8])
+                        .attr({
+                            stroke: '#303030',
+                            'stroke-linecap': 'round',
+                            'stroke-linejoin': 'round',
+                            'stroke-width': 2,
+                            zIndex: 10
+                        })
+                        .add(this.series[2].group);
+                }
+                this.series[0].icon.translate(
+                    this.chartWidth / 2 - 10,
+                    this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
+                        (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
+                );
+
+                // Exercise icon
+                if (!this.series[1].icon) {
+                    this.series[1].icon = this.renderer.path(
+                        ['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8,
+                            'M', 8, -8, 'L', 16, 0, 8, 8]
+                    )
+                        .attr({
+                            stroke: '#ffffff',
+                            'stroke-linecap': 'round',
+                            'stroke-linejoin': 'round',
+                            'stroke-width': 2,
+                            zIndex: 10
+                        })
+                        .add(this.series[2].group);
+                }
+                this.series[1].icon.translate(
+                    this.chartWidth / 2 - 10,
+                    this.plotHeight / 2 - this.series[1].points[0].shapeArgs.innerR -
+                        (this.series[1].points[0].shapeArgs.r - this.series[1].points[0].shapeArgs.innerR) / 2
+                );
+
+                // Stand icon
+                if (!this.series[2].icon) {
+                    this.series[2].icon = this.renderer.path(['M', 0, 8, 'L', 0, -8, 'M', -8, 0, 'L', 0, -8, 8, 0])
+                        .attr({
+                            stroke: '#303030',
+                            'stroke-linecap': 'round',
+                            'stroke-linejoin': 'round',
+                            'stroke-width': 2,
+                            zIndex: 10
+                        })
+                        .add(this.series[2].group);
+                }
+
+                this.series[2].icon.translate(
+                    this.chartWidth / 2 - 10,
+                    this.plotHeight / 2 - this.series[2].points[0].shapeArgs.innerR -
+                        (this.series[2].points[0].shapeArgs.r - this.series[2].points[0].shapeArgs.innerR) / 2
+                );
+            }
+
+            Highcharts.chart('container4', {
+
+                chart: {
+                    type: 'solidgauge',
+                    height: '60%',
+                    events: {
+                        render: renderIcons
+                    }
+                },
+
+                title: {
+                    text: 'Término biodiversidad en el 2017',
+                    style: {
+                        fontSize: '24px'
+                    }
+                },
+
+                tooltip: {
+                    borderWidth: 0,
+                    backgroundColor: 'none',
+                    shadow: false,
+                    style: {
+                        fontSize: '16px'
+                    },
+                    valueSuffix: '',
+                    pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}</span> <sub>personas</sub> ',
+                    positioner: function (labelWidth) {
+                        return {
+                            x: (this.chart.chartWidth - labelWidth) / 2,
+                            y: (this.chart.plotHeight / 2) + 15
+                        };
+                    }
+                },
+
+                pane: {
+                    startAngle: 0,
+                    endAngle: 360,
+                    background: [{ // Track for Move
+                        outerRadius: '112%',
+                        innerRadius: '88%',
+                        backgroundColor: Highcharts.color(Highcharts.getOptions().colors[0])
+                            .setOpacity(0.3)
+                            .get(),
+                        borderWidth: 0
+                    }, { // Track for Exercise
+                        outerRadius: '87%',
+                        innerRadius: '63%',
+                        backgroundColor: Highcharts.color(Highcharts.getOptions().colors[1])
+                            .setOpacity(0.3)
+                            .get(),
+                        borderWidth: 0
+                    }, { // Track for Stand
+                        outerRadius: '62%',
+                        innerRadius: '38%',
+                        backgroundColor: Highcharts.color(Highcharts.getOptions().colors[2])
+                            .setOpacity(0.3)
+                            .get(),
+                        borderWidth: 0
+                    }]
+                },
+
+                yAxis: {
+                    min: 0,
+                    max: 500,
+                    lineWidth: 0,
+                    tickPositions: []
+                },
+
+                plotOptions: {
+                    solidgauge: {
+                        dataLabels: {
+                            enabled: false
+                        },
+                        linecap: 'round',
+                        stickyTracking: false,
+                        rounded: true
+                    }
+                },
+
+                series: [{
+                    name: 'He escuchado pero no <br> se lo que significa',
+                    data: [{
+                        color: Highcharts.getOptions().colors[0],
+                        radius: '112%',
+                        innerRadius: '88%',
+                        y: {{ terminoEsNo17.count }}
+                    }]
+                }, {
+                    name: 'He escuchado <br> y se lo que significa',
+                    data: [{
+                        color: Highcharts.getOptions().colors[1],
+                        radius: '87%',
+                        innerRadius: '63%',
+                        y: {{ terminoEsSi17.count }}
+                    }]
+                }, {
+                    name: 'No lo sé',
+                    data: [{
+                        color: Highcharts.getOptions().colors[2],
+                        radius: '62%',
+                        innerRadius: '38%',
+                        y: {{ terminoNose17.count }}
+                    }]
+                }]
+            });
+        </script>
+
+
+    <!--Estadisticas pregunta falta-->
+    <script>
+        Highcharts.chart('containerfalta', {
+        data: {
+            table: 'datatable'
+        },
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Data extracted from a HTML table in the page'
+        },
+        yAxis: {
+            allowDecimals: false,
+            title: {
+                text: 'Units'
+            }
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    this.point.y + ' ' + this.point.name.toLowerCase();
+            }
+        }
+    });
+    </script>
+    <!-- TABLA DE LA PREGUNTA 2-->
+    <table id="datatable" style="display: none"><!-- TABLA DE LA PREGUNTA 2-->
+        <thead>
+            <tr>
+                <th></th>
+                <th>Jane</th>
+                <th>John</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Apples</th>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th>Pears</th>
+                <td>2</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <th>Plums</th>
+                <td>5</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <th>Bananas</th>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th>Oranges</th>
+                <td>2</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+
 
 
 

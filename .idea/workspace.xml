@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4890a1e7-9102-4117-85a0-18a363070208" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/js/accionesPreguntas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/estadisticas.css" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/static/css/estadisticas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/master.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/templates/observatorio/Componentes/agua.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webObservatorioMedioAmbienteUTPL/portal/views.py" afterDir="false" />
     </list>
@@ -14,10 +17,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Python Script" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -184,7 +187,7 @@
       <workItem from="1578536780118" duration="2921000" />
       <workItem from="1578607725373" duration="1036000" />
       <workItem from="1579726600792" duration="10465000" />
-      <workItem from="1579813681848" duration="2454000" />
+      <workItem from="1579813681848" duration="11087000" />
     </task>
     <servers />
   </component>

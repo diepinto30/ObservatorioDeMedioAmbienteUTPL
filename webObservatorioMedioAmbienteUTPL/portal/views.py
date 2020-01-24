@@ -167,14 +167,54 @@ def Agua_view(request):
     contenido = GestorContenidos.objects.all()
     subtitulo = ""
     # estadista agua
-    # paisEc_count = DataGrupo.objects.annotate(Count('pais', Avg('pais')))
+    #total = DataGrupo.objects.annotate(Count('r1p1', Avg('r1p1')))
+
+    # pregunta 1
     viven14 = DataGrupo.objects.filter(r1p1='1-4').annotate(Count('r1p1'))
     viven58 = DataGrupo.objects.filter(r1p1='5-8').annotate(Count('r1p1'))
     viven910 = DataGrupo.objects.filter(r1p1='9-10').annotate(Count('r1p1'))
     vivenDes = DataGrupo.objects.filter(r1p1='').annotate(Count('r1p1'))
 
+    # pregunta 2
+    ## año 2016
+    ingre366_16 = DataGrupo.objects.filter(r1p2='<366', Anio='2016').annotate(Count('Anio'))
+    ingre366500_16 = DataGrupo.objects.filter(r1p2='366 - <500', Anio='2016').annotate(Count('Anio'))
+    ingre5001000_16 = DataGrupo.objects.filter(r1p2='500 - <1000', Anio='2016').annotate(Count('Anio'))
+    ingre10002000_16 = DataGrupo.objects.filter(r1p2='1000 - <2000', Anio='2016').annotate(Count('Anio'))
+    ingre200_16 = DataGrupo.objects.filter(r1p2='>2000', Anio='2016').annotate(Count('Anio'))
+     ## año 2017
+    ingre366_17 = DataGrupo.objects.filter(r1p2='<366', Anio='2017').annotate(Count('Anio'))
+    ingre366500_17 = DataGrupo.objects.filter(r1p2='366 - <500', Anio='2017').annotate(Count('Anio'))
+    ingre5001000_17 = DataGrupo.objects.filter(r1p2='500 - <1000', Anio='2017').annotate(Count('Anio'))
+    ingre10002000_17 = DataGrupo.objects.filter(r1p2='1000 - <2000', Anio='2017').annotate(Count('Anio'))
+    ingre200_17 = DataGrupo.objects.filter(r1p2='>2000', Anio='2017').annotate(Count('Anio'))
+     ## año 2018
+    ingre366_18 = DataGrupo.objects.filter(r1p2='<366', Anio='2018').annotate(Count('Anio'))
+    ingre366500_18 = DataGrupo.objects.filter(r1p2='366 - <500', Anio='2018').annotate(Count('Anio'))
+    ingre5001000_18 = DataGrupo.objects.filter(r1p2='500 - <1000', Anio='2018').annotate(Count('Anio'))
+    ingre10002000_18 = DataGrupo.objects.filter(r1p2='1000 - <2000', Anio='2018').annotate(Count('Anio'))
+    ingre200_18 = DataGrupo.objects.filter(r1p2='>2000', Anio='2018').annotate(Count('Anio'))
+
+    # pregunta 3
+    ## año 2016
+    terminoEsNo16 = DataGrupo.objects.filter(r1p4='He escuchado pero no se lo que significa', Anio='2016').annotate(Count('Anio'))
+    terminoEsSi16 = DataGrupo.objects.filter(r1p4='He escuchado y se lo que significa', Anio='2016').annotate(Count('Anio'))
+    terminoNose16 = DataGrupo.objects.filter(r1p4='No lo sé', Anio='2016').annotate(Count('Anio'))
+    ## año 2017
+    terminoEsNo17 = DataGrupo.objects.filter(r1p4='He escuchado pero no se lo que significa', Anio='2017').annotate(Count('Anio'))
+    terminoEsSi17 = DataGrupo.objects.filter(r1p4='He escuchado y se lo que significa', Anio='2017').annotate(Count('Anio'))
+    terminoNose17 = DataGrupo.objects.filter(r1p4='No lo sé', Anio='2017').annotate(Count('Anio'))
+
+
+
     dic = {'list_contenido': contenido, 'subtitulo': subtitulo, 'viven14': viven14, 'viven58': viven58,
-           'viven910': viven910, 'vivenDes':vivenDes}
+           'viven910': viven910, 'vivenDes': vivenDes, 'ingre366_16': ingre366_16, 'ingre366500_16': ingre366500_16,
+           'ingre5001000_16': ingre5001000_16, 'ingre10002000_16': ingre10002000_16, 'ingre200_16': ingre200_16,
+           'ingre366_17': ingre366_17, 'ingre366500_17': ingre366500_17, 'ingre5001000_17': ingre5001000_17,
+           'ingre10002000_17': ingre10002000_17, 'ingre200_17': ingre200_17, 'ingre366_18': ingre366_18,
+           'ingre366500_18': ingre366500_18, 'ingre5001000_18': ingre5001000_18, 'ingre10002000_18': ingre10002000_18,
+           'ingre200_18': ingre200_18, 'terminoEsNo16': terminoEsNo16, 'terminoEsSi16': terminoEsSi16, 'terminoNose16': terminoNose16,
+           'terminoEsNo17': terminoEsNo17, 'terminoEsSi17': terminoEsSi17, 'terminoNose17': terminoNose17 }
     return render(request, "observatorio/Componentes/agua.html", dic)
 
 
